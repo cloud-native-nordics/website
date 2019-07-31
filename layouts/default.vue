@@ -1,74 +1,62 @@
 <template>
   <v-app dark>
-    <div class="app">
-      <Slide>
-        <v-list class="pa-0 pb-2">
-          <v-list-tile avatar>
-            <v-list-tile-avatar>
-              <img src="snowflake.png" />
-            </v-list-tile-avatar>
+    <v-bottom-navigation app dark grow fixed :value="activeBtn" color="#326ce5">
+      <v-btn to="/meetup-groups">
+        <span>Meetup Groups</span>
+        <v-icon>device_hub</v-icon>
+      </v-btn>
 
-            <v-list-tile-content>
-              <v-list-tile-title>
-                <router-link style="text-decoration: none;" to="/">CLOUD NATIVE NORDICS</router-link>
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-        <v-divider></v-divider>
-        <router-link to="groups">
-          <span>
-            <v-icon class="pr-4">device_hub</v-icon>Meetup Groups
-          </span>
-        </router-link>
-        <router-link to="speakers">
-          <span>
-            <v-icon class="pr-4">record_voice_over</v-icon>Speakers
-          </span>
-        </router-link>
-        <router-link to="sponsors">
-          <span>
-            <v-icon class="pr-4">attach_money</v-icon>Sponsors
-          </span>
-        </router-link>
-        <router-link to="members">
-          <span>
-            <v-icon class="pr-4">group</v-icon>Members
-          </span>
-        </router-link>
-      </Slide>
-      <v-content>
-        <nuxt />
-      </v-content>
-    </div>
+      <v-btn to="/speakers">
+        <span>Speakers</span>
+        <v-icon>record_voice_over</v-icon>
+      </v-btn>
+
+      <v-btn to="/" style="position: relative;">
+        <span>Cloud Native Nordics</span>
+        <v-icon>record_voice_over</v-icon>
+        <img style="position:absolute; top: -35px;" height="100" width="100" src="/snowflake-menu.png"></img>
+      </v-btn>
+
+      <v-btn to="/sponsors">
+        <span>Sponsors</span>
+        <v-icon>attach_money</v-icon>
+      </v-btn>
+
+      <v-btn to="/members">
+        <span>Members</span>
+        <v-icon>group</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
+
+    <v-content>
+      <Nuxt />
+    </v-content>
   </v-app>
 </template>
 <script>
-import { Slide } from "vue-burger-menu";
 export default {
-  components: {
-    Slide
-  },
   data() {
     return {
-      drawer: null,
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ],
-      right: null
+      activeBtn: 2
     };
   }
 };
 </script>
 <style>
-.bm-burger-bars {
-  background-color: #9c27b0 !important;
+body {
+  overflow: hidden;
 }
-.bm-item-list {
-  margin-left: 4% !important;
+.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: black;
+  color: white;
+  padding: 10px;
 }
-.theme--dark.v-list {
-  background: #3f3f41 !important;
+.dark a {
+  color: white;
 }
 </style>

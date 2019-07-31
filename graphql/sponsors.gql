@@ -1,0 +1,21 @@
+query sponsors {
+  sponsors {
+    id
+    venue {
+      name
+      websiteURL
+      logoURL
+      countries {
+        name
+      }
+    }
+    other {
+      name
+      websiteURL
+      logoURL
+      countries {
+        name
+      }
+    }
+  }
+}

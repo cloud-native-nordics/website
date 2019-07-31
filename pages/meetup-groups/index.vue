@@ -9,7 +9,6 @@
       sm8
       md6
     >
-    <v-img src="snowflake-text.png"></v-img>
     </v-flex>
   </v-layout>
 </template>

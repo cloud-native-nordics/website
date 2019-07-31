@@ -1,7 +1,5 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -41,35 +39,26 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/vuetify',
+    "@nuxtjs/vuetify",
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
   ],
+  
+  vuetify: {
+    customVariables: ["~/assets/variables.scss"],
+    theme: {
+      dark: true
+    }
+  },
 
   apollo: {
     // required
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:8080',
+        httpEndpoint: 'http://localhost:8080/query',
         // Enable Automatic Query persisting with Apollo Engine
         persisting: true, 
       }
-    }
-  },
-
-  /*
-  ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
-  */
-  vuetify: {
-    theme: {
-      primary: "#9c27b0",
-      secondary: "#673ab7",
-      accent: "#607d8b",
-      error: "#f44336",
-      warning: "#ff9800",
-      info: "#00bcd4",
-      success: "#4caf50"
     }
   },
   /*

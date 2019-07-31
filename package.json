@@ -11,16 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc7",
-    "@nuxtjs/pwa": "^2.6.0",
-    "@nuxtjs/vuetify": "0.5.5",
-    "graphql-tag": "^2.10.1",
-    "nuxt": "^2.0.0",
-    "vue-burger-menu": "^2.0.2"
+    "@nuxtjs/vuetify": "1.0.2",
+    "@nuxtjs/apollo": "4.0.0-rc9",
+    "@nuxtjs/pwa": "2.6.0",
+    "graphql-tag": "2.10.1",
+    "nuxt": "2.8.1"
   },
   "devDependencies": {
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
     "nodemon": "^1.18.9"
   }
 }
