@@ -1,0 +1,8 @@
+query meetupGroups {
+  meetupGroups {
+    meetupID
+    name
+    city
+    country
+  }
+}

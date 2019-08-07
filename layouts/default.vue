@@ -14,7 +14,7 @@
       <v-btn to="/" style="position: relative;">
         <span>Cloud Native Nordics</span>
         <v-icon>record_voice_over</v-icon>
-        <img style="position:absolute; top: -35px;" height="100" width="100" src="/snowflake-menu.png"></img>
+        <img style="position:absolute; top: -35px;" height="100" width="100" src="/snowflake-menu.png">
       </v-btn>
 
       <v-btn to="/sponsors">

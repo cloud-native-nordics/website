@@ -1,0 +1,17 @@
+query speakers {
+    speakers {
+      id
+      name
+      title
+      email
+      countries {
+        name
+      }
+      github
+      speakersBureau
+      company {
+        id
+        name
+      }
+    }
+}
