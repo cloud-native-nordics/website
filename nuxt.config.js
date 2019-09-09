@@ -29,6 +29,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/style/app.scss',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -47,7 +48,6 @@ export default {
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
-      dark: true
     }
   },
 
@@ -55,7 +55,7 @@ export default {
     // required
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:8080/query',
+        httpEndpoint: 'https://stats-api.whyyy.dk/query',
         // Enable Automatic Query persisting with Apollo Engine
         persisting: true, 
       }

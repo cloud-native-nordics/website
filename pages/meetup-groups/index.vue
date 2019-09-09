@@ -1,89 +1,71 @@
 <template>
   <v-container grid-list-lg fluid>
-    <v-layout justify-space-between row fill-height>
-      <v-flex xs3>
-        <v-combobox
-          multiple
-          v-model="selectedCountries"
-          :items="countries"
-          chips
-          label="Select countries"
-        >
-          <template v-slot:selection="data">
-            <v-chip
-              :key="JSON.stringify(data.item.name)"
-              v-bind="data.attrs"
-              :input-value="data.selected"
-              :disabled="data.disabled"
-              @click.stop="data.parent.selectedIndex = data.index"
-              @click:close="data.parent.selectItem(data.item.name)"
-            >
-              <v-avatar left>
-                <img :src="data.item+'.png'" height="25px" />
-              </v-avatar>
-              {{ data.item }}
-            </v-chip>
-          </template>
-        </v-combobox>
+    <v-layout row fill-height class="pt-5 pb-5">
+      <v-flex xs7>
+        <h1>GROUPS</h1>
       </v-flex>
-      <v-flex xs3>
-        <v-text-field
-          class="search-box"
-          v-model.lazy="searchText"
-          small
-          outline
-          label="Search"
-          prepend-inner-icon="search"
-          single-line
-          hide-details
-          clearable
-        ></v-text-field>
+      <v-flex xs5 class="d-flex justify-end justify-space-between">
+        <div class="d-none d-sm-flex">
+          <template v-for="(country, index) in countries">
+            <v-btn v-if="index==0" outlined rounded :selected="country === selectedCountry" class="country-btn country-btn--all text-capitalize mr-2" v-bind:key="country" @click="setSelectedCountry(country)">{{country}}</v-btn>
+            <v-btn v-else outlined rounded :selected="country === selectedCountry" class="country-btn text-capitalize mr-2" v-bind:key="country" @click="setSelectedCountry(country)">{{country}}</v-btn>
+          </template>
+        </div>
+        <div class="d-flex d-sm-none">
+          <v-menu offset-y transition="scroll-y-transition">
+            <template v-slot:activator="{ on }">
+              <v-btn outlined rounded class="country-btn text-capitalize" v-on="on">Filter</v-btn>
+            </template>
+            <v-list text>
+              <template v-for="country in countries">
+                <v-list-item v-bind:key="country">
+                  <v-btn outlined block class="country-btn country-btn text-capitalize" @click="setSelectedCountry(country)">{{country}}</v-btn>
+                </v-list-item>
+              </template>
+            </v-list>
+          </v-menu>
+        </div>
       </v-flex>
     </v-layout>
     <v-layout wrap align-center>
-      <v-flex v-for="meetupGroup in meetupGroupsByCountry" :key="meetupID" xs4>
-        <v-card color="#152e63" min-height="200px" raised dark>
+      <v-flex v-for="meetupGroup in meetupGroupsByCountry" :key="meetupGroup.meetupID" xs12 lg4>
+        <v-card text>
           <v-card-title>
-            <router-link :key="name" :to="'/meetup-groups/'+meetupGroup.meetupID">
-              <v-img
-                position="center"
-                contain
-                :src="meetupGroup.city.toLowerCase()+'.jpeg'"
-                height="250px"
-              ></v-img>
-            </router-link>
+            <v-img
+              position="center"
+              contain
+              :src="meetupGroup.city.toLowerCase()+'.jpeg'"
+              height="250px"
+            ></v-img>
           </v-card-title>
-          <v-card-text class="text-center font-weight-bold title">{{meetupGroup.name}}</v-card-text>
+          <v-card-text class="text-center font-weight-bold title">
+            <router-link
+              :key="meetupGroup.name"
+              :to="'/meetup-groups/'+meetupGroup.meetupID"
+            >{{meetupGroup.name}}</router-link>
+          </v-card-text>
           <v-card-actions>
-            <v-layout align-center justify-center row fill-height>
-              <v-flex xs4>
-                <span
-                  @click="setSelectedCountry(meetupGroup.country)"
-                  :key="name"
-                  :href="'/meetup-groups?country='+meetupGroup.country"
-                >
-                  <v-img position="center" contain :src="meetupGroup.country+'.png'" height="25px"></v-img>
-                </span>
-              </v-flex>
-              <v-flex xs4>
+            <v-layout row fill-height>
+              <v-flex class="d-flex justify-center" xs12>
                 <a
+                  class="mr-2"
                   :href="meetupGroup.city ? 'https://github.com/cloud-native-nordics/meetups/tree/master/'+ meetupGroup.city.toLowerCase() : 'https://github.com/cloud-native-nordics/meetups/tree/master/'"
                   target="_blank"
                 >
-                  <v-img position="center" contain src="github.png" height="25px"></v-img>
+                  <img contain src="github.png" height="33px" />
                 </a>
-              </v-flex>
-              <v-flex xs4>
+
                 <a
+                  class="ml-2"
                   :href="meetupGroup.meetupID ? 'https://www.meetup.com/'+meetupGroup.meetupID : 'https://www.meetup.com/'"
                   target="_blank"
                 >
-                  <v-img position="center" contain src="meetup.png" height="25px"></v-img>
+                  <img contain src="meetup.png" height="33px" />
                 </a>
               </v-flex>
             </v-layout>
           </v-card-actions>
-          <br>
+          <br />
         </v-card>
       </v-flex>
     </v-layout>
@@ -100,8 +82,8 @@ export default {
   },
   data() {
     return {
-      countries: ["denmark", "sweden", "norway", "finland"],
-      selectedCountries: ["denmark", "sweden", "norway", "finland"],
+      countries: ["all countries","denmark", "sweden", "norway", "finland"],
+      selectedCountry: "all countries",
       searchText: ""
     };
   },
@@ -110,7 +92,7 @@ export default {
       if (this.meetupGroups != undefined) {
         return this.meetupGroups
           .filter(x => {
-            return this.selectedCountries.includes(x.country);
+            return this.selectedCountry === x.country || this.selectedCountry === "all countries";
           })
           .filter(x => {
             if (
@@ -127,13 +109,12 @@ export default {
   mounted() {
     // see if there's searchText query parameter in the url and if there is, choose the country
     if (this.$route.query.country !== undefined) {
-      this.selectedCountries = [this.$route.query.country];
+      this.selectedCountry = this.$route.query.country;
     }
   },
   methods: {
     setSelectedCountry(country) {
-      console.log(country)
-      this.selectedCountries = [country];
+      this.selectedCountry = country;
     }
   }
 };

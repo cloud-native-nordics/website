@@ -1,99 +1,77 @@
 <template>
   <v-container grid-list-lg fluid>
-    <v-layout justify-space-between row fill-height>
-      <v-flex xs3>
-        <v-combobox
-          multiple
-          v-model="selectedCountries"
-          :items="countries"
-          chips
-          label="Select countries"
-        >
-          <template v-slot:selection="data">
-            <v-chip
-              :key="JSON.stringify(data.item.name)"
-              v-bind="data.attrs"
-              :input-value="data.selected"
-              :disabled="data.disabled"
-              @click.stop="data.parent.selectedIndex = data.index"
-              @click:close="data.parent.selectItem(data.item.name)"
-            >
-              <v-avatar left>
-                <img :src="data.item+'.png'" height="25px" />
-              </v-avatar>
-              {{ data.item }}
-            </v-chip>
-          </template>
-        </v-combobox>
+    <v-layout row fill-height class="pt-5 pb-5">
+      <v-flex xs7>
+        <h1>SPEAKERS</h1>
       </v-flex>
-      <v-flex xs3>
-        <v-text-field
-          class="search-box"
-          v-model.lazy="searchText"
-          small
-          outline
-          label="Search"
-          prepend-inner-icon="search"
-          single-line
-          hide-details
-          clearable
-        ></v-text-field>
+      <v-flex xs5 class="d-flex justify-end justify-space-between">
+        <div class="d-none d-sm-flex">
+          <template v-for="(country, index) in countries">
+            <v-btn v-if="index==0" :selected="country === selectedCountry" outlined rounded class="country-btn country-btn--all text-capitalize mr-2" v-bind:key="country" @click="setSelectedCountry(country)">{{country}}</v-btn>
+            <v-btn v-else :selected="country === selectedCountry" outlined rounded class="country-btn text-capitalize mr-2" v-bind:key="country" @click="setSelectedCountry(country)">{{country}}</v-btn>
+          </template>
+        </div>
+        <div class="d-flex d-sm-none">
+          <v-menu offset-y transition="scroll-y-transition">
+            <template v-slot:activator="{ on }">
+              <v-btn outlined rounded class="country-btn text-capitalize" v-on="on">Filter</v-btn>
+            </template>
+            <v-list text>
+              <template v-for="country in countries">
+                <v-list-item v-bind:key="country">
+                  <v-btn outlined block class="country-btn country-btn text-capitalize" @click="setSelectedCountry(country)">{{country}}</v-btn>
+                </v-list-item>
+              </template>
+            </v-list>
+          </v-menu>
+        </div>
       </v-flex>
     </v-layout>
     <v-layout wrap>
-      <v-flex v-for="speaker in speakersByCountry" :key="id" xs2>
-        <v-card color="#152e63" min-height="200px" raised dark>
+      <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 xs6>
+        <v-card text>
           <v-card-title>
             <router-link :to="'/speakers/'+speaker.id">{{speaker.name}}</router-link>
           </v-card-title>
           <v-card-text>
+            <span v-if="speaker.title" class="text--primary .text-no-wrap text-title">
+              {{ speaker.title}}
+              <br />
+            </span>
             <span class="text--primary .text-no-wrap">
-              {{speaker.title ? speaker.title : "No title"}} @
+              @
               <router-link
                 v-if="speaker.company"
                 :to="'/company/'+speaker.company.id"
                 target="_blank"
               >{{speaker.company.name}}</router-link>
             </span>
-            <br />
-            <span class="text--primary .text-no-wrap">
-              <a
-                v-if="speaker.email"
-                :href="'mailto:'+speaker.email"
-                target="_top"
-              >{{speaker.email}}</a>
-              <span v-else>No email</span>
-            </span>
           </v-card-text>
           <v-card-actions>
-            <v-layout align-end justify-center row fill-height>
-              <v-flex xs3>
-                <router-link
-                  :key="name"
-                  v-for="country in speaker.countries"
-                  :to="'/meetup-groups?country='+country.name"
-                >
-                  <img position="left" contain :src="country.name+'.png'" height="25px">
-                </router-link>
-              </v-flex>
-              <v-flex xs3>
+            <v-layout justify-start row fill-height>
+              <v-flex xs12>
                 <a
                   :href="speaker.github ? 'https://github.com/'+ speaker.github : 'https://github.com/'"
                   target="_blank"
                 >
-                  <img position="left" contain src="github.png" height="25px">
+                  <img contain src="github.png" height="33px" />
                 </a>
-              </v-flex>
-              <v-flex xs3>
                 <a
                   :href="speaker.speakersBureau ? 'https://www.cncf.io/speaker/'+speaker.speakersBureau : 'https://www.cncf.io/speakers/'"
                   target="_blank"
                 >
-                  <img position="left" contain src="cncf.png" height="25px">
+                  <img contain src="cncf.png" height="33px" />
                 </a>
               </v-flex>
             </v-layout>
           </v-card-actions>
+          <v-footer absolute>
+            <router-link
+              :key="country.name"
+              v-for="country in speaker.countries"
+              :to="'/meetup-groups?country='+country.name"
+            >{{country.name}}</router-link>
+          </v-footer>
         </v-card>
       </v-flex>
     </v-layout>
@@ -110,8 +88,8 @@ export default {
   },
   data() {
     return {
-      countries: ["denmark", "sweden", "norway", "finland"],
-      selectedCountries: ["denmark", "sweden", "norway", "finland"],
+      countries: ["all countries","denmark", "sweden", "norway", "finland"],
+      selectedCountry: "all countries",
       searchText: ""
     };
   },
@@ -122,17 +100,25 @@ export default {
           .filter(x => {
             let valid = true;
             x.countries.forEach(country => {
-              valid = this.selectedCountries.includes(country.name);
+              valid = this.selectedCountry === country.name || this.selectedCountry === "all countries";
             });
             return valid;
           })
           .filter(x => {
-            if (this.searchText === "" || x.name.toLowerCase().includes(this.searchText.toLowerCase())) {
+            if (
+              this.searchText === "" ||
+              x.name.toLowerCase().includes(this.searchText.toLowerCase())
+            ) {
               return true;
             }
             return false;
           });
       }
+    }
+  },
+  methods: {
+    setSelectedCountry(country) {
+      this.selectedCountry = country;
     }
   }
 };

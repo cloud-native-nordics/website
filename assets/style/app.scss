@@ -1,0 +1,131 @@
+@import "_colors";
+
+.v-application{
+    font-family: 'Roboto Mono', monospace !important;
+    h1{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+
+        text-transform: uppercase;
+
+        color: $primary-col;
+
+        padding-left: 20px;
+    }
+    .theme--light.v-sheet.v-app-bar {
+        background-color: $primary-col;
+        border-color: $primary-col;
+        
+        .v-toolbar__items .v-btn{
+            background-color: $primary-col;
+            border-color: $primary-col;
+            color: white;
+        }
+    }
+
+    .theme--light.v-list {
+        background-color: $primary-col;
+        border-color: $primary-col;
+
+        .theme--light.v-btn {
+            background-color: $primary-col;
+            border-color: $primary-col;
+            color: white;
+        }
+    }
+
+    .theme--light.v-navigation-drawer {
+        background-color: $primary-col;
+
+        .v-navigation-drawer__content .v-list .v-btn{
+            background-color: $primary-col;
+            border-color: $primary-col;
+            color: white;
+        }
+    }
+    
+    .country-btn {
+        border: 2px solid rgba(0, 46, 141, 0.4);
+        // box-sizing: border-box;
+        width: 140px;
+        height: 48px !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 116.4%;
+        /* or 19px */
+        
+        text-align: center;
+
+        &--all{
+            width: 184px;
+        }
+
+        &[selected] {
+            background-color: $primary-col;
+            border-color: $primary-col;
+            color: white;
+        }
+    }
+
+    .v-card {
+        background: linear-gradient(180deg, #FEEDED 0%, #F3EAFF 100%);
+        border-radius: 2px;
+        min-height: 330px;
+
+        &.group-card {
+            width: 300px;
+            height: 330px;
+        }
+
+        .v-card__title{
+            a {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: #326CE5;
+                text-decoration: none;
+            }
+        }
+        .v-card__text{
+            span.text-title  {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.64) !important;
+            }
+            
+            span {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.3) !important;
+            }
+            a {
+                font-size: 14px;
+                color: #326CE5;
+                text-decoration: none;
+            }
+        }
+
+        .v-card__actions {
+            img {
+                filter: invert(52%) sepia(99%) saturate(5096%) hue-rotate(212deg) brightness(93%) contrast(92%);
+            }
+        }
+
+        footer {
+            background: transparent;
+            text-transform: capitalize;
+            
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.81);
+            }
+        }
+    }
+
+    .primary-overlay {
+        filter: invert(52%) sepia(99%) saturate(5096%) hue-rotate(212deg) brightness(93%) contrast(92%);
+    }
+    
+}
+

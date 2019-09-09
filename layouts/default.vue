@@ -1,33 +1,62 @@
 <template>
-  <v-app dark>
-    <v-bottom-navigation app dark grow fixed :value="activeBtn" color="#326ce5">
-      <v-btn to="/meetup-groups">
-        <span>Meetup Groups</span>
-        <v-icon>device_hub</v-icon>
-      </v-btn>
+  <v-app>
+    <v-app-bar text app>
+      <v-toolbar-title>
+        <nuxt-link to="/" style="position: relative;">
+          <v-img width="80%" src="/logo.svg" />
+        </nuxt-link>
+      </v-toolbar-title>
 
-      <v-btn to="/speakers">
-        <span>Speakers</span>
-        <v-icon>record_voice_over</v-icon>
-      </v-btn>
+      <div class="flex-grow-1"></div>
 
-      <v-btn to="/" style="position: relative;">
-        <span>Cloud Native Nordics</span>
-        <v-icon>record_voice_over</v-icon>
-        <img style="position:absolute; top: -35px;" height="100" width="100" src="/snowflake-menu.png">
-      </v-btn>
+      <v-toolbar-items class="d-none d-sm-flex">
+        <v-btn large text depressed to="/meetup-groups">
+          <span><b>Meetup Groups</b></span>
+        </v-btn>
 
-      <v-btn to="/sponsors">
-        <span>Sponsors</span>
-        <v-icon>attach_money</v-icon>
-      </v-btn>
+        <v-btn large text depressed to="/speakers">
+          <span><b>Speakers</b></span>
+        </v-btn>
 
-      <v-btn to="/members">
-        <span>Members</span>
-        <v-icon>group</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
+        <v-btn large text depressed to="/sponsors">
+          <span><b>Sponsors</b></span>
+        </v-btn>
 
+        <v-btn large text depressed to="/members">
+          <span><b>Members</b></span>
+        </v-btn>
+
+        <v-btn large text depressed>
+          <v-icon large>search</v-icon>
+        </v-btn>
+      </v-toolbar-items>
+
+      <v-app-bar-nav-icon color="white" class="d-flex d-sm-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list>
+        <v-list-item-group subheader three-line v-model="group">
+          <nuxt-link to="/" style="position: relative;">
+            <v-img width="80%" src="/logo.svg" />
+          </nuxt-link>
+          <v-btn large text depressed block to="/meetup-groups">
+            <span><b>Meetup Groups</b></span>
+          </v-btn>
+
+          <v-btn large text depressed block to="/speakers">
+            <span><b>Speakers</b></span>
+          </v-btn>
+
+          <v-btn large text depressed block to="/sponsors">
+            <span><b>Sponsors</b></span>
+          </v-btn>
+
+          <v-btn large text depressed block to="/members">
+            <span><b>Members</b></span>
+          </v-btn>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
     <v-content>
       <Nuxt />
     </v-content>
@@ -35,28 +64,21 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      activeBtn: 2
-    };
+  data: () => ({
+    drawer: false,
+    group: null
+  }),
+
+  watch: {
+    group() {
+      this.drawer = false;
+    }
   }
 };
 </script>
+
 <style>
 body {
   overflow: hidden;
-}
-.dark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-  background: black;
-  color: white;
-  padding: 10px;
-}
-.dark a {
-  color: white;
 }
 </style>
