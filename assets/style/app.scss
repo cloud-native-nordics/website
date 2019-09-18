@@ -14,7 +14,7 @@
         padding-left: 20px;
     }
     .theme--light.v-sheet.v-app-bar {
-        background-image: linear-gradient(to right, #502366 , #EA1F7A);
+        background-image: $gradient;
         border-color: $primary-col;
 
         .v-toolbar__items .v-btn{
