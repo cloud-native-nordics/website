@@ -14,11 +14,10 @@
         padding-left: 20px;
     }
     .theme--light.v-sheet.v-app-bar {
-        background-color: $primary-col;
+        background-image: $gradient;
         border-color: $primary-col;
-        
+
         .v-toolbar__items .v-btn{
-            background-color: $primary-col;
             border-color: $primary-col;
             color: white;
         }
@@ -44,7 +43,7 @@
             color: white;
         }
     }
-    
+
     .country-btn {
         border: 2px solid rgba(0, 46, 141, 0.4);
         // box-sizing: border-box;
@@ -55,7 +54,7 @@
         font-size: 16px;
         line-height: 116.4%;
         /* or 19px */
-        
+
         text-align: center;
 
         &--all{
@@ -93,7 +92,7 @@
                 font-size: 12px;
                 color: rgba(0, 0, 0, 0.64) !important;
             }
-            
+
             span {
                 font-size: 12px;
                 color: rgba(0, 0, 0, 0.3) !important;
@@ -114,7 +113,7 @@
         footer {
             background: transparent;
             text-transform: capitalize;
-            
+
             a {
                 text-decoration: none;
                 font-size: 14px;
@@ -126,6 +125,6 @@
     .primary-overlay {
         filter: invert(52%) sepia(99%) saturate(5096%) hue-rotate(212deg) brightness(93%) contrast(92%);
     }
-    
+
 }
 
