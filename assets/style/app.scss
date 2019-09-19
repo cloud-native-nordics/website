@@ -68,6 +68,12 @@
         }
     }
 
+    .v-snack__content{
+        a {
+            color: white;
+        }
+    }
+
     .v-card {
         background: linear-gradient(180deg, #FEEDED 0%, #F3EAFF 100%);
         border-radius: 2px;
