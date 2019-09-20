@@ -4,53 +4,51 @@
     dark
     src="cover2.png"
   >
+  <v-container>
     <v-row align="center" justify="center">
-      <h1 class="mt-12">Cloud Native Nordics</h1>
+      <h1 style="color: white;">Welcome to Cloud Native Nordics</h1>
     </v-row>
+    <br>
     <v-row align="center" justify="center">
       <h3>Join our slack community</h3>
     </v-row>
+    <br>
     <v-row align="center" justify="center">
+      <v-col md=4 justify="center" align="center"></v-col>
+      <v-col md=4 justify="center" align="center">
         <v-text-field
-          color="#FFFFFF"
           label="Email"
           outlined
           append-icon="mdi-arrow-right-circle"
           v-model="email"
           @click:append="sendInvite"
-        ></v-text-field>
+          style="color: white;"></v-text-field>
 
-      <v-col md="6" offset-md="3">
-      <v-snackbar color="primary" multi-line timeout="20000" v-model="snackbar">
-        <span v-html="response"></span>
-        <v-btn text @click="snackbar = false">Close</v-btn>
-      </v-snackbar>
+        <v-snackbar color="primary" multi-line timeout="20000" v-model="snackbar">
+          <span v-html="response"></span>
+          <v-btn text @click="snackbar = false">Close</v-btn>
+        </v-snackbar>
       </v-col>
-      </v-row>
+      <v-col md=4 justify="center" align="center"></v-col>
+    </v-row>
+
+    </v-container>
 
   </v-parallax>
-  <v-container grid-list-md text-center fill-height>
-    <v-layout align-center justify-space-around column>
-      <h1 class="mt-5">Cloud Native Nordics</h1>
-      <br>
-      <h3>Join our slack community</h3>
-      <v-flex xs-12 mr-5>
-        <v-text-field
-          color="#FFFFFF"
-          label="Email"
-          outlined
-          append-icon="mdi-arrow-right-circle"
-          v-model="email"
-          @click:append="sendInvite"
-        ></v-text-field>
-      </v-flex>
-      <v-snackbar color="primary" multi-line timeout="20000" v-model="snackbar">
-        <span v-html="response"></span>
-        <v-btn text @click="snackbar = false">Close</v-btn>
-      </v-snackbar>
-    </v-layout>
-  </v-container>
+
+    <br>
+    <v-row>
+      <v-col md=6 justify="center" align="center">
+        <h2>Upcoming meetups</h2>
+      </v-col>
+      <v-col md=6 justify="center" align="center">
+        <h2>Some other stuff</h2>
+      </v-col>
+    </v-row>
+    <br>
+
   </section>
+
 </template>
 
 <script>
