@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar text app>
+    <v-app-bar text app flat>
       <v-toolbar-title>
         <nuxt-link to="/" style="position: relative;">
           <v-img width="80%" src="/logo.svg" />

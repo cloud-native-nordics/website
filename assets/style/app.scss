@@ -1,18 +1,26 @@
 @import "_colors";
 
 .v-application{
-    font-family: 'Roboto Mono', monospace !important;
+    font-family: 'Raleway', monospace !important;
     h1{
         font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
+        font-weight: 300;
+        font-size: 45px;
 
-        text-transform: uppercase;
-
-        color: $primary-col;
+        color: #502366;
 
         padding-left: 20px;
     }
+    h2{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+
+        color: #502366;
+
+        padding-left: 20px;
+    }
+
     .theme--light.v-sheet.v-app-bar {
         background-image: $gradient;
         border-color: $primary-col;
@@ -21,6 +29,14 @@
             border-color: $primary-col;
             color: white;
         }
+    }
+
+    .theme--light.v-text-field--outlined fieldset {
+        border-color: rgba(255, 255, 255, 0.54);
+    }
+
+    .theme--light.v-label {
+        color:  rgba(255, 255, 255, 0.54);
     }
 
     .theme--light.v-list {
@@ -75,9 +91,9 @@
     }
 
     .v-card {
-        background: linear-gradient(180deg, #FEEDED 0%, #F3EAFF 100%);
+        background: #D6d6d6;
         border-radius: 2px;
-        min-height: 330px;
+        min-height: 200px;
 
         &.group-card {
             width: 300px;
@@ -89,7 +105,7 @@
                 font-style: normal;
                 font-weight: bold;
                 font-size: 18px;
-                color: #326CE5;
+                color: $primary-col;
                 text-decoration: none;
             }
         }
@@ -105,7 +121,7 @@
             }
             a {
                 font-size: 14px;
-                color: #326CE5;
+                color: $primary-col;
                 text-decoration: none;
             }
         }
