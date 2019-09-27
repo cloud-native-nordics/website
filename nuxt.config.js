@@ -18,7 +18,12 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap'
+      },
     ]
   },
   /*
@@ -44,7 +49,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
   ],
-  
+
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
@@ -57,7 +62,7 @@ export default {
       default: {
         httpEndpoint: 'https://stats-api.cloudnativenordics.com/query',
         // Enable Automatic Query persisting with Apollo Engine
-        persisting: true, 
+        persisting: true,
       }
     }
   },
