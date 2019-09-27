@@ -43,6 +43,7 @@ export default {
     "@nuxtjs/vuetify",
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
+    '@nuxtjs/axios',
   ],
   
   vuetify: {
