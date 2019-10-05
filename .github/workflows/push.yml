@@ -1,0 +1,25 @@
+on: push
+name: Publish container
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      uses: ./.github/actions/docker
+      env:
+        DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
+      with:
+        args: build Dockerfile
+    - name: Login
+      uses: actions/docker/login@master
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    - name: Push
+      uses: ./.github/actions/docker
+      env:
+        DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
+      with:
+        args: push
