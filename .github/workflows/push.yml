@@ -1,25 +1,27 @@
-on: push
 name: Publish container
+on:
+  push:
+    branches:
+    - master
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Build
-      uses: ./.github/actions/docker
-      env:
-        DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
-      with:
-        args: build Dockerfile
-    - name: Login
-      uses: actions/docker/login@master
+    - name: Checkout master
+      uses: actions/checkout@master
+      id: checkout
+    - name: Logging in to container registry...
       env:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    - name: Push
-      uses: ./.github/actions/docker
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - name: Building Docker container...
       env:
         DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
-      with:
-        args: push
+      run:
+        docker build --rm -t $DOCKER_IMAGE:latest .
+    - name: Publishing Container...
+      env:
+        DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
+      run: docker push $DOCKER_IMAGE
