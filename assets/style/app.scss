@@ -84,6 +84,12 @@
         }
     }
 
+    @media (max-width: 375px) {
+        .country-btn {
+            width: 80px;
+        }
+    }
+
     .v-snack__content{
         a {
             color: white;
