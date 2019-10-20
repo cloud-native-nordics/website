@@ -16,12 +16,12 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-    - name: Building Docker container...
+    - name: Building Docker image...
       env:
         DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
       run:
         docker build --rm -t $DOCKER_IMAGE:$(echo ${GITHUB_SHA} | head -c7) .
-    - name: Publishing Container...
+    - name: Publishing image...
       env:
         DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
       run: docker push $DOCKER_IMAGE:$(echo ${GITHUB_SHA} | head -c7)
