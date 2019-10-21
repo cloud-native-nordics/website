@@ -20,8 +20,8 @@ jobs:
       env:
         DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
       run:
-        docker build --rm -t $DOCKER_IMAGE:$(echo ${GITHUB_SHA} | head -c7) .
+        docker build --rm -t $DOCKER_IMAGE:master-$(echo ${GITHUB_SHA} | head -c7) .
     - name: Publishing image...
       env:
         DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE }}
-      run: docker push $DOCKER_IMAGE:$(echo ${GITHUB_SHA} | head -c7)
+      run: docker push $DOCKER_IMAGE:master-$(echo ${GITHUB_SHA} | head -c7)
