@@ -1,5 +1,6 @@
 <template>
-  <v-container grid-list-lg fluid>
+  <section>
+    <v-container grid-list-lg fluid>
     <v-layout row fill-height class="pt-5 pb-5 d-flex flex-wrap flex-md-nowrap">
       <v-flex xs4 class="pt-0">
         <h1>GROUPS</h1>
@@ -16,6 +17,7 @@
             <template v-slot:activator="{ on }">
               <v-btn outlined rounded class="country-btn text-capitalize mt-1" v-on="on">Filter</v-btn>
             </template>
+          </v-menu>
           </div>
           <div class="d-flex d-sm-none">
             <v-menu offset-y transition="scroll-y-transition">
@@ -76,7 +78,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  <Footer></Footer>
+    <Footer></Footer>
   </section>
 </template>
 

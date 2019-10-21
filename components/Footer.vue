@@ -1,16 +1,24 @@
 <template>
-  <v-container>
-   <v-row>
-     <v-col md=12 justify="center" align="center">
-       <span>
-        <p style="color: #502366;">Proudly running on </p>
-        <a href="https://www.digitalocean.com/">
-         <img width="200px" src="DO_Logo_horizontal_blue.svg" />
-       </a>
-     </span>
-   </v-col>
- </v-row>
-</v-container>
+    <v-footer fluid class="footer">
+    <v-row>
+      <v-col cols="2"></v-col>
+      <v-col cols="4" justify="left" align="left">
+        <v-layout align-center>
+          <img width="32px" src="/GitHub-Mark-32px.png" />
+          <v-flex fill-height>
+            &nbsp;<a href="github.com/cloud-native-nordics">github.com/cloud-native-nordics</a>
+          </v-flex>
+        </v-layout>
+        <p>#CloudNativeNordics</p>
+      </v-col>
+      <v-col cols="4"
+      justify="right"
+      align="right">
+      <v-img width="30%" src="/DO_Powered_by_Badge_blue.png" />
+      </v-col>
+      <v-col cols="2"></v-col>
+    </v-row>
+  </v-footer>
 </template>
 
 <script>
