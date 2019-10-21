@@ -25,10 +25,6 @@
         <v-btn large text depressed to="/members">
           <span><b>Members</b></span>
         </v-btn>
-
-        <v-btn large text depressed>
-          <v-icon large>search</v-icon>
-        </v-btn>
       </v-toolbar-items>
 
       <v-app-bar-nav-icon color="white" class="d-flex d-sm-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
