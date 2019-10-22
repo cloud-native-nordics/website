@@ -40,8 +40,8 @@
 
 <script>
 import members from "~/graphql/members.gql";
-import CountryFilter from "~/components/CountryFilter.vue";
-import Headline from "~/components/Headline.vue";
+import CountryFilter from "~/components/common/CountryFilter.vue";
+import Headline from "~/components/common/Headline.vue";
 export default {
   components: {
     CountryFilter: CountryFilter,

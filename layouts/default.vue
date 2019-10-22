@@ -8,8 +8,8 @@
   </v-app>
 </template>
 <script>
-import Navigation from "~/components/Navigation.vue";
-import BottomFooter from "~/components/BottomFooter.vue";
+import Navigation from "~/components/common/Navigation.vue";
+import BottomFooter from "~/components/common/BottomFooter.vue";
 export default {
   components: {
     Navigation: Navigation,
