@@ -2,7 +2,7 @@
   <section style="color: black;">
 
   <v-container fluid
-    style="background-color: #ffffff; height: 400px;">
+    class="section-one">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="4">
@@ -20,7 +20,7 @@
   </v-container>
 
   <v-container fluid
-    style="background-color: #dddddd; height: 100px;">
+    class="section-two">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="4">
@@ -45,7 +45,7 @@
   </v-container>
 
   <v-container fluid
-    style="background-color: #F11F7E; height: 260px; color: white;">
+    class="section-three">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="8"
@@ -60,7 +60,7 @@
   </v-container>
 
    <v-container fluid
-    style="background-color: white; height: 400px; color: #512268;">
+    class="section-four">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="8"
@@ -101,7 +101,7 @@
   </v-container>
 
    <v-container fluid
-    style="background-color: #512268; height: 500px; color: white;">
+    class="section-five">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="4"
