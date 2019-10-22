@@ -20,6 +20,16 @@
 
         padding-left: 20px;
     }
+    h3{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+
+        color: #502366;
+
+        padding-left: 20px;
+    }
+
 
     .theme--light.v-sheet.v-app-bar {
         background-image: $gradient;
@@ -47,6 +57,14 @@
             background-color: $primary-col;
             border-color: $primary-col;
             color: white;
+        }
+
+        .theme--light.country-btn-sm {
+            &[selected] {
+                background-color: $primary-col;
+                border-color: $primary-col;
+                color: #EA1F7A;
+            }
         }
     }
 
@@ -81,12 +99,6 @@
             background-color: $primary-col;
             border-color: $primary-col;
             color: white;
-        }
-    }
-
-    @media (max-width: 375px) {
-        .country-btn {
-            width: 80px;
         }
     }
 
