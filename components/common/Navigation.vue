@@ -28,9 +28,9 @@
           </span>
         </v-btn>
 
-        <v-btn large text depressed to="/members">
+        <v-btn large text depressed to="/events">
           <span>
-            <b>Members</b>
+            <b>Events</b>
           </span>
         </v-btn>
       </v-toolbar-items>
