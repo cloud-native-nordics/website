@@ -33,30 +33,34 @@
     //TODO: These should probably be scoped under some landing page class or something=
     .section-one {
         background-color: white;
-        height: 400px;
+        height: 100%;
     }
 
     .section-two {
         background-color: $grey;
-        height: 100px;
+        height: 100%;
     }
 
     .section-three {
         background-color: $pink;
-        height: 260px;
+        height: 100%;
         color: white;
     }
 
     .section-four {
         background-color: white;
-        height: 400px;
+        height: 100%;
         color: $purple;
     }
 
     .section-five {
         background-color: $purple;
-        height: 500px;
+        height: 100%;
         color: white;
+    }
+
+    .slack-invite{
+        border-color: $purple;
     }
 
     .theme--light.v-sheet.v-app-bar {
