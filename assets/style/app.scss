@@ -137,16 +137,24 @@
                 filter: invert(52%) sepia(99%) saturate(5096%) hue-rotate(212deg) brightness(93%) contrast(92%);
             }
         }
+    }
 
-        footer {
-            background: transparent;
-            text-transform: capitalize;
+    footer {
+        background: transparent;
 
-            a {
-                text-decoration: none;
-                font-size: 14px;
-                color: rgba(0, 0, 0, 0.81);
-            }
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.81);
+        }
+
+        p {
+            margin-top: 0.5em;
+            font-size: 1.25em;
+            color: rgba(0, 0, 0, 0.81);
+        }
+
+        .github {
+            max-width: 32px;
         }
     }
 

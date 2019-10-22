@@ -117,32 +117,18 @@
       <v-col cols="2"></v-col>
     </v-row>
   </v-container>
-
-  <v-container fluid
-    style="background-color: #dddddd; height: 150px;">
-    <v-row>
-      <v-col cols="2"></v-col>
-      <v-col cols="4"
-        justify="left"
-        align="left">
-      <h3>github.com</h3>
-      </v-col>
-      <v-col cols="4"
-        justify="right"
-        align="right">
-        <v-img width="30%" src="/DO_Powered_by_Badge_blue.png" />
-      </v-col>
-      <v-col cols="2"></v-col>
-      </v-row>
-  </v-container>
+  <Footer></Footer>
   </section>
-
 </template>
 
 <script>
 import SlackInvite from "~/graphql/slackInvite.gql";
+import Footer from '~/components/Footer.vue';
 export default {
-  components: {},
+  components:{
+         'Footer':Footer,
+  },
+  // slack invite
   data: () => ({
     email: "",
     response: "",

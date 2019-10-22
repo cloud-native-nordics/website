@@ -11,9 +11,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/vuetify": "1.0.2",
     "@nuxtjs/apollo": "4.0.0-rc9",
     "@nuxtjs/pwa": "2.6.0",
+    "@nuxtjs/vuetify": "1.0.2",
     "graphql-tag": "2.10.1",
     "nuxt": "2.8.1"
   },
