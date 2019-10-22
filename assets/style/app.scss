@@ -30,13 +30,41 @@
         padding-left: 20px;
     }
 
+    //TODO: These should probably be scoped under some landing page class or something=
+    .section-one {
+        background-color: white;
+        height: 400px;
+    }
+
+    .section-two {
+        background-color: $grey;
+        height: 100px;
+    }
+
+    .section-three {
+        background-color: $pink;
+        height: 260px;
+        color: white;
+    }
+
+    .section-four {
+        background-color: white;
+        height: 400px;
+        color: $purple;
+    }
+
+    .section-five {
+        background-color: $purple;
+        height: 500px;
+        color: white;
+    }
 
     .theme--light.v-sheet.v-app-bar {
         background-image: $gradient;
-        border-color: $primary-col;
+        border-color: $purple;
 
         .v-toolbar__items .v-btn{
-            border-color: $primary-col;
+            border-color: $purple;
             color: white;
         }
     }
@@ -50,30 +78,30 @@
     }
 
     .theme--light.v-list {
-        background-color: $primary-col;
-        border-color: $primary-col;
+        background-color: $purple;
+        border-color: $purple;
 
         .theme--light.v-btn {
-            background-color: $primary-col;
-            border-color: $primary-col;
+            background-color: $purple;
+            border-color: $purple;
             color: white;
         }
 
         .theme--light.country-btn-sm {
             &[selected] {
-                background-color: $primary-col;
-                border-color: $primary-col;
+                background-color: $purple;
+                border-color: $purple;
                 color: #EA1F7A;
             }
         }
     }
 
     .theme--light.v-navigation-drawer {
-        background-color: $primary-col;
+        background-color: $purple;
 
         .v-navigation-drawer__content .v-list .v-btn{
-            background-color: $primary-col;
-            border-color: $primary-col;
+            background-color: $purple;
+            border-color: $purple;
             color: white;
         }
     }
@@ -96,8 +124,8 @@
         }
 
         &[selected] {
-            background-color: $primary-col;
-            border-color: $primary-col;
+            background-color: $purple;
+            border-color: $purple;
             color: white;
         }
     }
@@ -123,7 +151,7 @@
                 font-style: normal;
                 font-weight: bold;
                 font-size: 18px;
-                color: $primary-col;
+                color: $purple;
                 text-decoration: none;
             }
         }
@@ -139,7 +167,7 @@
             }
             a {
                 font-size: 14px;
-                color: $primary-col;
+                color: $purple;
                 text-decoration: none;
             }
         }
