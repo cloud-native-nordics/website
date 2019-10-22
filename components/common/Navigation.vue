@@ -62,9 +62,9 @@
             </span>
           </v-btn>
 
-          <v-btn large text depressed block to="/members">
+          <v-btn large text depressed block to="/events">
             <span>
-              <b>Members</b>
+              <b>Events</b>
             </span>
           </v-btn>
         </v-list-item-group>
