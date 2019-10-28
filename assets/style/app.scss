@@ -32,13 +32,32 @@
 
     //TODO: These should probably be scoped under some landing page class or something=
     .section-one {
-        background-color: white;
+        background-image: $gradient;
+        color: white;
         height: 100%;
+        .welcome {
+            margin-top: 100px;
+        }
+        h1{
+            color: white;
+            font-size: 55px;
+        }
+        h3 {
+            color: white;
+        }
+        .cover-image {
+            margin-top: 70px;
+            margin-bottom: 70px;
+            width: 50%
+        }
     }
 
     .section-two {
         background-color: $grey;
         height: 100%;
+        h3 {
+            margin-top: 10px;
+        }
     }
 
     .section-three {
