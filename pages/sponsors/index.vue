@@ -64,12 +64,28 @@ export default {
       if (this.companies != undefined) {
         return this.companies
           .filter(x => {
-            let valid = true;
+            let valid = false;
             x.countries.forEach(country => {
-              valid =
-                this.selectedCountry === country ||
-                this.selectedCountry === "all countries";
+              if (!valid) {
+                valid =
+                  this.selectedCountry === country ||
+                  this.selectedCountry === "all countries";
+              }
             });
+            return valid;
+          })
+          .filter(x => {
+            let valid = true;
+            if (x.countries.length == 0) {
+              valid = false;
+            }
+            return valid;
+          })
+          .filter(x => {
+            let valid = true;
+            if (x.sponsorTiers.length == 0) {
+              valid = false;
+            }
             return valid;
           })
           .filter(x => {
