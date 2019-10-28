@@ -1,0 +1,15 @@
+query companies {
+  companies {
+    id
+    name
+    websiteURL
+    logoURL
+    countries
+    sponsorTiers {
+      tier
+      meetupGroups {
+        name
+      }
+    }
+  }
+}

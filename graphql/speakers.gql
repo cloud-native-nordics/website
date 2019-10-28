@@ -4,9 +4,7 @@ query speakers {
       name
       title
       email
-      countries {
-        name
-      }
+      countries
       github
       speakersBureau
       company {

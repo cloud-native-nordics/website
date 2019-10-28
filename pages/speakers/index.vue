@@ -45,10 +45,10 @@
             </v-card-actions>
             <v-footer absolute>
               <router-link
-                :key="country.name"
+                :key="country"
                 v-for="country in speaker.countries"
-                :to="'/meetup-groups?country='+country.name"
-              >{{country.name}}</router-link>
+                :to="'/meetup-groups?country='+country"
+              >{{country+"&nbsp"}}</router-link>
             </v-footer>
           </v-card>
         </v-flex>
@@ -82,12 +82,21 @@ export default {
       if (this.speakers != undefined) {
         return this.speakers
           .filter(x => {
-            let valid = true;
+            let valid = false;
             x.countries.forEach(country => {
-              valid =
-                this.selectedCountry === country.name ||
-                this.selectedCountry === "all countries";
+              if (!valid) {
+                valid =
+                  this.selectedCountry === country ||
+                  this.selectedCountry === "all countries";
+              }
             });
+            return valid;
+          })
+          .filter(x => {
+            let valid = true;
+            if (x.countries.length == 0) {
+              valid = false;
+            }
             return valid;
           })
           .filter(x => {

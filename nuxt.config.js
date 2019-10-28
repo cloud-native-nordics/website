@@ -61,6 +61,7 @@ export default {
     clientConfigs: {
       default: {
         httpEndpoint: 'https://stats-api.cloudnativenordics.com/query',
+        // httpEndpoint: 'http://localhost:8080/query',
         // Enable Automatic Query persisting with Apollo Engine
         persisting: true,
       }
