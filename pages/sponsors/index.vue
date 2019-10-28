@@ -2,11 +2,11 @@
   <section>
     <v-container grid-list-lg fluid>
       <v-layout row fill-height class="pt-5 pb-5 d-flex flex-wrap flex-md-nowrap">
-        <headline text="sponsors"></headline>
+        <headline text="companies"></headline>
         <country-filter :selectedCountry="selectedCountry" @selectCountry="setSelectedCountry"></country-filter>
       </v-layout>
       <v-layout wrap>
-        <v-flex v-for="sponsor in sponsorsByCountry" :key="sponsor.id" lg2 xs6>
+        <v-flex v-for="sponsor in companiesByCountry" :key="sponsor.id" lg2 xs6>
           <v-card text>
             <v-card-title>
               <v-img contain :src="sponsor.logoURL" height="200px"></v-img>
@@ -27,10 +27,10 @@
             </v-card-text>
             <v-footer absolute>
               <router-link
-                :key="country.name"
+                :key="country"
                 v-for="country in sponsor.countries"
-                :to="'/meetup-groups?country='+country.name"
-              >{{country.name}}</router-link>
+                :to="'/meetup-groups?country='+country"
+              >{{country+"&nbsp"}}</router-link>
             </v-footer>
           </v-card>
         </v-flex>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import sponsors from "~/graphql/sponsors.gql";
+import companies from "~/graphql/companies.gql";
 import CountryFilter from "~/components/common/CountryFilter.vue";
 import Headline from "~/components/common/Headline.vue";
 export default {
@@ -49,8 +49,8 @@ export default {
     Headline: Headline
   },
   apollo: {
-    sponsors: {
-      query: sponsors
+    companies: {
+      query: companies
     }
   },
   data() {
@@ -60,14 +60,14 @@ export default {
     };
   },
   computed: {
-    sponsorsByCountry() {
-      if (this.sponsors != undefined) {
-        return this.sponsors
+    companiesByCountry() {
+      if (this.companies != undefined) {
+        return this.companies
           .filter(x => {
             let valid = true;
             x.countries.forEach(country => {
               valid =
-                this.selectedCountry === country.name ||
+                this.selectedCountry === country ||
                 this.selectedCountry === "all countries";
             });
             return valid;
