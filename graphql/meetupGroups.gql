@@ -1,6 +1,7 @@
 query meetupGroups {
   meetupGroups {
     meetupID
+    photo
     name
     city
     country

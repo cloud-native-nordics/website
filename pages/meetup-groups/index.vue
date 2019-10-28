@@ -12,7 +12,7 @@
               <v-img
                 position="center"
                 contain
-                :src="meetupGroup.city.toLowerCase()+'.jpeg'"
+                :src="meetupGroup.photo"
                 height="250px"
               ></v-img>
             </v-card-title>
