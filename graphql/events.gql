@@ -1,7 +1,9 @@
 query {
- meetups {
-  id
-  name
-  date
-	}
+  meetups {
+    name
+    date
+    address
+    id
+  }
 }
+
