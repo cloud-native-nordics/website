@@ -76,6 +76,17 @@
         background-color: $purple;
         height: 100%;
         color: white;
+        h2 {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+        .date{
+            color: white;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
     }
 
     .slack-invite{
