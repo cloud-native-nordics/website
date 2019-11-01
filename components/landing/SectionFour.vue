@@ -10,7 +10,7 @@
         <v-row justify="center" align="center">
           <v-col cols="2" justify="center" align="center">
             <v-img width="40%" src="/icon_group.png" />
-            <h1 style="font-weight: 800; font-size: 55px;">12</h1>
+            <h1 style="font-weight: 800; font-size: 55px;">{{ meetupGroupsCount }} </h1>
             <h3 style="font-weight: 400; font-size: 35px;">groups</h3>
           </v-col>
           <v-col cols="2">
@@ -20,12 +20,12 @@
           </v-col>
           <v-col cols="2">
             <v-img width="40%" src="/icon_members.png" />
-            <h1 style="font-weight: 800; font-size: 55px;">84</h1>
+            <h1 style="font-weight: 800; font-size: 55px;">{{ meetupsCount }}</h1>
             <h3 style="font-weight: 400; font-size: 35px;">meetups</h3>
           </v-col>
           <v-col cols="2">
             <v-img width="40%" src="/icon_avg_rsvp.png" />
-            <h1 style="font-weight: 800; font-size: 55px;">53</h1>
+            <h1 style="font-weight: 800; font-size: 55px;">{{ averageAttendees }}</h1>
             <h3 style="font-weight: 400; font-size: 35px;">avg. rsvps</h3>
           </v-col>
         </v-row>
@@ -35,3 +35,35 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+import meetupGroups from "~/graphql/meetupGroups.gql";
+import meetups from "~/graphql/meetups.gql";
+export default {
+  components: {
+  },
+  apollo: {
+    meetupGroups: {
+      query: meetupGroups
+    },
+    meetups: {
+      query: meetups
+    }
+  },
+  computed: {
+    meetupGroupsCount() {
+      return this.meetupGroups.length
+    },
+    meetupsCount() {
+      return this.meetups.length
+    },
+    averageAttendees() {
+      var total = 0;
+      for (var i = 0; i < this.meetups.length; i++) {
+        total = total + this.meetups[i].attendees;
+      }
+      return Math.ceil(total / this.meetups.length);
+    }
+  }
+};
+</script>
