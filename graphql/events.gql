@@ -4,6 +4,7 @@ query {
     date
     address
     id
+    photo
   }
 }
 
