@@ -9,7 +9,7 @@
         <v-flex v-for="sponsor in companiesByCountry" :key="sponsor.id" lg2 xs6>
           <v-card text>
             <v-card-title>
-              <v-img contain :src="sponsor.logoURL" height="200px"></v-img>
+              <v-img v-bind:class="{ darkLogo: sponsor.whiteLogo }" contain :src="sponsor.logoURL" height="200px"></v-img>
             </v-card-title>
 
             <v-card-text>

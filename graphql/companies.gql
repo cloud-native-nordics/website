@@ -3,6 +3,7 @@ query companies {
     id
     name
     websiteURL
+    whiteLogo
     logoURL
     countries
     sponsorTiers {

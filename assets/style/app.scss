@@ -30,6 +30,10 @@
         padding-left: 20px;
     }
 
+    .darkLogo {
+        filter: brightness(0.1);
+    }
+
     //TODO: These should probably be scoped under some landing page class or something=
     .section-one {
         background-image: $gradient;
