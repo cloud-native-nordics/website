@@ -11,7 +11,7 @@
               <v-img
                 position="center"
                 contain
-                src="meetup.png"
+                :src="event.photo"
                 height="250px"
               ></v-img>
             </v-card-title>
@@ -47,9 +47,13 @@ export default {
   },
   computed: {
     sortedMeetups() {
-        return this.meetups.sort( ( a, b) => {
-            return new Date(b.date) - new Date(a.date);
-        });
+        if (this.meetups) {
+          return this.meetups.sort( ( a, b) => {
+              return new Date(b.date) - new Date(a.date);
+          });
+        } else {
+          return [];
+        }
     }
   }
 };
