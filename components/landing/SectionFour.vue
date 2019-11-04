@@ -15,7 +15,7 @@
           </v-col>
           <v-col cols="2">
             <v-img width="40%" src="/icon_meetups.png" />
-            <h1 style="font-weight: 800; font-size: 55px;">5372</h1>
+            <h1 style="font-weight: 800; font-size: 55px;">{{ totalMembers }}</h1>
             <h3 style="font-weight: 400; font-size: 35px;">members</h3>
           </v-col>
           <v-col cols="2">
@@ -71,6 +71,17 @@ export default {
           total = total + this.meetups[i].attendees;
         }
         return Math.ceil(total / this.meetups.length);
+      } else {
+        return 0;
+      }
+    },
+    totalMembers() {
+      if (this.meetupGroups) {
+        var total = 0;
+        for (var i = 0; i < this.meetupGroups.length; i++) {
+          total = total + this.meetupGroups[i].memberCount;
+        }
+        return total;
       } else {
         return 0;
       }
