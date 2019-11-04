@@ -10,7 +10,7 @@
         <v-row justify="center" align="center">
           <v-col cols="2" justify="center" align="center">
             <v-img width="40%" src="/icon_group.png" />
-            <h1 style="font-weight: 800; font-size: 55px;">{{ meetupGroupsCount }} </h1>
+            <h1 style="font-weight: 800; font-size: 55px;">{{ meetupGroupsCount }}</h1>
             <h3 style="font-weight: 400; font-size: 35px;">groups</h3>
           </v-col>
           <v-col cols="2">
@@ -40,8 +40,7 @@
 import meetupGroups from "~/graphql/meetupGroups.gql";
 import meetups from "~/graphql/meetups.gql";
 export default {
-  components: {
-  },
+  components: {},
   apollo: {
     meetupGroups: {
       query: meetupGroups
@@ -52,17 +51,29 @@ export default {
   },
   computed: {
     meetupGroupsCount() {
-      return this.meetupGroups.length
+      if (this.meetupGroups) {
+        return this.meetupGroups.length;
+      } else {
+        return 0;
+      }
     },
     meetupsCount() {
-      return this.meetups.length
+      if (this.meetups) {
+        return this.meetups.length;
+      } else {
+        return 0;
+      }
     },
     averageAttendees() {
-      var total = 0;
-      for (var i = 0; i < this.meetups.length; i++) {
-        total = total + this.meetups[i].attendees;
+      if (this.meetups) {
+        var total = 0;
+        for (var i = 0; i < this.meetups.length; i++) {
+          total = total + this.meetups[i].attendees;
+        }
+        return Math.ceil(total / this.meetups.length);
+      } else {
+        return 0;
       }
-      return Math.ceil(total / this.meetups.length);
     }
   }
 };
