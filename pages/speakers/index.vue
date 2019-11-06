@@ -9,41 +9,25 @@
         <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 xs6>
           <v-card text>
             <v-card-title>
-              <router-link :to="'/speakers/'+speaker.id">{{speaker.name}}</router-link>
+              <v-img  contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
             </v-card-title>
             <v-card-text>
-              <span v-if="speaker.title" class="text--primary .text-no-wrap text-title">
-                {{ speaker.title}}
-                <br />
-              </span>
-              <span class="text--primary .text-no-wrap">
-                @
-                <router-link
+              <router-link :to="'/speakers/'+speaker.id">{{speaker.name}}</router-link>
+              <br/>
+              <router-link
                   v-if="speaker.company"
                   :to="'/company/'+speaker.company.id"
                   target="_blank"
                 >{{speaker.company.name}}</router-link>
+                <br/>
+              <span v-if="speaker.title" class="text--primary .text-wrap text-title">
+                {{ speaker.title}}
+              </span>
+              <span v-else="speaker.title" class="text--primary .text-no-wrap text-title">
+                -
               </span>
             </v-card-text>
-            <v-card-actions>
-              <v-layout justify-start row fill-height>
-                <v-flex xs12>
-                  <a
-                    :href="speaker.github ? 'https://github.com/'+ speaker.github : 'https://github.com/'"
-                    target="_blank"
-                  >
-                    <img contain src="github.png" height="33px" />
-                  </a>
-                  <a
-                    :href="speaker.speakersBureau ? 'https://www.cncf.io/speaker/'+speaker.speakersBureau : 'https://www.cncf.io/speakers/'"
-                    target="_blank"
-                  >
-                    <img contain src="cncf.png" height="33px" />
-                  </a>
-                </v-flex>
-              </v-layout>
-            </v-card-actions>
-            <v-footer absolute>
+            <v-footer class="card-footer" absolute>
               <router-link
                 :key="country"
                 v-for="country in speaker.countries"
@@ -114,6 +98,12 @@ export default {
   methods: {
     setSelectedCountry(country) {
       this.selectedCountry = country;
+    },
+    githubAvatar(githubId){
+      if (githubId == "") {
+        return "no-image.jpg"
+      }
+      return "https://github.com/"+githubId+".png?size=200"
     }
   }
 };

@@ -34,6 +34,11 @@
         filter: brightness(0.1);
     }
 
+    card-footer {
+        background-color: $gradient;
+    }
+
+
     //TODO: These should probably be scoped under some landing page class or something=
     .section-one {
         background-image: $gradient;
