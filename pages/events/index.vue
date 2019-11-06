@@ -7,7 +7,8 @@
       <v-layout wrap align-center>
         <v-flex v-for="event in sortedMeetups" :key="event.id" xs12 lg4>
           <v-card text>
-            <v-card-title>
+            <v-card-title class="text-center">
+                    {{ event.name }}
               <v-img
                 position="center"
                 contain
@@ -15,17 +16,9 @@
                 height="250px"
               ></v-img>
             </v-card-title>
-            <v-card-text class="text-center font-weight-bold title">
-              {{ event.name }}
-            </v-card-text>
-            <v-card-actions>
-              <v-layout row fill-height>
-                <v-flex class="d-flex justify-center" xs12>
-                {{ event.date }}
-                </v-flex>
-              </v-layout>
-            </v-card-actions>
-            <br />
+            <v-footer class="card-footer" absolute>
+             {{ formattedDate(event.date) }}: {{ event.address }}
+            </v-footer>
           </v-card>
         </v-flex>
       </v-layout>
@@ -34,6 +27,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import meetups from "~/graphql/events.gql";
 import Headline from "~/components/common/Headline.vue";
 export default {
@@ -54,6 +48,11 @@ export default {
         } else {
           return [];
         }
+    }
+  },
+  methods: {
+    formattedDate: function(date) {
+      return moment(date).format('YYYY-MM-DD');
     }
   }
 };
