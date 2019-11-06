@@ -9,7 +9,7 @@
         <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 xs6>
           <v-card text>
             <v-card-title>
-              <v-img  contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
+              <v-img contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
             </v-card-title>
             <v-card-text>
               <router-link :to="'/speakers/'+speaker.id">{{speaker.name}}</router-link>
@@ -101,7 +101,7 @@ export default {
     },
     githubAvatar(githubId){
       if (githubId == "") {
-        return "no-image.jpg"
+        return "no-image.png"
       }
       return "https://github.com/"+githubId+".png?size=200"
     }
