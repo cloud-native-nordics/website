@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs6 class="d-flex justify-end">
+  <v-flex xs6 class="d-flex justify-end pr-5">
     <div class="d-none d-md-flex">
       <template v-for="(country, index) in countries">
         <v-btn

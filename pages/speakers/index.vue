@@ -1,12 +1,11 @@
 <template>
-  <section>
     <v-container grid-list-lg fluid>
       <v-layout row fill-height class="pt-5 pb-5 d-flex flex-wrap flex-md-nowrap">
         <headline text="speakers"></headline>
         <country-filter :selectedCountry="selectedCountry" @selectCountry="setSelectedCountry"></country-filter>
       </v-layout>
-      <v-layout wrap>
-        <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 xs6>
+      <v-layout wrap class="pl-5 pr-5">
+        <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 sm6 md4 xs12>
           <v-card text>
             <v-card-title>
               <v-img contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
@@ -23,7 +22,7 @@
               <span v-if="speaker.title" class="text--primary .text-wrap text-title">
                 {{ speaker.title}}
               </span>
-              <span v-else="speaker.title" class="text--primary .text-no-wrap text-title">
+              <span v-else class="text--primary .text-no-wrap text-title">
                 -
               </span>
             </v-card-text>
@@ -38,7 +37,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </section>
 </template>
 
 <script>

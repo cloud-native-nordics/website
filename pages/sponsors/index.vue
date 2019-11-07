@@ -1,12 +1,11 @@
 <template>
-  <section>
     <v-container grid-list-lg fluid>
       <v-layout row fill-height class="pt-5 pb-5 d-flex flex-wrap flex-md-nowrap">
         <headline text="companies"></headline>
         <country-filter :selectedCountry="selectedCountry" @selectCountry="setSelectedCountry"></country-filter>
       </v-layout>
-      <v-layout wrap>
-        <v-flex v-for="sponsor in companiesByCountry" :key="sponsor.id" lg2 xs6>
+      <v-layout wrap class="pl-5 pr-5">
+        <v-flex v-for="sponsor in companiesByCountry" :key="sponsor.id" lg2 sm6 md4 xs12>
           <v-card text>
             <v-card-title>
               <v-img v-bind:class="{ darkLogo: sponsor.whiteLogo }" contain :src="sponsor.logoURL" height="200px"></v-img>
@@ -36,7 +35,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </section>
 </template>
 
 <script>
