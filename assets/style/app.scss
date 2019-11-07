@@ -63,11 +63,8 @@
             }
         }
 
-
-
         h1{
             color: white;
-            font-size: 55px;
         }
         h3 {
             color: white;
@@ -90,9 +87,17 @@
     }
 
     .section-three {
-        background-color: $darkgrey;
+        background-color: $pink;
         height: 100%;
         color: white;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    .section-map {
+        background-color: white;
+        height: 100%;
+        color: black;
         padding-bottom: 25px;
         padding-top: 25px;
     }
@@ -126,6 +131,10 @@
 
     .slack-invite{
         border-color: $purple;
+    }
+
+    .v-toolbar__title {
+        overflow: inherit;
     }
 
     .theme--light.v-sheet.v-app-bar {

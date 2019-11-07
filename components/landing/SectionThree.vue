@@ -5,7 +5,7 @@
       <v-col cols="8" justify="center" align="center">
         <h2
           style="color: white; margin-top: 40px;"
-        >Building and scaling the adoption of Cloud Native in the nordics</h2>
+        >Scaling adoption of Cloud Native in the nordics</h2>
         <br />
         <p
           style="margin-bottom:40px; font-size: 20px;"
