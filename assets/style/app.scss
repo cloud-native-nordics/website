@@ -5,7 +5,7 @@
     h1{
         font-style: normal;
         font-weight: 300;
-        font-size: 45px;
+        font-size: 40px;
 
         color: #502366;
 
@@ -49,11 +49,17 @@
             .welcome {
                 margin-top: 0px;
             }
+            h1{
+                font-size: 30px;
+            }
         }
 
         @media screen and (min-width: 600px){
             .welcome {
                 margin-top: 100px;
+            }
+            h1{
+                font-size: 55px;
             }
         }
 
@@ -74,19 +80,21 @@
     }
 
     .section-two {
-        background-color: $grey;
+        background-color: $purple;
+        color: white;
         height: 100%;
         h3 {
             margin-top: 10px;
+            color: white;
         }
     }
 
     .section-three {
-        background-color: $pink;
+        background-color: $darkgrey;
         height: 100%;
         color: white;
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding-bottom: 25px;
+        padding-top: 25px;
     }
 
     .section-four {
