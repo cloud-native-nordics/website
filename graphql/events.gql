@@ -5,6 +5,17 @@ query {
     address
     id
     photo
+    meetupGroup {
+      meetupID
+      country
+      city
+    }
+    sponsors {
+      role
+      company {
+        name
+      }
+    }
   }
 }
 

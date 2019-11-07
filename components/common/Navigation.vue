@@ -39,7 +39,7 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" fixed temporary>
-      <v-list>
+      <v-list class="mobile-nav">
         <v-list-item-group subheader three-line v-model="group">
           <nuxt-link to="/" style="position: relative;">
             <v-img width="80%" src="/logo.svg" />

@@ -11,7 +11,7 @@
         <h1>Cloud Native Nordics</h1>
         </div>
       </v-col>
-      <v-col sm="12" md="4" lg="4" cols="12" justify="right" align="right" class="">
+      <v-col sm="12" md="4" lg="4" cols="12" justify="right" align="right" class="d-none d-sm-flex">
         <v-img contain max-width=80% src="/snowflake_white_border.png" />
       </v-col>
       <v-spacer></v-spacer>

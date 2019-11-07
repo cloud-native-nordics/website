@@ -34,8 +34,8 @@
         filter: brightness(0.1);
     }
 
-    card-footer {
-        background-color: $gradient;
+    .card-footer {
+        background-color: #f5f5f5;
     }
 
 
@@ -44,9 +44,21 @@
         background-image: $gradient;
         color: white;
         height: 100%;
-        .welcome {
-            margin-top: 100px;
+
+        @media screen and (max-width: 600px){
+            .welcome {
+                margin-top: 0px;
+            }
         }
+
+        @media screen and (min-width: 600px){
+            .welcome {
+                margin-top: 100px;
+            }
+        }
+
+
+
         h1{
             color: white;
             font-size: 55px;
@@ -126,7 +138,7 @@
         color:  rgba(255, 255, 255, 0.54);
     }
 
-    .theme--light.v-list {
+    .theme--light.v-list.mobile-nav {
         background-color: $purple;
         border-color: $purple;
 
