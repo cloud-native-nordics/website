@@ -4,7 +4,7 @@
       <v-spacer></v-spacer>
       <v-col cols="8" justify="center" align="center">
         <v-row justify="center">
-                <h2>Cloud Native Nordics is rapidly growing</h2>
+                <h2>Cloud Native Nordics is rapidly growing</h2><br/>
                 <p>... so far we have gathered...</p>
         </v-row>
         <br />
