@@ -7,7 +7,7 @@
                 <h2>Cloud Native Nordics is rapidly growing</h2>
         </v-row>
         <v-row justify="center">
-               ... so far we have gathered...
+          The numbers below are based on data from meetup.com and generated using our &nbsp<a href="https://github.com/cloud-native-nordics/meetups" target="_blank"> meetup-generator</a>
         </v-row>
 
         <br />
