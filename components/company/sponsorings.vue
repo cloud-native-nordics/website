@@ -41,7 +41,7 @@
     </v-row>
     <v-row v-if="tiers.includes('Meetup')">
       <v-col>
-        <h3>Hosted at</h3>
+        <h3>Meetup sponsored at</h3>
         <v-row class="pr-5 pl-5">
           <v-col
             v-for="meetupGroup in meetupGroupsInTier('Meetup')"
@@ -90,7 +90,7 @@
                 <v-img
                   contain
                   :src="meetupGroup.photo"
-                  height="100px"
+                  height="200px"
                 ></v-img>
               </v-card-title>
               <v-card-text>
@@ -110,7 +110,7 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row v-if="tiers.includes('EcosystemMember')">
+    <!-- <v-row v-if="tiers.includes('EcosystemMember')">
       <v-col>
         <h3>Members of</h3>
         <v-row class="pr-5 pl-5">
@@ -143,7 +143,7 @@
           </v-col>
         </v-row>
       </v-col>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 

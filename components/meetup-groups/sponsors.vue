@@ -7,7 +7,7 @@
     </v-row>
     <v-row v-if="tiers.includes('Longterm')">
       <v-col>
-        <h3>Longterm sponsors</h3>
+        <h3>Longterm Sponsors</h3>
         <v-row class="pr-5 pl-5">
           <v-col
             v-for="sponsor in companiesInTier('Longterm')"
@@ -46,7 +46,7 @@
     </v-row>
     <v-row v-if="tiers.includes('Meetup')">
       <v-col>
-        <h3>Hosts</h3>
+        <h3>Meetup Sponsors</h3>
         <v-row class="pr-5 pl-5">
           <v-col
             v-for="sponsor in companiesInTier('Meetup')"
@@ -125,9 +125,9 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row v-if="tiers.includes('EcosystemMember')">
+    <!-- <v-row v-if="tiers.includes('EcosystemMember')">
       <v-col>
-        <h3>Members</h3>
+        <h3>Ecosystem Members</h3>
         <v-row class="pr-5 pl-5">
           <v-col
             v-for="sponsor in companiesInTier('EcosystemMember')"
@@ -147,7 +147,7 @@
           </v-col>
         </v-row>
       </v-col>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 
