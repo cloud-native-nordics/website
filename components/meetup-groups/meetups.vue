@@ -8,7 +8,7 @@
     <v-row class="pl-5 pr-5">
       <v-col cols="12">
         <v-card>
-          <v-carousel hide-delimiters>
+          <v-carousel cycle hide-delimiters>
             <v-carousel-item v-for="meetup in sortedMeetups" v-bind:key="meetup.id">
               <v-sheet height="90%" tile>
                 <v-row class="fill-height" align="center" justify="center">
