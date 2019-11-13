@@ -7,9 +7,22 @@
     </v-row>
     <v-row class="pr-5 pl-5">
       <v-col>
+        <b>Meetup Group:</b>
+        <span class="text--primary .text-no-wrap text-no-decoration">
+          <router-link
+            class="info-text"
+            v-if="presentation.meetup.meetupGroup.name"
+            :to="'/meetup-groups/'+presentation.meetup.meetupGroup.meetupID"
+          >{{presentation.meetup.meetupGroup.name}}</router-link>
+        </span>
+      </v-col>
+    </v-row>
+    <v-row class="pr-5 pl-5">
+      <v-col>
         <b>Meetup:</b>
         <span class="text--primary .text-no-wrap text-no-decoration">
           <router-link
+            class="info-text"
             v-if="presentation.meetup.name"
             :to="'/meetups/'+presentation.meetup.id"
           >{{presentation.meetup.name}}</router-link>
@@ -31,7 +44,7 @@
     <v-row class="pr-5 pl-5" v-if="presentation.slides">
       <v-col>
         <b>Slides:</b>
-        <a :href="presentation.slides" target="_blank">Link</a>
+        <a class="info-text" :href="presentation.slides" target="_blank">Link</a>
       </v-col>
     </v-row>
   </v-container>
@@ -55,3 +68,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.info-text {
+  font-size: 14px;
+  color: #512268;
+  text-decoration: none;
+}
+</style>

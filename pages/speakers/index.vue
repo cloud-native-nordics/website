@@ -99,7 +99,7 @@ export default {
     },
     githubAvatar(githubId){
       if (githubId == "") {
-        return "no-image.png"
+        return "/no-image.png"
       }
       return "https://github.com/"+githubId+".png?size=200"
     }

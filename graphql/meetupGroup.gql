@@ -23,6 +23,7 @@ query meetupGroup($meetupID: String!) {
       photo
     }
     organizers {
+      id
       name
       github
       email

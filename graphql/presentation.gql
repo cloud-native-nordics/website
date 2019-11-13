@@ -8,6 +8,10 @@ query presentation($id: String!) {
       name
       date
       id
+      meetupGroup {
+        meetupID
+        name
+      }
     }
   }
 }

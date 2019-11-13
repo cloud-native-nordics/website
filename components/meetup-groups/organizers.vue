@@ -21,7 +21,7 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
           >
-            <v-card-title v-text="organizer.name"></v-card-title>
+            <v-card-title><router-link class="white--text" :to="'/speakers/'+organizer.id">{{organizer.name}}</router-link></v-card-title>
           </v-img>
 
           <v-card-actions>
