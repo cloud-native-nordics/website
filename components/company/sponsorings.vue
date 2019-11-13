@@ -2,16 +2,16 @@
   <div>
     <v-row>
       <v-col>
-        <h3>Sponsors</h3>
+        <h3>Sponsorings</h3>
       </v-col>
     </v-row>
     <v-row v-if="tiers.includes('Longterm')">
       <v-col>
-        <h3>Longterm sponsors</h3>
+        <h3>Longterm sponsors of</h3>
         <v-row class="pr-5 pl-5">
           <v-col
-            v-for="sponsor in companiesInTier('Longterm')"
-            :key="sponsor.id"
+            v-for="meetupGroup in meetupGroupsInTier('Longterm')"
+            :key="meetupGroup.id"
             cols="12"
             sm="6"
             md="6"
@@ -20,9 +20,8 @@
             <v-card text>
               <v-card-title>
                 <v-img
-                  v-bind:class="{ darkLogo: sponsor.company.whiteLogo }"
                   contain
-                  :src="sponsor.company.logoURL"
+                  :src="meetupGroup.photo"
                   height="200px"
                 ></v-img>
               </v-card-title>
@@ -30,13 +29,9 @@
               <v-card-text>
                 <span class="text--primary .text-no-wrap">
                   <router-link
-                    v-if="sponsor.company.name"
-                    :to="'/company/'+sponsor.company.id"
-                  >{{sponsor.company.name}}</router-link>
-                </span>
-                <br />
-                <span class="text--primary">
-                  <a :href="sponsor.company.websiteURL">Website</a>
+                    v-if="meetupGroup.name"
+                    :to="'/meetup-groups/'+meetupGroup.meetupID"
+                  >{{meetupGroup.name}}</router-link>
                 </span>
               </v-card-text>
             </v-card>
@@ -46,11 +41,11 @@
     </v-row>
     <v-row v-if="tiers.includes('Meetup')">
       <v-col>
-        <h3>Hosts</h3>
+        <h3>Hosted at</h3>
         <v-row class="pr-5 pl-5">
           <v-col
-            v-for="sponsor in companiesInTier('Meetup')"
-            :key="sponsor.id"
+            v-for="meetupGroup in meetupGroupsInTier('Meetup')"
+            :key="meetupGroup.meetupID"
             cols="12"
             sm="6"
             md="6"
@@ -59,9 +54,8 @@
             <v-card text>
               <v-card-title>
                 <v-img
-                  v-bind:class="{ darkLogo: sponsor.company.whiteLogo }"
                   contain
-                  :src="sponsor.company.logoURL"
+                  :src="meetupGroup.photo"
                   height="200px"
                 ></v-img>
               </v-card-title>
@@ -69,13 +63,9 @@
               <v-card-text>
                 <span class="text--primary .text-no-wrap">
                   <router-link
-                    v-if="sponsor.company.name"
-                    :to="'/company/'+sponsor.company.id"
-                  >{{sponsor.company.name}}</router-link>
-                </span>
-                <br />
-                <span class="text--primary">
-                  <a :href="sponsor.company.websiteURL">Website</a>
+                    v-if="meetupGroup.name"
+                    :to="'/meetup-groups/'+meetupGroup.meetupID"
+                  >{{meetupGroup.name}}</router-link>
                 </span>
               </v-card-text>
             </v-card>
@@ -85,22 +75,21 @@
     </v-row>
     <v-row v-if="tiers.includes('SpeakerProvider')">
       <v-col>
-        <h3>Speaker providers</h3>
+        <h3>Speakers provided to</h3>
         <v-row class="pr-5 pl-5">
           <v-col
-            v-for="sponsor in companiesInTier('SpeakerProvider')"
-            :key="sponsor.id"
-            cols="6"
-            sm="4"
-            md="4"
-            lg="2"
+            v-for="meetupGroup in meetupGroupsInTier('SpeakerProvider')"
+            :key="meetupGroup.meetupID"
+            cols="12"
+            sm="6"
+            md="6"
+            lg="4"
           >
             <v-card text>
               <v-card-title>
                 <v-img
-                  v-bind:class="{ darkLogo: sponsor.company.whiteLogo }"
                   contain
-                  :src="sponsor.company.logoURL"
+                  :src="meetupGroup.photo"
                   height="100px"
                 ></v-img>
               </v-card-title>
@@ -109,13 +98,9 @@
                   <v-col cols="12">
                     <span class="text--primary .text-no-wrap">
                       <router-link
-                        v-if="sponsor.company.name"
-                        :to="'/company/'+sponsor.company.id"
-                      >{{sponsor.company.name}}</router-link>
-                    </span>
-                    <br />
-                    <span class="text--primary">
-                      <a :href="sponsor.company.websiteURL">Website</a>
+                        v-if="meetupGroup.name"
+                        :to="'/meetup-groups/'+meetupGroup.meetupID"
+                      >{{meetupGroup.name}}</router-link>
                     </span>
                   </v-col>
                 </v-row>
@@ -127,23 +112,34 @@
     </v-row>
     <v-row v-if="tiers.includes('EcosystemMember')">
       <v-col>
-        <h3>Members</h3>
+        <h3>Members of</h3>
         <v-row class="pr-5 pl-5">
           <v-col
-            v-for="sponsor in companiesInTier('EcosystemMember')"
-            :key="sponsor.id"
-            cols="4"
-            sm="3"
-            md="3"
-            lg="2"
+            v-for="meetupGroup in meetupGroupsInTier('EcosystemMember')"
+            :key="meetupGroup.meetupID"
+            cols="12"
+            sm="6"
+            md="6"
+            lg="4"
           >
-            <span class="text--primary">
-              <router-link
-                class="member-text"
-                v-if="sponsor.company.name"
-                :to="'/company/'+sponsor.company.id"
-              >{{sponsor.company.name}}</router-link>
-            </span>
+            <v-card text>
+              <v-card-title>
+                <v-img
+                  contain
+                  :src="meetupGroup.photo"
+                  height="200px"
+                ></v-img>
+              </v-card-title>
+
+              <v-card-text>
+                <span class="text--primary .text-no-wrap">
+                  <router-link
+                    v-if="meetupGroup.name"
+                    :to="'/meetup-groups/'+meetupGroup.meetupID"
+                  >{{meetupGroup.name}}</router-link>
+                </span>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
       </v-col>
@@ -153,21 +149,26 @@
 
 <script>
 export default {
-  props: ["sponsors"],
+  props: ["sponsorings"],
   computed: {
     tiers() {
       let tiers = [];
-      this.sponsors.forEach(sponsor => {
-        if (!tiers.includes(sponsor.tier)) {
-          tiers.push(sponsor.tier);
+      this.sponsorings.forEach(sponsoring => {
+        if (!tiers.includes(sponsoring.tier)) {
+          tiers.push(sponsoring.tier);
         }
       });
       return tiers;
     }
   },
   methods: {
-    companiesInTier(tier) {
-      return this.sponsors.filter(sponsor => sponsor.tier === tier);
+    meetupGroupsInTier(tier) {
+      let meetupGroups = []
+      let tiers = this.sponsorings.filter(sponsoring => sponsoring.tier === tier);
+      tiers.forEach(tier => {
+        meetupGroups.push(tier.meetupGroups[0])
+      });
+      return meetupGroups;
     }
   }
 };

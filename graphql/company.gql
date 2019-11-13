@@ -1,0 +1,24 @@
+query company($id: String!) {
+  company(id: $id){
+    id
+    name
+    websiteURL
+    whiteLogo
+    logoURL
+    countries
+    speakers{
+      id
+      name
+      title
+      github
+    }
+    sponsorTiers {
+      tier
+      meetupGroups {
+        meetupID
+        name
+        photo
+      }
+    }
+  }
+}

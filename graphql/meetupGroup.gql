@@ -9,6 +9,7 @@ query meetupGroup($meetupID: String!) {
     sponsorTiers {
       tier
       company {
+        id
         name
         whiteLogo
         logoURL

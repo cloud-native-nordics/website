@@ -15,7 +15,7 @@
               <span class="text--primary .text-no-wrap">
                 <router-link
                   v-if="sponsor.name"
-                  :to="'/company/'+sponsor.name"
+                  :to="'/company/'+sponsor.id"
                 >{{sponsor.name}}</router-link>
               </span>
               <br />
