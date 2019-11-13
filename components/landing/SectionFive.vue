@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="4" justify="center" align="center" class="d-none d-lg-flex d-xl-flex">
-        <v-img max-width="300px" src="/mascot.png" />
+        <v-img contain max-width="300px" src="/mascot.png" />
       </v-col>
       <v-col sm="12" md="12" lg="4" cols="12" justify="center" align="center">
         <h2 style="color: white;">Upcoming events</h2>

@@ -8,7 +8,7 @@
       <v-flex v-for="meetupGroup in meetupGroupsByCountry" :key="meetupGroup.meetupID" xs12 lg4>
         <v-card text>
           <v-card-title>
-            <v-img position="center" contain :src="meetupGroup.photo" height="250px"></v-img>
+            <v-img position="center" contain :src="meetupGroup.photo" height="250px" :to="`meetup-groups/${meetupGroup.meetupID}`"></v-img>
           </v-card-title>
           <v-card-text class="text-center font-weight-bold title">
             <router-link
@@ -24,7 +24,7 @@
                   :href="meetupGroup.city ? 'https://github.com/cloud-native-nordics/meetups/tree/master/'+ meetupGroup.city.toLowerCase() : 'https://github.com/cloud-native-nordics/meetups/tree/master/'"
                   target="_blank"
                 >
-                  <img contain src="github.png" height="33px" />
+                  <img contain src="/github.png" height="33px" />
                 </a>
 
                 <a
@@ -32,7 +32,7 @@
                   :href="meetupGroup.meetupID ? 'https://www.meetup.com/'+meetupGroup.meetupID : 'https://www.meetup.com/'"
                   target="_blank"
                 >
-                  <img contain src="meetup.png" height="33px" />
+                  <img contain src="/meetup.png" height="33px" />
                 </a>
               </v-flex>
             </v-layout>

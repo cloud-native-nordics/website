@@ -16,7 +16,6 @@
                 <router-link
                   v-if="sponsor.name"
                   :to="'/company/'+sponsor.name"
-                  target="_blank"
                 >{{sponsor.name}}</router-link>
               </span>
               <br />

@@ -1,0 +1,33 @@
+query meetupGroup($meetupID: String!) {
+  meetupGroup(meetupID: $meetupID){
+    photo
+    memberCount
+    name
+    city
+    country
+    description
+    sponsorTiers {
+      tier
+      company {
+        name
+        whiteLogo
+        logoURL
+      }
+    }
+    meetups {
+      name
+      date
+      address
+      id
+      photo
+    }
+    organizers {
+      name
+      github
+      email
+      company {
+        websiteURL
+      }
+    }
+  }
+}
