@@ -49,7 +49,7 @@ export default {
   props: ["selectedCountry"],
   data() {
     return {
-      countries: ["all countries", "denmark", "sweden", "norway", "finland"],
+      countries: ["all countries", "denmark", "sweden", "norway", "finland", "iceland"],
       searchText: ""
     };
   },
