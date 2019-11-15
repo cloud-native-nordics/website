@@ -4,7 +4,7 @@
       <headline text="events"></headline>
       <country-filter :selectedCountry="selectedCountry" @selectCountry="setSelectedCountry"></country-filter>
     </v-layout>
-    <h3 class="pb-3 pt-3">Upcomming Events</h3>
+    <h3 class="pb-3 pt-3">Upcoming Events</h3>
     <v-layout wrap align-center class="pl-5 pr-5">
       <v-flex v-for="event in futureEvents" :key="event.id" xs12 md6 lg4>
         <v-card>
