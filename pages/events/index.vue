@@ -105,6 +105,8 @@ export default {
               return true;
             }
             return false;
+          }).sort((a, b) => {
+            return new Date(a.date) - new Date(b.date); // Sort upcoming meetups so that the closest one in time is displayed first
           });
       }
     },
