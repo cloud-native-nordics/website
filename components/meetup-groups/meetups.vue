@@ -9,7 +9,7 @@
       <v-col cols="12">
         <v-card>
           <v-carousel cycle hide-delimiters>
-            <v-carousel-item v-for="meetup in sortedMeetups" v-bind:key="meetup.id">
+            <v-carousel-item v-for="meetup in sortedMeetups" v-bind:key="meetup.id" nuxt :to="`/events/${meetup.id}`">
               <v-sheet height="90%" tile>
                 <v-row class="fill-height" align="center" justify="center">
                   <v-img height="400px" v-if="meetup.photo" contain :src="meetup.photo"></v-img>
@@ -24,14 +24,14 @@
                     class="pt-1"
                     cols="auto"
                   >{{new Date(meetup.date).toLocaleString()}}</v-col>
-                  <v-col justify="center" align="center" class="pt-2 pl-1" cols="auto">
+                  <!-- <v-col justify="center" align="center" class="pt-2 pl-1" cols="auto">
                     <a
                       :href="`https://meetup.com/${meetupGroupId}/events/${meetup.id}`"
                       target="_blank"
                     >
                       <img class="meetup-logo" contain src="/meetup.png" height="33px" />
                     </a>
-                  </v-col>
+                  </v-col> -->
                 </v-row>
               </v-sheet>
             </v-carousel-item>

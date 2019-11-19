@@ -9,13 +9,12 @@
       <v-flex v-for="event in futureEvents" :key="event.id" xs12 md6 lg4>
         <v-card>
           <v-card-title>
-            <a
-              :href="`https://meetup.com/${event.meetupGroup.meetupID}/events/${event.id}`"
-              target="_blank"
-            >{{ event.name }}</a>
+            <router-link
+              :to="`events/${event.id}`"
+            >{{ event.name }}</router-link>
           </v-card-title>
           <v-card-text>
-            <v-img position="center" contain :src="event.photo" height="250px"></v-img>
+            <v-img class="clickable-image" @click="navigate(`events/${event.id}`)" position="center" contain :src="event.photo" height="250px"></v-img>
           </v-card-text>
           <v-card-actions class="card-footer">
             <div class="d-none d-sm-flex">
@@ -38,13 +37,12 @@
       <v-flex v-for="event in pastEvents" :key="event.id" xs12 md6 lg4>
         <v-card>
           <v-card-title>
-            <a
-              :href="`https://meetup.com/${event.meetupGroup.meetupID}/events/${event.id}`"
-              target="_blank"
-            >{{ event.name }}</a>
+            <router-link
+              :to="`events/${event.id}`"
+            >{{ event.name }}</router-link>
           </v-card-title>
           <v-card-text>
-            <v-img position="center" contain :src="event.photo" height="250px"></v-img>
+            <v-img class="clickable-image" @click="navigate(`events/${event.id}`)" position="center" contain :src="event.photo" height="250px"></v-img>
           </v-card-text>
           <v-card-actions class="card-footer">
             <div class="d-none d-sm-flex">

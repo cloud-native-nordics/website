@@ -6,8 +6,8 @@
         <headline v-else :text="company.name"></headline>
       </v-col>
     </v-row>
-    <speakers :speakers="company.speakers"></speakers>
-    <sponsorings :sponsorings="company.sponsorTiers"></sponsorings>
+    <speakers v-if="company.speakers && company.speakers.length > 0" :speakers="company.speakers"></speakers>
+    <sponsorings v-if="company.sponsorTiers && company.sponsorTiers.length > 0" :sponsorings="company.sponsorTiers"></sponsorings>
   </v-container>
 </template>
 

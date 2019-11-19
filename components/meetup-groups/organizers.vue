@@ -16,8 +16,9 @@
       >
         <v-card>
           <v-img
+            @click="navigate(`/speakers/${organizer.id}`)"
             :src="githubAvatar(organizer.github)"
-            class="white--text align-end"
+            class="white--text align-end clickable-image"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
           >

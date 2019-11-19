@@ -24,6 +24,8 @@
                   contain
                   :src="sponsor.company.logoURL"
                   height="200px"
+                  class="clickable-image"
+                  @click="navigate(`/company/${sponsor.company.id}`)"
                 ></v-img>
               </v-card-title>
 
@@ -63,6 +65,8 @@
                   contain
                   :src="sponsor.company.logoURL"
                   height="200px"
+                  class="clickable-image"
+                  @click="navigate(`/company/${sponsor.company.id}`)"
                 ></v-img>
               </v-card-title>
 
@@ -102,6 +106,8 @@
                   contain
                   :src="sponsor.company.logoURL"
                   height="100px"
+                  class="clickable-image"
+                  @click="navigate(`/company/${sponsor.company.id}`)"
                 ></v-img>
               </v-card-title>
               <v-card-text>
@@ -125,29 +131,6 @@
         </v-row>
       </v-col>
     </v-row>
-    <!-- <v-row v-if="tiers.includes('EcosystemMember')">
-      <v-col>
-        <h3>Ecosystem Members</h3>
-        <v-row class="pr-5 pl-5">
-          <v-col
-            v-for="sponsor in companiesInTier('EcosystemMember')"
-            :key="sponsor.id"
-            cols="4"
-            sm="3"
-            md="3"
-            lg="2"
-          >
-            <span class="text--primary">
-              <router-link
-                class="member-text"
-                v-if="sponsor.company.name"
-                :to="'/company/'+sponsor.company.id"
-              >{{sponsor.company.name}}</router-link>
-            </span>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row> -->
   </div>
 </template>
 

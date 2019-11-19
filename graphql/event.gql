@@ -1,0 +1,39 @@
+query meetup($id: Int!) {
+  meetup(id: $id) {
+    name
+    date
+    address
+    id
+    photo
+    presentations {
+      id
+      title
+      duration
+      speakers {
+        id
+        name
+        title
+        github
+        company {
+          name
+          websiteURL
+        }
+      }
+    }
+    meetupGroup {
+      meetupID
+      photo
+      country
+      city
+    }
+    sponsors {
+      role
+      company {
+        id
+        name
+        logoURL
+        whiteLogo
+      }
+    }
+  }
+}

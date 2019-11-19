@@ -7,8 +7,8 @@
     <v-layout wrap align-center class="pl-5 pr-5">
       <v-flex v-for="meetupGroup in meetupGroupsByCountry" :key="meetupGroup.meetupID" xs12 lg4>
         <v-card text>
-          <v-card-title>
-            <v-img position="center" contain :src="meetupGroup.photo" height="250px" :to="`meetup-groups/${meetupGroup.meetupID}`"></v-img>
+          <v-card-title >
+            <v-img class="clickable-image" @click="navigate(`meetup-groups/${meetupGroup.meetupID}`)" position="center" contain :src="meetupGroup.photo" height="250px"></v-img>
           </v-card-title>
           <v-card-text class="text-center font-weight-bold title">
             <router-link

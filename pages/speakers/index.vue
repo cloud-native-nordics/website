@@ -8,7 +8,7 @@
         <v-flex v-for="speaker in speakersByCountry" :key="speaker.id" lg2 sm6 md4 xs12>
           <v-card text>
             <v-card-title>
-              <v-img contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
+              <v-img class="clickable-image" @click="navigate(`/speakers/${speaker.id}`)" contain :src="githubAvatar(speaker.github)" height="200px"></v-img>
             </v-card-title>
             <v-card-text>
               <router-link :to="'/speakers/'+speaker.id">{{speaker.name}}</router-link>

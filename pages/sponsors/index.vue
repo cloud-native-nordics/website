@@ -8,7 +8,7 @@
         <v-flex v-for="sponsor in companiesByCountry" :key="sponsor.id" lg2 sm6 md4 xs12>
           <v-card text>
             <v-card-title>
-              <v-img v-bind:class="{ darkLogo: sponsor.whiteLogo }" contain :src="sponsor.logoURL" height="200px"></v-img>
+              <v-img class="clickable-image" @click="navigate(`/company/${sponsor.id}`)" v-bind:class="{ darkLogo: sponsor.whiteLogo }" contain :src="sponsor.logoURL" height="200px"></v-img>
             </v-card-title>
 
             <v-card-text>

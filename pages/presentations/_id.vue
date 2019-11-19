@@ -24,7 +24,7 @@
           <router-link
             class="info-text"
             v-if="presentation.meetup.name"
-            :to="'/meetups/'+presentation.meetup.id"
+            :to="'/events/'+presentation.meetup.id"
           >{{presentation.meetup.name}}</router-link>
         </span>
       </v-col>

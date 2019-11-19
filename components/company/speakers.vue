@@ -10,9 +10,10 @@
         <v-card>
           <v-img
             :src="githubAvatar(speaker.github)"
-            class="white--text align-end"
+            class="white--text align-end clickable-image"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
+            @click="navigate(`/speakers/${speaker.id}`)"
           >
             <v-card-title>
               <span class="text--primary .text-no-wrap">

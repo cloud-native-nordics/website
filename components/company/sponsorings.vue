@@ -21,6 +21,8 @@
               <v-card-title>
                 <v-img
                   contain
+                  class="clickable-image"
+                  @click="navigate(`/meetup-groups/${meetupGroup.meetupID}`)"
                   :src="meetupGroup.photo"
                   height="200px"
                 ></v-img>
@@ -55,6 +57,8 @@
               <v-card-title>
                 <v-img
                   contain
+                  class="clickable-image"
+                  @click="navigate(`/meetup-groups/${meetupGroup.meetupID}`)"
                   :src="meetupGroup.photo"
                   height="200px"
                 ></v-img>
@@ -89,6 +93,8 @@
               <v-card-title>
                 <v-img
                   contain
+                  class="clickable-image"
+                  @click="navigate(`/meetup-groups/${meetupGroup.meetupID}`)"
                   :src="meetupGroup.photo"
                   height="200px"
                 ></v-img>
@@ -110,40 +116,6 @@
         </v-row>
       </v-col>
     </v-row>
-    <!-- <v-row v-if="tiers.includes('EcosystemMember')">
-      <v-col>
-        <h3>Members of</h3>
-        <v-row class="pr-5 pl-5">
-          <v-col
-            v-for="meetupGroup in meetupGroupsInTier('EcosystemMember')"
-            :key="meetupGroup.meetupID"
-            cols="12"
-            sm="6"
-            md="6"
-            lg="4"
-          >
-            <v-card text>
-              <v-card-title>
-                <v-img
-                  contain
-                  :src="meetupGroup.photo"
-                  height="200px"
-                ></v-img>
-              </v-card-title>
-
-              <v-card-text>
-                <span class="text--primary .text-no-wrap">
-                  <router-link
-                    v-if="meetupGroup.name"
-                    :to="'/meetup-groups/'+meetupGroup.meetupID"
-                  >{{meetupGroup.name}}</router-link>
-                </span>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row> -->
   </div>
 </template>
 
@@ -163,10 +135,12 @@ export default {
   },
   methods: {
     meetupGroupsInTier(tier) {
-      let meetupGroups = []
-      let tiers = this.sponsorings.filter(sponsoring => sponsoring.tier === tier);
+      let meetupGroups = [];
+      let tiers = this.sponsorings.filter(
+        sponsoring => sponsoring.tier === tier
+      );
       tiers.forEach(tier => {
-        meetupGroups.push(tier.meetupGroups[0])
+        meetupGroups.push(tier.meetupGroups[0]);
       });
       return meetupGroups;
     }

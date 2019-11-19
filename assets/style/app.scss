@@ -155,6 +155,10 @@
         color:  rgba(255, 255, 255, 0.54);
     }
 
+    .clickable-image {
+        cursor: pointer;
+    }
+
     .theme--light.v-list.mobile-nav {
         background-color: $purple;
         border-color: $purple;
