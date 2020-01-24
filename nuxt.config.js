@@ -15,12 +15,12 @@ export default {
       { name: 'twitter:title', content: 'Cloud Native Nordics' },
       { name: 'twitter:description', content: process.env.npm_package_description || '' },
       // image must be an absolute path
-      { name: 'twitter:image', content: 'https://cloudnativenordics.com/logo.svg' },
+      { name: 'twitter:image', content: 'https://cloudnativenordics.com/social-media.png' },
       // Facebook OpenGraph
       { property: 'og:title', content: 'Cloud Native Nordics' },
       { property: 'og:site_name', content: 'Cloud Native Nordics' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'https://cloudnativenordics.com/logo.svg' },
+      { property: 'og:image', content: 'https://cloudnativenordics.com/social-media.png' },
       { property: 'og:description', content: process.env.npm_package_description || '' }
     ],
     link: [
