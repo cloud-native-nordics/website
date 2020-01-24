@@ -11,7 +11,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       // Twitter Card
-      { name: 'twitter:card', content: 'Cloud Native Nordics' },
+      { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:title', content: 'Cloud Native Nordics' },
       { name: 'twitter:description', content: process.env.npm_package_description || '' },
       // image must be an absolute path
