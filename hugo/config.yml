@@ -8,3 +8,9 @@ params:
   description: "Cloud Native Nordics is a community embracing and showing others the way of cloud native tech"
   images:
     - logo.svg
+
+  organization:
+    meetupgroupcount: "13"
+    totalmembers: "7000+"
+    meetupscount: "100+"
+    averageattendees: "50+"

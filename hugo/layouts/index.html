@@ -1,9 +1,9 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-<section class="section-one">
+<section class="banner">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-8 col-lg-8">
+			<div class="col-lg-8 col-md-8 col-sm-12">
 				<div class="welcome">
 					<h3>Hej! Hallå!</h3>
 					<h3>Hallo! Hei! Halló!</h3>
@@ -12,37 +12,116 @@
 					<h1>Cloud Native Nordics</h1>
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-4 col-lg-4">
-				<img width="80%" class="float-right" src="snowflake_white_border.png" />
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<img class="logo float-right center-block" src="snowflake_white_border.png" />
 			</div>
 		</div>
 	</div>
 </div>
 </section>
 
-<section class="section-two">
+<section class="bg-purple py-4">
 	<div class="container">
-		<div class="row" style="margin-bottom: -30px;">
-		  <div class="col-sm-12 col-md-4 col-lg-4">
-			<h3 class="d-none d-md-flex align-center">Join our Slack community</h3>
-			<h3 class="d-block d-md-none d-sm-block text-center pl-0">Join our Slack community</h3>
-		  </div>
-		  <div class="col-sm-12 col-md-4 col-lg-4">
-			<v-text-field
-			  label="Email"
-			  append-icon="mdi-arrow-right-circle"
-			  v-model="email"
-			  @click:append="sendInvite"
-			  color="purple"
-			  solo
-			  placeholder="Enter email..."
-			></v-text-field>
+		<div class="row">
+			<div class="col-sm-12 col-lg-6 align-self-center">
+				<h3>Join our Slack community</h3>
+			</div>
+			<div class="col-sm-12 col-lg-6">
+				<form class="mb-0">
+					<input type="email" class="form-control rounded form-control-lg" placeholder="Enter email..." />
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
 
-			<v-snackbar color="primary" multi-line :timeout="20000" v-model="snackbar">
-			  <span v-html="response"></span>
-			  <v-btn text @click="snackbar = false">Close</v-btn>
-			</v-snackbar>
-		  </div>
+<section class="slice">
+	<div class="container" >
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2 class="text-purple">Alliance across the nordic borders</h2>
+				<p class="lead text-secondary">Is your city missing on this map? We are very excited to help you to initiate a new meetup group!</p>
+				<img width="80%" src="/map.png" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slice bg-pink">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>Scaling adoption of Cloud Native in the nordics</h2>
+				<br />
+				<p class=" lead">
+					Cloud Native Nordics is a meetup alliance across the five countries in northern europe. We help each other with many things, some of them being; tooling, website, speakers, guidelines, workshops, branding, and much more. We are a community built and run by passionate people. 
+					<br/><br/>
+					The mantra is; <strong>By the community for the community</strong>.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slice text-purple">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>Cloud Native Nordics is rapidly growing</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>
+					The numbers below are based on data from meetup.com and community.cncf.com
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
+				<div class="stats">
+					<img src="icon_group.png" />
+					<h1>{{ .Site.Params.organization.meetupgroupcount }}</h1>
+					<h3>groups</h3>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
+				<div class="stats">
+					<img src="icon_meetups.png" />
+					<h1>{{ .Site.Params.organization.totalmembers }}</h1>
+					<h3>members</h3>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
+				<div class="stats">
+					<img src="icon_members.png" />
+					<h1>{{ .Site.Params.organization.meetupscount }}</h1>
+					<h3>meetups</h3>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
+				<div class="stats">
+					<img src="icon_avg_rsvp.png" />
+					<h1>{{ .Site.Params.organization.averageattendees }}</h1>
+					<h3>avg. rsvps</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slice bg-purple ">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 d-none d-lg-flex d-xl-flex">
+				<img style="max-width: 18em;" src="mascot.png" />
+			</div>
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<h2>Upcoming events</h2>
+				<p class="py-2">
+					Visit <strong><a href="https://community.cncf.io/" class="text-white">https://community.cncf.io/</a></strong> to see all events. Search for your favorit Cloud Native Nordics group.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
