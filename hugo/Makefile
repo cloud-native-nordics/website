@@ -1,3 +1,8 @@
+.PHONY: build
+## build: build the site
+build:
+	hugo
+
 .PHONY: run
 ## run: runs the website locally for development
 run:
