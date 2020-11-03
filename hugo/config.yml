@@ -1,0 +1,16 @@
+baseURL: "http://cloudnativenordics.com"
+languageCode: "en-us"
+title: "Cloud Native Nordics"
+params:
+  # used for social media tags such as og: and twitter:
+  # and used for meta tags for author and description (index page)
+  author: "Cloud Native Nordics"
+  description: "Cloud Native Nordics is a community embracing and showing others the way of cloud native tech"
+  images:
+    - logo.svg
+
+  organization:
+    meetupgroupcount: "13"
+    totalmembers: "7000+"
+    meetupscount: "100+"
+    averageattendees: "50+"

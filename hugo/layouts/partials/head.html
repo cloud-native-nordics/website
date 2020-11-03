@@ -1,0 +1,24 @@
+ <html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+		<meta name="author" content="{{ .Site.Params.author }}" />
+
+		<title>{{ .Site.Title }}</title>
+
+		<!-- Open Graph (Social) -->
+		{{ template "_internal/opengraph.html" . }}
+		{{ template "_internal/twitter_cards.html" . }}
+
+
+		<!-- Styles -->
+		<link data-n-head="true" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+		
+		{{ $options := (dict "targetPath" "style.css") }}
+		{{ $scss := resources.Get "scss/main.scss" }}
+		{{ $style := $scss| toCSS $options | resources.Minify | resources.Fingerprint }}
+		<link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
+	</head>
+	<body>
