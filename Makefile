@@ -1,13 +1,15 @@
-export PROJECT=cloud-native-nordics-website
+.PHONY: build
+## build: build the site
+build:
+	hugo
 
-all: run
-
+.PHONY: run
+## run: runs the website locally for development
 run:
-	npm run dev
+	hugo server
 
-build-image:
-	docker build -t cloud-native-nordics/${PROJECT} .
-
-clean:
-	sudo rm bin/${PROJECT}
-	
+.PHONY: help
+## help: prints this help message
+help:
+	@echo "Usage: \n"
+	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'

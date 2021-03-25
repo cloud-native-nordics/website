@@ -1,33 +1,18 @@
-# cloud-native-nordics-website
+# Website
 
-> Website to display cloud native nordics stats
+This repo contains the website of [cloudnativenordics.com](https://cloudnativenordics.com)
 
-## Build Setup
+# Run the website and contribute
 
-### Install yarn
-Follow this [installation guide](https://yarnpkg.com/lang/en/docs/install) to install yarn.
+Contributions are very welcome.
 
-### Install Node.js > v10
-This repo uses dependencies which requires Node.js version 10 or above.
+Start by running `make help` and go from there.
 
-Follow this [installation guide](https://nodejs.org/en/download/package-manager/) to install node.js v10.x.
+Currently you need to have [gohugo installed](https://gohugo.io/getting-started/installing/).
 
-### Build the website
-This website is built using the Vue.js Framework.
+# Bootstrap
 
-``` bash
-# install dependencies
-$ yarn
+The website is running with bootstrap which is placed within `assets`.
+The current version running is `Bootstrap v4.3.1`.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+To update bootstrap download the zip and place scss `[bootstrap version]/scss` under `assets/scss/bootstrap` and js `[bootstrap version]/js/dist` under `assets/js/bootstrap`.
