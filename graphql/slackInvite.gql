@@ -1,3 +1,0 @@
-query SlackInvite($data: String!) {
-    slackInvite(email: $data)
-}
