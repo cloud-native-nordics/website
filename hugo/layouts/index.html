@@ -27,8 +27,8 @@
 				<h3>Join our Slack community</h3>
 			</div>
 			<div class="col-sm-12 col-lg-6">
-				<form class="mb-0">
-					<input type="email" class="form-control rounded form-control-lg" placeholder="Enter email..." />
+				<form action="https://slack.cloudnativenordics.com/invite" method="get" class="mb-0">
+					<input type="email" name="email" class="form-control rounded form-control-lg" placeholder="Enter email..." />
 				</form>
 			</div>
 		</div>
@@ -80,28 +80,29 @@
 		<div class="row">
 			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
 				<div class="stats">
-					<img src="icon_group.png" />
+					<object data="groups.svg" type="image/svg+xml">
+					</object>
 					<h1>{{ .Site.Params.organization.meetupgroupcount }}</h1>
 					<h3>groups</h3>
 				</div>
 			</div>
 			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
 				<div class="stats">
-					<img src="icon_meetups.png" />
+					<img src="meetups.svg" />
 					<h1>{{ .Site.Params.organization.totalmembers }}</h1>
 					<h3>members</h3>
 				</div>
 			</div>
 			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
 				<div class="stats">
-					<img src="icon_members.png" />
+					<img src="members.svg" />
 					<h1>{{ .Site.Params.organization.meetupscount }}</h1>
 					<h3>meetups</h3>
 				</div>
 			</div>
 			<div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center">
 				<div class="stats">
-					<img src="icon_avg_rsvp.png" />
+					<img src="rsvps.svg" />
 					<h1>{{ .Site.Params.organization.averageattendees }}</h1>
 					<h3>avg. rsvps</h3>
 				</div>
