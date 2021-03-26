@@ -1,0 +1,39 @@
+<section class="bg-purple py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 align-self-center">
+        <h3>Join our Slack community</h3>
+      </div>
+      <div class="col-sm-12 col-lg-6">
+        <form action="https://slack.cloudnativenordics.com/invite" method="get" class="mb-0">
+          <div class="input-group mb-3">
+            <input type="email" name="email" id="email" class="form-control form-control-lg"
+              placeholder="Enter email..." />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-secondary" type="button">Invite</button>
+            </div>
+          </div>
+        </form>
+        <p id="status"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const form = document.querySelector('form');
+    const formResponse = document.getElementById('status');
+    const inputEmail = document.getElementById("email")
+    form.onsubmit = e => {
+      e.preventDefault();
+      var xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action + "?email=" + inputEmail.value, true);
+      xhr.send(null);
+      xhr.onloadend = response => {
+        form.reset();
+        formResponse.innerHTML = response.target.responseText;
+      };
+    };
+  })();
+</script>
