@@ -20,5 +20,6 @@
 		{{ $scss := resources.Get "scss/main.scss" }}
 		{{ $style := $scss| toCSS $options | resources.Minify | resources.Fingerprint }}
 		<link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 	</head>
 	<body>
