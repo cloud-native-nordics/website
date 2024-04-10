@@ -138,3 +138,24 @@ footer {
         max-width: 2.6rem;
     }
 }
+
+.slack {
+    a:link {
+        color: $blue;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: $pink;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: $grey;
+        text-decoration: underline;
+    }
+    a:active {
+        color: $blue;
+        text-decoration: underline;
+    }
+}
