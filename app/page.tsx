@@ -43,8 +43,8 @@ export default async function Home() {
     <>
       <Hero totalMembers={totalMembers} />
       <StatsBar stats={stats} />
-      <About />
       <InteractiveMap groups={groupsWithEvents} />
+      <About />
       <GroupsGrid groups={groupsWithEvents} />
       <UpcomingEvents events={allUpcoming} />
       <CfpSection />
