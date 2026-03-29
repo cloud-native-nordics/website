@@ -7,6 +7,13 @@ const CONFERENCES = [
     logo: "/images/partner-denmark.svg",
   },
   {
+    name: "KCD Helsinki",
+    location: "Helsinki",
+    date: "May 20, 2026",
+    href: "https://community.cncf.io/events/details/cncf-kcd-helsinki-presents-kubernetes-community-days-helsinki-2026/",
+    logo: "/logo-icon.svg",
+  },
+  {
     name: "Cloud Native Days Norway",
     location: "Bergen",
     date: "October 26-27, 2026",
