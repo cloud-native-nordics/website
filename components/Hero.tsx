@@ -7,7 +7,7 @@ interface HeroProps {
 
 export function Hero({ totalMembers }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-navy-deep py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-navy-deep pt-20 pb-28 sm:pt-28 sm:pb-36">
       {/* Vibrant aurora blobs on dark background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-brand-gold/30 blur-[140px] animate-pulse-glow" />
@@ -73,8 +73,6 @@ export function Hero({ totalMembers }: HeroProps) {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-warm-white dark:from-navy-deep to-transparent" />
     </section>
   );
 }

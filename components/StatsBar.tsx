@@ -27,7 +27,7 @@ export function StatsBar({ stats }: { stats: SiteStats }) {
   ];
 
   return (
-    <section className="relative -mt-6 z-10 pb-10">
+    <section className="relative -mt-7 z-10 mb-10">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-xl bg-white dark:bg-navy-card shadow-lg dark:shadow-xl dark:shadow-black/20 border border-gray-100 dark:border-white/5 py-5 px-8">
           <div className="flex items-center justify-around">
