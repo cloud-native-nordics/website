@@ -6,6 +6,7 @@ import { UpcomingEvents } from "@/components/UpcomingEvents";
 import { About } from "@/components/About";
 import { CfpSection } from "@/components/CfpSection";
 import { CommunitySection } from "@/components/CommunitySection";
+import { Partners } from "@/components/Partners";
 import { loadGroups } from "@/lib/groups";
 import { fetchBevyEvents, getEventsForChapter } from "@/lib/bevy";
 import type { SiteStats, GroupWithData } from "@/lib/types";
@@ -47,6 +48,7 @@ export default async function Home() {
       <GroupsGrid groups={groupsWithEvents} />
       <UpcomingEvents events={allUpcoming} />
       <CfpSection />
+      <Partners />
       <CommunitySection />
     </>
   );
