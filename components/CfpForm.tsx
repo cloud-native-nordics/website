@@ -57,7 +57,8 @@ export function CfpForm() {
     setSubmitting(true);
 
     try {
-      const res = await fetch("https://cfp.cloudnativenordics.com/api/submissions", {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || "https://cfp.cloudnativenordics.com";
+      const res = await fetch(`${apiBase}/api/submissions`, {
         method: "POST",
         body: formData,
       });

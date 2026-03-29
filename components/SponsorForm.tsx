@@ -46,7 +46,8 @@ export function SponsorForm() {
     setSubmitting(true);
 
     try {
-      const res = await fetch("https://cfp.cloudnativenordics.com/api/sponsorships", {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || "https://cfp.cloudnativenordics.com";
+      const res = await fetch(`${apiBase}/api/sponsorships`, {
         method: "POST",
         body: formData,
       });
