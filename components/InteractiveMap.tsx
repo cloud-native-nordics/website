@@ -93,10 +93,12 @@ export function InteractiveMap({ groups }: { groups: GroupWithData[] }) {
         <h2 className="text-3xl font-heading font-bold text-center mb-8 text-navy dark:text-white">
           Our Communities
         </h2>
-        <div
-          ref={mapRef}
-          className="h-[400px] sm:h-[500px] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-white/10"
-        />
+        <div className="p-[2px] rounded-xl bg-gradient-to-r from-brand-pink to-brand-gold shadow-lg">
+          <div
+            ref={mapRef}
+            className="h-[400px] sm:h-[500px] rounded-[10px] overflow-hidden"
+          />
+        </div>
       </div>
     </section>
   );
