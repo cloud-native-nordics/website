@@ -92,7 +92,7 @@ export function CfpForm() {
     );
   }
 
-  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-navy-deep px-4 py-2.5 text-sm text-navy dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink transition-colors";
+  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-navy-deep px-4 py-2.5 text-sm text-navy dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors";
   const labelClass = "block text-sm font-medium text-navy dark:text-white mb-1.5";
   const sectionClass = "bg-white dark:bg-navy-card rounded-xl border border-gray-200 dark:border-white/10 p-6 mb-6";
 
@@ -111,13 +111,13 @@ export function CfpForm() {
         </h3>
 
         <div className="mb-4">
-          <label className={labelClass}>Full Name <span className="text-brand-pink">*</span></label>
+          <label className={labelClass}>Full Name <span className="gradient-text">*</span></label>
           <input type="text" name="name" required minLength={2} className={inputClass} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div>
-            <label className={labelClass}>Email <span className="text-brand-pink">*</span></label>
+            <label className={labelClass}>Email <span className="gradient-text">*</span></label>
             <input type="email" name="email" required className={inputClass} />
           </div>
           <div>
@@ -167,17 +167,17 @@ export function CfpForm() {
 
       {/* Talk Information */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 border-b-2 border-brand-pink">
+        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
           Talk Information
         </h3>
 
         <div className="mb-4">
-          <label className={labelClass}>Talk Title <span className="text-brand-pink">*</span></label>
+          <label className={labelClass}>Talk Title <span className="gradient-text">*</span></label>
           <input type="text" name="title" required minLength={5} maxLength={200} className={inputClass} />
         </div>
 
         <div className="mb-4">
-          <label className={labelClass}>Abstract <span className="text-brand-pink">*</span></label>
+          <label className={labelClass}>Abstract <span className="gradient-text">*</span></label>
           <textarea
             name="abstract"
             rows={5}
@@ -192,7 +192,7 @@ export function CfpForm() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           <div>
-            <label className={labelClass}>Talk Type <span className="text-brand-pink">*</span></label>
+            <label className={labelClass}>Talk Type <span className="gradient-text">*</span></label>
             <select name="talk_type" required className={inputClass}>
               <option value="">Select...</option>
               {TALK_TYPES.map((t) => (
@@ -205,7 +205,7 @@ export function CfpForm() {
             <input type="number" name="preferred_duration" min={5} max={480} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Language <span className="text-brand-pink">*</span></label>
+            <label className={labelClass}>Language <span className="gradient-text">*</span></label>
             <select name="language" required className={inputClass} defaultValue="English">
               {LANGUAGES.map((l) => (
                 <option key={l} value={l}>{l}</option>
@@ -219,7 +219,7 @@ export function CfpForm() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {TAGS.map((tag) => (
               <label key={tag} className="flex items-center gap-2 text-sm text-navy dark:text-gray-300 cursor-pointer">
-                <input type="checkbox" name="tags" value={tag} className="rounded border-gray-300 dark:border-white/20 text-brand-pink focus:ring-brand-pink" />
+                <input type="checkbox" name="tags" value={tag} className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold" />
                 {tag}
               </label>
             ))}
@@ -245,11 +245,11 @@ export function CfpForm() {
 
       {/* Location Selection */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 border-b-2 border-brand-pink">
+        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
           Location Selection
         </h3>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-          Select the chapter(s) you'd like to present at. <span className="text-brand-pink">*</span>
+          Select the chapter(s) you'd like to present at. <span className="gradient-text">*</span>
         </p>
 
         <label className="flex items-center gap-2 text-sm font-semibold text-navy dark:text-white mb-4 cursor-pointer">
@@ -259,7 +259,7 @@ export function CfpForm() {
             value="1"
             checked={openToAny}
             onChange={(e) => setOpenToAny(e.target.checked)}
-            className="rounded border-gray-300 dark:border-white/20 text-brand-pink focus:ring-brand-pink"
+            className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold"
           />
           I'm open to presenting at any location
         </label>
@@ -267,7 +267,7 @@ export function CfpForm() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {Object.entries(LOCATIONS).map(([country, cities]) => (
             <div key={country}>
-              <h4 className="text-sm font-heading font-bold text-brand-pink mb-2">{country}</h4>
+              <h4 className="text-sm font-heading font-bold gradient-text mb-2">{country}</h4>
               {cities.map((city) => (
                 <label key={city} className="flex items-center gap-2 text-sm text-navy dark:text-gray-300 mb-1 cursor-pointer">
                   <input
@@ -276,7 +276,7 @@ export function CfpForm() {
                     value={city}
                     disabled={openToAny}
                     defaultChecked={city === preselectedLocation}
-                    className="rounded border-gray-300 dark:border-white/20 text-brand-pink focus:ring-brand-pink disabled:opacity-50"
+                    className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold disabled:opacity-50"
                   />
                   {city}
                 </label>
@@ -293,7 +293,7 @@ export function CfpForm() {
 
       {/* Consent */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 border-b-2 border-brand-pink">
+        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
           Data Consent
         </h3>
         <label className="flex items-start gap-2 text-sm text-navy dark:text-gray-300 cursor-pointer">
@@ -301,10 +301,10 @@ export function CfpForm() {
             type="checkbox"
             name="consent"
             required
-            className="rounded border-gray-300 dark:border-white/20 text-brand-pink focus:ring-brand-pink mt-0.5"
+            className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold mt-0.5"
           />
           <span>
-            I consent to my data being stored and shared with Cloud Native Nordics organisers for the purpose of reviewing my submission. <span className="text-brand-pink">*</span>
+            I consent to my data being stored and shared with Cloud Native Nordics organisers for the purpose of reviewing my submission. <span className="gradient-text">*</span>
           </span>
         </label>
         <p className="text-xs text-gray-400 mt-2 ml-6">
