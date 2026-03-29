@@ -53,13 +53,7 @@ function normalizeEvent(raw: BevyApiEvent): BevyEvent {
 
 export async function fetchBevyEvents(): Promise<BevyEvent[]> {
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-
-    const res = await fetch(`${BEVY_API_BASE}/event/?page_size=500`, {
-      signal: controller.signal,
-    });
-    clearTimeout(timeout);
+    const res = await fetch(`${BEVY_API_BASE}/event/?page_size=500`);
 
     if (!res.ok) return [];
 
