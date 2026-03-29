@@ -27,20 +27,22 @@ export function StatsBar({ stats }: { stats: SiteStats }) {
   ];
 
   return (
-    <section className="py-12 bg-white dark:bg-navy-card border-b border-gray-100 dark:border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          {items.map((item) => (
-            <div key={item.label} className="flex flex-col items-center gap-2">
-              <div className="text-brand-pink">{item.icon}</div>
-              <div className="text-3xl font-heading font-bold text-navy dark:text-white">
-                {item.value}
+    <section className="relative -mt-8 z-10 pb-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-white dark:bg-navy-card shadow-xl dark:shadow-2xl dark:shadow-black/20 border border-gray-100 dark:border-white/5 py-8 px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+            {items.map((item) => (
+              <div key={item.label} className="flex flex-col items-center gap-2">
+                <div className="text-brand-pink">{item.icon}</div>
+                <div className="text-3xl font-heading font-bold text-navy dark:text-white">
+                  {item.value}
+                </div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  {item.label}
+                </div>
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                {item.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
