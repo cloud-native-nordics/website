@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { loadGroup, loadGroups } from "@/lib/groups";

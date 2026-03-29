@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "aalborg",
+    "name": "Cloud Native Aalborg",
+    "city": "Aalborg",
+    "country": "Denmark",
+    "latitude": 57.0488,
+    "longitude": 9.9217,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-aalborg/",
+    "member_count": 300
+  },
+  {
+    "slug": "aarhus",
+    "name": "Cloud Native Aarhus",
+    "city": "Aarhus",
+    "country": "Denmark",
+    "latitude": 56.1629,
+    "longitude": 10.2039,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-aarhus/",
+    "slack_channel": "#cloud-native-aarhus",
+    "member_count": 1200,
+    "organizers": [
+      {
+        "name": "Kasper Borg Nissen",
+        "role": "Principal Developer Advocate",
+        "company": "Dash0",
+        "photo": "https://github.com/kaspernissen.png",
+        "linkedin": "https://www.linkedin.com/in/kaspernissen/",
+        "github": "https://github.com/kaspernissen",
+        "bluesky": "https://bsky.app/profile/kaspernissen.xyz",
+        "twitter": "https://x.com/phennex"
+      },
+      {
+        "name": "Rasmus Steiniche",
+        "role": "Lead Organizer",
+        "company": "Neurospace"
+      },
+      {
+        "name": "Ophelia Zhang Dalsgaard",
+        "role": "Modernization and Engineering Lead",
+        "company": "Danske Bank"
+      },
+      {
+        "name": "Henrik Høegh",
+        "role": "Digital Platform Owner",
+        "company": "VELUX"
+      },
+      {
+        "name": "Henrik Løvborg",
+        "role": "Tech Sales Lead Denmark",
+        "company": "Red Hat"
+      },
+      {
+        "name": "Stefan Daugaard Poulsen",
+        "role": "Solution Architect",
+        "company": "Norlys"
+      },
+      {
+        "name": "Ryan Gough",
+        "role": "Senior IT Operations Specialist / Platform",
+        "company": "JYSK"
+      },
+      {
+        "name": "Kasper Tygesen",
+        "role": "Senior Software Engineer",
+        "company": "Lunar"
+      }
+    ]
+  },
+  {
+    "slug": "bergen",
+    "name": "Cloud Native Bergen",
+    "city": "Bergen",
+    "country": "Norway",
+    "latitude": 60.3913,
+    "longitude": 5.3221,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-bergen/",
+    "member_count": 300
+  },
+  {
+    "slug": "copenhagen",
+    "name": "Cloud Native Copenhagen",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "latitude": 55.6761,
+    "longitude": 12.5683,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-copenhagen/",
+    "member_count": 1500
+  },
+  {
+    "slug": "goteborg",
+    "name": "Cloud Native Goteborg",
+    "city": "Goteborg",
+    "country": "Sweden",
+    "latitude": 57.7089,
+    "longitude": 11.9746,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-goteborg/",
+    "member_count": 400
+  },
+  {
+    "slug": "helsinki",
+    "name": "Cloud Native Helsinki",
+    "city": "Helsinki",
+    "country": "Finland",
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-helsinki/",
+    "member_count": 800
+  },
+  {
+    "slug": "oslo",
+    "name": "Cloud Native Oslo",
+    "city": "Oslo",
+    "country": "Norway",
+    "latitude": 59.9139,
+    "longitude": 10.7522,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-oslo/",
+    "member_count": 600
+  },
+  {
+    "slug": "stavanger",
+    "name": "Cloud Native Stavanger",
+    "city": "Stavanger",
+    "country": "Norway",
+    "latitude": 58.97,
+    "longitude": 5.7331,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-stavanger/",
+    "member_count": 200
+  },
+  {
+    "slug": "stockholm",
+    "name": "Cloud Native Stockholm",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "latitude": 59.3293,
+    "longitude": 18.0686,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-stockholm/",
+    "member_count": 800
+  },
+  {
+    "slug": "tampere",
+    "name": "Cloud Native Tampere",
+    "city": "Tampere",
+    "country": "Finland",
+    "latitude": 61.4978,
+    "longitude": 23.761,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-tampere/",
+    "member_count": 300
+  },
+  {
+    "slug": "turku",
+    "name": "Cloud Native Turku",
+    "city": "Turku",
+    "country": "Finland",
+    "latitude": 60.4518,
+    "longitude": 22.2666,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-turku/",
+    "member_count": 200
+  },
+  {
+    "slug": "umea",
+    "name": "Cloud Native Umea",
+    "city": "Umea",
+    "country": "Sweden",
+    "latitude": 63.8258,
+    "longitude": 20.263,
+    "platform": "bevy",
+    "platform_url": "https://community.cncf.io/cloud-native-umea/",
+    "member_count": 150
+  }
+]
