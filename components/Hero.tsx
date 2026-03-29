@@ -24,7 +24,7 @@ export function Hero({ totalMembers }: HeroProps) {
           {/* Outer spinning ring */}
           <div className="absolute inset-0 -m-8 sm:-m-10 rounded-full animate-spin-slow">
             <div className="w-full h-full rounded-full" style={{
-              background: "linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)) padding-box, linear-gradient(135deg, #FFB500, #ffffff, #326CE5, #FFB500) border-box",
+              background: "transparent padding-box, linear-gradient(135deg, #FFB500, #FF6DAF, #F11F7E, #FFB500) border-box",
               borderWidth: "2px",
               borderStyle: "solid",
               borderColor: "transparent",
@@ -34,16 +34,15 @@ export function Hero({ totalMembers }: HeroProps) {
           {/* Inner reverse-spinning ring */}
           <div className="absolute inset-0 -m-4 sm:-m-5 rounded-full animate-spin-slow-reverse">
             <div className="w-full h-full rounded-full" style={{
-              background: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)) padding-box, linear-gradient(135deg, #326CE5, #FFB500, #ffffff, #326CE5) border-box",
+              background: "transparent padding-box, linear-gradient(135deg, #F11F7E, #FFB500, #FF6DAF, #F11F7E) border-box",
               borderWidth: "1px",
               borderStyle: "solid",
               borderColor: "transparent",
             }} />
           </div>
 
-          {/* Glow behind the icon */}
-          <div className="absolute inset-0 -m-10 rounded-full bg-white/30 blur-[50px] animate-pulse-glow" />
-          <div className="absolute inset-0 -m-6 rounded-full bg-brand-blue/20 blur-[35px] animate-pulse-glow [animation-delay:1s]" />
+          {/* Dark circle behind icon for contrast */}
+          <div className="absolute inset-0 -m-2 rounded-full bg-navy-deep/80 backdrop-blur-sm" />
 
           {/* The helm icon */}
           <Image
@@ -51,7 +50,7 @@ export function Hero({ totalMembers }: HeroProps) {
             alt="Cloud Native Nordics"
             width={120}
             height={120}
-            className="relative z-10 drop-shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+            className="relative z-10 drop-shadow-[0_0_20px_rgba(50,108,229,0.5)]"
             priority
           />
         </div>
