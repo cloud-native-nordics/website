@@ -15,6 +15,11 @@ export interface GroupDefinition {
 export interface Organizer {
   name: string;
   role?: string;
+  photo?: string;
+  linkedin?: string;
+  github?: string;
+  bluesky?: string;
+  twitter?: string;
 }
 
 export interface BevyEvent {
