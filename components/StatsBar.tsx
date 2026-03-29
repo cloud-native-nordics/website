@@ -28,16 +28,16 @@ export function StatsBar({ stats }: { stats: SiteStats }) {
 
   return (
     <section className="relative -mt-6 z-10 pb-10">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-xl bg-white dark:bg-navy-card shadow-lg dark:shadow-xl dark:shadow-black/20 border border-gray-100 dark:border-white/5 py-4 px-6">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-xl bg-white dark:bg-navy-card shadow-lg dark:shadow-xl dark:shadow-black/20 border border-gray-100 dark:border-white/5 py-5 px-8">
           <div className="flex items-center justify-around">
             {items.map((item) => (
-              <div key={item.label} className="flex items-center gap-2">
+              <div key={item.label} className="flex items-center gap-2.5">
                 <div className="text-brand-gold">{item.icon}</div>
-                <div className="text-xl font-heading font-bold text-navy dark:text-white">
+                <div className="text-2xl font-heading font-bold text-navy dark:text-white">
                   {item.value}
                 </div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
                   {item.label}
                 </div>
               </div>
