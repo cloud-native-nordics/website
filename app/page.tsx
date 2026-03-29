@@ -24,8 +24,10 @@ export default async function Home() {
 
   const totalUpcoming = groupsWithEvents.reduce((sum, g) => sum + g.upcoming_events.length, 0);
 
+  const countries = new Set(groups.map((g) => g.country)).size;
+
   const stats: SiteStats = {
-    total_members: totalMembers,
+    countries,
     active_groups: groups.length,
     upcoming_events: totalUpcoming,
   };

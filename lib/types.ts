@@ -37,7 +37,7 @@ export interface GroupWithData extends GroupDefinition {
 }
 
 export interface SiteStats {
-  total_members: number;
+  countries: number;
   active_groups: number;
   upcoming_events: number;
 }
