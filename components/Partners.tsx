@@ -1,12 +1,5 @@
 const CONFERENCES = [
   {
-    name: "Cloud Native Denmark",
-    location: "Copenhagen",
-    date: "November 19-20, 2026",
-    href: "https://cloudnativedenmark.dk/",
-    logo: "/images/partner-denmark.svg",
-  },
-  {
     name: "KCD Helsinki",
     location: "Helsinki",
     date: "May 20, 2026",
@@ -19,6 +12,13 @@ const CONFERENCES = [
     date: "October 26-27, 2026",
     href: "https://2026.cloudnativedays.no/",
     logo: "/images/partner-norway.svg",
+  },
+  {
+    name: "Cloud Native Denmark",
+    location: "Copenhagen",
+    date: "November 19-20, 2026",
+    href: "https://cloudnativedenmark.dk/",
+    logo: "/images/partner-denmark.svg",
   },
 ];
 
