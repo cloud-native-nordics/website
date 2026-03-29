@@ -1,9 +1,13 @@
-export default function Home() {
+import { Hero } from "@/components/Hero";
+import { loadGroups } from "@/lib/groups";
+
+export default async function Home() {
+  const groups = await loadGroups();
+  const totalMembers = groups.reduce((sum, g) => sum + (g.member_count || 0), 0);
+
   return (
-    <main className="flex items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-heading font-bold">
-        Cloud Native Nordics
-      </h1>
-    </main>
+    <>
+      <Hero totalMembers={totalMembers} />
+    </>
   );
 }
