@@ -8,6 +8,7 @@ export interface GroupDefinition {
   platform: "bevy" | "meetup";
   platform_url: string;
   slack_channel?: string;
+  slack_channel_id?: string;
   member_count?: number;
   organizers?: Organizer[];
 }

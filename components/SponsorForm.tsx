@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import groupsData from "@/lib/groups-data.json";
 
 const LOCATIONS = {
   Denmark: ["Aalborg", "Aarhus", "Copenhagen"],
@@ -42,6 +43,14 @@ export function SponsorForm() {
         return;
       }
     }
+
+    const channelMap: Record<string, string> = {};
+    for (const group of groupsData as any[]) {
+      if (group.slack_channel_id) {
+        channelMap[group.city] = group.slack_channel_id;
+      }
+    }
+    formData.set("slack_channels", JSON.stringify(channelMap));
 
     setSubmitting(true);
 

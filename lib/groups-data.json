@@ -20,6 +20,7 @@
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-aarhus/",
     "slack_channel": "#cloud-native-aarhus",
+    "slack_channel_id": "G4W89H5LH",
     "member_count": 1200,
     "organizers": [
       {
