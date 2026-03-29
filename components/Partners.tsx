@@ -7,6 +7,7 @@ const PARTNERS = [
   {
     name: "Cloud Native Days Norway",
     href: "https://2026.cloudnativedays.no/",
+    logo: "/images/partner-norway.svg",
   },
 ];
 
