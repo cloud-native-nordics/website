@@ -2,6 +2,7 @@ const PARTNERS = [
   {
     name: "Cloud Native Denmark",
     href: "https://cloudnativedenmark.dk/",
+    logo: "/images/partner-denmark.svg",
   },
   {
     name: "Cloud Native Days Norway",
@@ -26,9 +27,16 @@ export function Partners() {
               href={partner.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-5 rounded-xl bg-white dark:bg-navy-card border border-gray-200 dark:border-white/10 hover:border-brand-pink dark:hover:border-brand-pink transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="flex flex-col items-center gap-3 px-8 py-6 rounded-xl bg-white dark:bg-navy-card border border-gray-200 dark:border-white/10 hover:border-brand-pink dark:hover:border-brand-pink transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              <span className="font-heading font-bold text-navy dark:text-white">
+              {partner.logo ? (
+                <img src={partner.logo} alt={partner.name} className="h-12 w-auto" />
+              ) : (
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-brand-pink to-brand-gold flex items-center justify-center text-white font-heading font-bold text-lg">
+                  {partner.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+                </div>
+              )}
+              <span className="font-heading font-bold text-sm text-navy dark:text-white">
                 {partner.name}
               </span>
             </a>
