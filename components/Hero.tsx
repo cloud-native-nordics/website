@@ -50,7 +50,7 @@ export function Hero({ totalMembers }: HeroProps) {
             alt="Cloud Native Nordics"
             width={120}
             height={120}
-            className="relative z-10 drop-shadow-[0_0_20px_rgba(50,108,229,0.5)]"
+            className="relative z-10"
             priority
           />
         </div>
