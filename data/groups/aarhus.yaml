@@ -1,0 +1,12 @@
+name: Cloud Native Aarhus
+city: Aarhus
+country: Denmark
+latitude: 56.1629
+longitude: 10.2039
+platform: bevy
+platform_url: https://community.cncf.io/cloud-native-aarhus/
+slack_channel: "#cloud-native-aarhus"
+member_count: 1200
+organizers:
+  - name: Kasper Nissen
+    role: Lead Organizer
