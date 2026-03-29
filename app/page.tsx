@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import { Hero } from "@/components/Hero";
 import { StatsBar } from "@/components/StatsBar";
 import { InteractiveMap } from "@/components/InteractiveMap";

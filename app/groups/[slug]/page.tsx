@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { loadGroup, loadGroups } from "@/lib/groups";
@@ -11,6 +9,11 @@ import type { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const groups = await loadGroups();
+  return groups.map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
