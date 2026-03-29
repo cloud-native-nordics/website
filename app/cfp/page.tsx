@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { CfpForm } from "@/components/CfpForm";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function CfpPage() {
       </section>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <CfpForm />
+        <Suspense><CfpForm /></Suspense>
       </div>
     </>
   );

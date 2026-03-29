@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { SponsorForm } from "@/components/SponsorForm";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function SponsorPage() {
       </section>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <SponsorForm />
+        <Suspense><SponsorForm /></Suspense>
       </div>
     </>
   );
