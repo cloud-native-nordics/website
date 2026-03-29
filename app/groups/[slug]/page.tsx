@@ -47,13 +47,11 @@ export default async function GroupPage({ params }: PageProps) {
             </svg>
             All Groups
           </Link>
-          {logoUrl && (
-            <img
-              src={logoUrl}
-              alt=""
-              className="w-16 h-16 rounded-xl object-cover mb-4"
-            />
-          )}
+          <img
+            src={logoUrl || "/logo-icon.svg"}
+            alt=""
+            className="w-16 h-16 rounded-xl object-cover mb-4"
+          />
           <h1 className="text-3xl sm:text-4xl font-heading font-extrabold text-white mb-2">
             {group.name}
           </h1>

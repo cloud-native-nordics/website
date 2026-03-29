@@ -40,9 +40,9 @@ export function InteractiveMap({ groups }: { groups: GroupWithData[] }) {
       tileLayer.current = tiles;
 
       const markerIcon = L.divIcon({
-        html: `<div style="background: linear-gradient(135deg, #FF6DAF, #FFB500); width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>`,
-        iconSize: [24, 24],
-        iconAnchor: [12, 12],
+        html: `<img src="/logo-icon.svg" style="width: 32px; height: 32px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));" />`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
         className: "",
       });
 
