@@ -9,7 +9,7 @@ slack_channel: "#cloud-native-aarhus"
 member_count: 1200
 organizers:
   - name: Kasper Borg Nissen
-    role: Lead Organizer
+    role: Principal Developer Advocate
     company: Dash0
     photo: https://github.com/kaspernissen.png
     linkedin: https://www.linkedin.com/in/kaspernissen/
