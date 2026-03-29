@@ -12,8 +12,8 @@ const config: Config = {
       colors: {
         navy: {
           DEFAULT: "#262F59",
-          deep: "#0F1229",
-          card: "#1A1F3D",
+          deep: "#09090b",
+          card: "#18181b",
         },
         brand: {
           blue: "#326CE5",
