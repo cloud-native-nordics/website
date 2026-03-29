@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Raleway } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Navbar } from "@/components/Navbar";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -49,7 +50,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Navbar />
+          <main className="pt-16">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
