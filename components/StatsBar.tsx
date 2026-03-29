@@ -32,7 +32,7 @@ export function StatsBar({ stats }: { stats: SiteStats }) {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {items.map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-2">
-              <div className="text-brand-blue">{item.icon}</div>
+              <div className="text-brand-pink">{item.icon}</div>
               <div className="text-3xl font-heading font-bold text-navy dark:text-white">
                 {item.value}
               </div>
