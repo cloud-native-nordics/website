@@ -17,6 +17,9 @@ export function EventCard({ event }: { event: BevyEvent }) {
         <div className="text-2xl font-heading font-bold text-navy dark:text-white">
           {date.getDate()}
         </div>
+        <div className="text-xs text-gray-400 dark:text-gray-500">
+          {date.getFullYear()}
+        </div>
       </div>
       <div className="min-w-0">
         <h3 className="text-sm font-semibold text-navy dark:text-white truncate">
