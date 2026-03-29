@@ -103,17 +103,23 @@ export default async function GroupPage({ params }: PageProps) {
                   key={org.name}
                   className="flex items-center gap-4 px-5 py-4 rounded-xl bg-white dark:bg-navy-card border border-gray-200 dark:border-white/10"
                 >
-                  {org.photo && (
+                  {org.photo ? (
                     <img
                       src={org.photo}
                       alt={org.name}
-                      className="w-14 h-14 rounded-full object-cover"
+                      className="w-14 h-14 rounded-full object-cover flex-shrink-0"
                     />
+                  ) : (
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand-pink to-brand-gold flex items-center justify-center text-white font-heading font-bold text-lg flex-shrink-0">
+                      {org.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+                    </div>
                   )}
                   <div>
                     <div className="font-heading font-bold text-navy dark:text-white">{org.name}</div>
-                    {org.role && (
-                      <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">{org.role}</div>
+                    {(org.role || org.company) && (
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        {org.role}{org.role && org.company && " · "}{org.company}
+                      </div>
                     )}
                     <div className="flex items-center gap-2">
                       {org.linkedin && (

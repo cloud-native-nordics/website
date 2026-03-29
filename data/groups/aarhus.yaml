@@ -8,10 +8,32 @@ platform_url: https://community.cncf.io/cloud-native-aarhus/
 slack_channel: "#cloud-native-aarhus"
 member_count: 1200
 organizers:
-  - name: Kasper Nissen
+  - name: Kasper Borg Nissen
     role: Lead Organizer
+    company: Dash0
     photo: https://github.com/kaspernissen.png
     linkedin: https://www.linkedin.com/in/kaspernissen/
     github: https://github.com/kaspernissen
     bluesky: https://bsky.app/profile/kaspernissen.xyz
     twitter: https://x.com/phennex
+  - name: Rasmus Steiniche
+    role: Lead Organizer
+    company: Neurospace
+  - name: Ophelia Zhang Dalsgaard
+    role: Modernization and Engineering Lead
+    company: Danske Bank
+  - name: Henrik Høegh
+    role: Digital Platform Owner
+    company: VELUX
+  - name: Henrik Løvborg
+    role: Tech Sales Lead Denmark
+    company: Red Hat
+  - name: Stefan Daugaard Poulsen
+    role: Solution Architect
+    company: Norlys
+  - name: Ryan Gough
+    role: Senior IT Operations Specialist / Platform
+    company: JYSK
+  - name: Kasper Tygesen
+    role: Senior Software Engineer
+    company: Lunar

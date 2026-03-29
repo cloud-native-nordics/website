@@ -15,6 +15,7 @@ export interface GroupDefinition {
 export interface Organizer {
   name: string;
   role?: string;
+  company?: string;
   photo?: string;
   linkedin?: string;
   github?: string;
