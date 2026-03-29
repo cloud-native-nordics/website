@@ -12,26 +12,22 @@ export function GroupCard({ group }: { group: GroupWithData }) {
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl bg-gradient-to-br from-brand-pink/5 to-brand-gold/5" />
 
       <div className="relative p-6">
+        {group.member_count && (
+          <span className="absolute top-4 right-4 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-brand-pink to-brand-gold text-white">
+            {group.member_count.toLocaleString()} members
+          </span>
+        )}
         <img
           src={group.logo_url || "/logo-icon.svg"}
           alt=""
           className="w-12 h-12 rounded-lg object-cover mb-3"
         />
-        <div className="flex items-start justify-between mb-3">
-          <div>
-            <h3 className="text-lg font-heading font-bold text-navy dark:text-white group-hover-gradient transition-colors">
-              {group.name}
-            </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {group.city}, {group.country}
-            </p>
-          </div>
-          {group.member_count && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-brand-pink to-brand-gold text-white">
-              {group.member_count.toLocaleString()} members
-            </span>
-          )}
-        </div>
+        <h3 className="text-lg font-heading font-bold text-navy dark:text-white group-hover-gradient transition-colors">
+          {group.name}
+        </h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+          {group.city}, {group.country}
+        </p>
 
         {nextEvent ? (
           <div className="mt-4 pt-4 border-t border-gray-100 dark:border-white/5">
