@@ -1,18 +1,49 @@
-# Website
+# Cloud Native Nordics Website
 
-This repo contains the website of [cloudnativenordics.com](https://cloudnativenordics.com)
+The official website for Cloud Native Nordics — connecting cloud native communities across the Nordic countries.
 
-# Run the website and contribute
+## Tech Stack
 
-Contributions are very welcome.
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Map:** Leaflet with CartoDB tiles
+- **Data:** Bevy API (events) + YAML (group definitions)
+- **Deployment:** Cloudflare Pages
 
-Start by running `make help` and go from there.
+## Development
 
-Currently you need to have [gohugo installed](https://gohugo.io/getting-started/installing/).
+```bash
+npm install
+npm run dev
+```
 
-# Bootstrap
+Open http://localhost:3000.
 
-The website is running with bootstrap which is placed within `assets`.
-The current version running is `Bootstrap v4.3.1`.
+## Managing Groups
 
-To update bootstrap download the zip and place scss `[bootstrap version]/scss` under `assets/scss/bootstrap` and js `[bootstrap version]/js/dist` under `assets/js/bootstrap`.
+Groups are defined as YAML files in `data/groups/`. Each file represents one community chapter:
+
+```yaml
+name: Cloud Native Aarhus
+city: Aarhus
+country: Denmark
+latitude: 56.1629
+longitude: 10.2039
+platform: bevy
+platform_url: https://community.cncf.io/cloud-native-aarhus/
+slack_channel: "#cloud-native-aarhus"
+member_count: 1200
+organizers:
+  - name: Kasper Nissen
+    role: Lead Organizer
+```
+
+To add a new group, create a new YAML file and push to master.
+
+## Deployment
+
+Pushes to `master` automatically deploy to Cloudflare Pages via GitHub Actions.
+
+## CFP
+
+The Call for Papers form is managed separately at [cfp.cloudnativenordics.com](https://cfp.cloudnativenordics.com).
