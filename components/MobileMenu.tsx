@@ -17,7 +17,7 @@ export function MobileMenu({ links, onClose }: { links: NavLink[]; onClose: () =
             target={link.external ? "_blank" : undefined}
             rel={link.external ? "noopener noreferrer" : undefined}
             onClick={onClose}
-            className="block py-2 text-base font-medium text-navy/70 dark:text-gray-300 hover:text-brand-blue"
+            className="block py-2 text-base font-medium text-navy/70 dark:text-gray-300 hover:text-brand-pink"
           >
             {link.label}
           </a>

@@ -24,10 +24,7 @@ export function Hero({ totalMembers }: HeroProps) {
           className="mx-auto mb-8"
           priority
         />
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-gold mb-4">
-          Cloud Native Nordics
-        </h1>
-        <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl font-heading font-semibold text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-gold mb-10 max-w-2xl mx-auto">
           Connecting cloud native communities across the Nordics
         </p>
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-brand-pink/40">

@@ -42,7 +42,7 @@ export function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-sm font-medium text-navy/70 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-blue transition-colors"
+                className="text-sm font-medium text-navy/70 dark:text-gray-300 hover:text-brand-pink transition-colors"
               >
                 {link.label}
               </a>

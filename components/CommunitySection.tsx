@@ -48,7 +48,7 @@ export function CommunitySection() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white dark:bg-navy-deep border border-gray-200 dark:border-white/10 hover:border-brand-blue dark:hover:border-brand-blue transition-colors w-full sm:w-auto"
+              className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white dark:bg-navy-deep border border-gray-200 dark:border-white/10 hover:border-brand-pink dark:hover:border-brand-pink transition-colors w-full sm:w-auto"
             >
               <div className="text-navy dark:text-white">{link.icon}</div>
               <div className="text-left">

@@ -8,7 +8,7 @@ export function EventCard({ event }: { event: BevyEvent }) {
       href={event.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex gap-4 p-4 rounded-lg bg-white dark:bg-navy-card border border-gray-200 dark:border-white/10 hover:border-brand-blue dark:hover:border-brand-blue transition-colors"
+      className="flex gap-4 p-4 rounded-lg bg-white dark:bg-navy-card border border-gray-200 dark:border-white/10 hover:border-brand-pink dark:hover:border-brand-pink transition-colors"
     >
       <div className="flex-shrink-0 w-14 text-center">
         <div className="text-xs uppercase font-medium text-brand-pink">

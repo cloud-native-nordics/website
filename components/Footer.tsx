@@ -9,7 +9,7 @@ export function Footer() {
               href="https://www.cncf.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-blue hover:underline"
+              className="text-brand-pink hover:text-brand-gold transition-colors"
             >
               CNCF
             </a>{" "}
