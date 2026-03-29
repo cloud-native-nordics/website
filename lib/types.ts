@@ -33,6 +33,7 @@ export interface BevyEvent {
 export interface GroupWithData extends GroupDefinition {
   upcoming_events: BevyEvent[];
   past_events: BevyEvent[];
+  logo_url?: string;
 }
 
 export interface SiteStats {

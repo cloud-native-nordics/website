@@ -12,8 +12,15 @@ export function GroupCard({ group }: { group: GroupWithData }) {
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl bg-gradient-to-br from-brand-pink/5 to-brand-gold/5" />
 
       <div className="relative p-6">
-        <div className="flex items-start justify-between mb-3">
-          <div>
+        <div className="flex items-start gap-3 mb-3">
+          {group.logo_url && (
+            <img
+              src={group.logo_url}
+              alt=""
+              className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
+            />
+          )}
+          <div className="flex-1 min-w-0">
             <h3 className="text-lg font-heading font-bold text-navy dark:text-white group-hover:text-brand-pink transition-colors">
               {group.name}
             </h3>
@@ -22,7 +29,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
             </p>
           </div>
           {group.member_count && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-pink/10 text-brand-pink dark:bg-brand-pink/20">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-pink/10 text-brand-pink dark:bg-brand-pink/20 flex-shrink-0">
               {group.member_count.toLocaleString()} members
             </span>
           )}
