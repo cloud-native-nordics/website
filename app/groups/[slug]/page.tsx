@@ -60,7 +60,7 @@ export default async function GroupPage({ params }: PageProps) {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             {group.member_count && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-brand-pink/20 text-brand-pink">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm gradient-text">
                 {group.member_count.toLocaleString()} members
               </span>
             )}

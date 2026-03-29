@@ -19,7 +19,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
         />
         <div className="flex items-start justify-between mb-3">
           <div>
-            <h3 className="text-lg font-heading font-bold text-navy dark:text-white group-hover:text-brand-pink transition-colors">
+            <h3 className="text-lg font-heading font-bold text-navy dark:text-white group-hover-gradient transition-colors">
               {group.name}
             </h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -27,7 +27,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
             </p>
           </div>
           {group.member_count && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-pink/10 text-brand-pink dark:bg-brand-pink/20">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium gradient-text">
               {group.member_count.toLocaleString()} members
             </span>
           )}

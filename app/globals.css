@@ -26,4 +26,11 @@
   .gradient-link:hover {
     @apply from-brand-gold to-brand-pink;
   }
+
+  .group:hover .group-hover-gradient {
+    background: linear-gradient(to right, #FF6DAF, #FFB500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
