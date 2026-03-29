@@ -3,6 +3,7 @@ import { Barlow, Raleway } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="pt-16">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
