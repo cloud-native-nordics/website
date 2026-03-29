@@ -10,18 +10,20 @@ export function Hero({ totalMembers }: HeroProps) {
     <section className="relative overflow-hidden bg-navy-deep py-20 sm:py-28">
       {/* Vibrant aurora background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large warm glow top-left */}
-        <div className="absolute -top-1/3 -left-1/4 w-[900px] h-[900px] rounded-full bg-brand-gold/30 blur-[140px] animate-pulse-glow" />
-        {/* Hot pink center-right */}
-        <div className="absolute top-1/4 -right-1/6 w-[700px] h-[700px] rounded-full bg-brand-hotpink/25 blur-[120px] animate-pulse-glow [animation-delay:1s]" />
-        {/* Gold bottom-right */}
-        <div className="absolute -bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/25 blur-[100px] animate-pulse-glow [animation-delay:2s]" />
-        {/* Pink center */}
-        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-brand-pink/20 blur-[100px] animate-pulse-glow [animation-delay:0.5s]" />
-        {/* Blue accent near logo */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-brand-blue/20 blur-[80px] animate-pulse-glow [animation-delay:1.5s]" />
-        {/* Extra warm glow bottom-left */}
-        <div className="absolute bottom-0 -left-1/6 w-[500px] h-[500px] rounded-full bg-brand-gold/20 blur-[100px] animate-pulse-glow [animation-delay:0.8s]" />
+        {/* Top-left gold */}
+        <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-brand-gold/30 blur-[140px] animate-pulse-glow" />
+        {/* Top-right gold */}
+        <div className="absolute -top-1/4 right-0 w-[800px] h-[800px] rounded-full bg-brand-gold/25 blur-[130px] animate-pulse-glow [animation-delay:1.2s]" />
+        {/* Center pink */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-brand-pink/20 blur-[100px] animate-pulse-glow [animation-delay:0.5s]" />
+        {/* Right hotpink */}
+        <div className="absolute top-1/2 right-[10%] w-[600px] h-[600px] rounded-full bg-brand-hotpink/20 blur-[110px] animate-pulse-glow [animation-delay:1.8s]" />
+        {/* Bottom-left gold */}
+        <div className="absolute -bottom-1/4 left-[10%] w-[600px] h-[600px] rounded-full bg-brand-gold/25 blur-[100px] animate-pulse-glow [animation-delay:0.8s]" />
+        {/* Bottom-right pink */}
+        <div className="absolute -bottom-1/3 right-[5%] w-[700px] h-[700px] rounded-full bg-brand-pink/20 blur-[120px] animate-pulse-glow [animation-delay:2s]" />
+        {/* Blue accent center */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-brand-blue/15 blur-[80px] animate-pulse-glow [animation-delay:1.5s]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
