@@ -3,6 +3,7 @@ import { StatsBar } from "@/components/StatsBar";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { GroupsGrid } from "@/components/GroupsGrid";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
+import { About } from "@/components/About";
 import { CfpSection } from "@/components/CfpSection";
 import { CommunitySection } from "@/components/CommunitySection";
 import { loadGroups } from "@/lib/groups";
@@ -41,6 +42,7 @@ export default async function Home() {
     <>
       <Hero totalMembers={totalMembers} />
       <StatsBar stats={stats} />
+      <About />
       <InteractiveMap groups={groupsWithEvents} />
       <GroupsGrid groups={groupsWithEvents} />
       <UpcomingEvents events={allUpcoming} />
