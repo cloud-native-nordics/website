@@ -31,6 +31,7 @@ export default async function GroupPage({ params }: PageProps) {
   const { upcoming, past } = getEventsForChapter(allEvents, group.platform_url);
   const firstEvent = upcoming[0] || past[0];
   const logoUrl = firstEvent?.chapter_logo_url;
+  const description = firstEvent?.chapter_description;
 
   return (
     <>
@@ -82,6 +83,19 @@ export default async function GroupPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* About */}
+        {description && (
+          <div className="mb-12">
+            <h2 className="text-xl font-heading font-bold text-navy dark:text-white mb-4">
+              About
+            </h2>
+            <div
+              className="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-300"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          </div>
+        )}
+
         {/* Location Map */}
         <div className="mb-12">
           <h2 className="text-xl font-heading font-bold text-navy dark:text-white mb-4">

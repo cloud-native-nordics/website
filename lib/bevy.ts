@@ -17,6 +17,7 @@ interface BevyApiEvent {
     country: string;
     country_name: string;
     logo?: { url: string; thumbnail_url: string };
+    description?: string;
     relative_url: string;
     url: string;
   };
@@ -45,6 +46,7 @@ function normalizeEvent(raw: BevyApiEvent): BevyEvent {
     chapter_city: raw.chapter.city,
     chapter_country: raw.chapter.country_name || raw.chapter.country,
     chapter_logo_url: raw.chapter.logo?.url,
+    chapter_description: raw.chapter.description,
     chapter_relative_url: raw.chapter.relative_url,
   };
 }

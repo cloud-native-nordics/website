@@ -19,7 +19,8 @@ export default async function Home() {
     const { upcoming, past } = getEventsForChapter(allEvents, group.platform_url);
     const firstEvent = upcoming[0] || past[0];
     const logo_url = firstEvent?.chapter_logo_url;
-    return { ...group, upcoming_events: upcoming, past_events: past, logo_url };
+    const description = firstEvent?.chapter_description;
+    return { ...group, upcoming_events: upcoming, past_events: past, logo_url, description };
   });
 
   const totalUpcoming = groupsWithEvents.reduce((sum, g) => sum + g.upcoming_events.length, 0);

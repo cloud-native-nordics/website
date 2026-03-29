@@ -33,6 +33,7 @@ export interface BevyEvent {
   chapter_city: string;
   chapter_country: string;
   chapter_logo_url?: string;
+  chapter_description?: string;
   chapter_relative_url: string;
 }
 
@@ -40,6 +41,7 @@ export interface GroupWithData extends GroupDefinition {
   upcoming_events: BevyEvent[];
   past_events: BevyEvent[];
   logo_url?: string;
+  description?: string;
 }
 
 export interface SiteStats {
