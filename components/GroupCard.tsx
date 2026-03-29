@@ -13,7 +13,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
 
       <div className="relative p-6">
         {group.member_count && (
-          <span className="absolute top-4 right-4 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-brand-pink to-brand-gold text-white">
+          <span className="absolute top-6 right-6 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-brand-pink to-brand-gold text-white">
             {group.member_count.toLocaleString()} members
           </span>
         )}
