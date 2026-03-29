@@ -9,7 +9,7 @@ import { MobileMenu } from "./MobileMenu";
 const NAV_LINKS = [
   { href: "#groups", label: "Groups" },
   { href: "#events", label: "Events" },
-  { href: "https://cfp.cloudnativenordics.com", label: "CFP", external: true },
+  { href: "/cfp", label: "CFP" },
   {
     href: "https://join.slack.com/t/cloud-native-nordics/shared_invite/zt-2ge0c6cmo-SDDeFUDeEU~TUkZTDcis8w",
     label: "Slack",

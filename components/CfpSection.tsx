@@ -13,9 +13,7 @@ export function CfpSection() {
           We welcome topics on Kubernetes, DevOps, Security, Observability, Platform Engineering, and more.
         </p>
         <a
-          href="https://cfp.cloudnativenordics.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/cfp"
           className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-navy font-heading font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
         >
           Submit a Talk

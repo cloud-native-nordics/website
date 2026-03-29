@@ -156,9 +156,7 @@ export default async function GroupPage({ params }: PageProps) {
             Want to speak at {group.name}?
           </h3>
           <a
-            href="https://cfp.cloudnativenordics.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/cfp?location=${encodeURIComponent(group.city)}`}
             className="inline-flex items-center gap-2 mt-3 px-6 py-3 rounded-full bg-gradient-to-r from-brand-pink to-brand-gold text-white font-heading font-bold hover:opacity-90 transition-opacity"
           >
             Submit a Talk Proposal
