@@ -20,6 +20,10 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Cloud Native Nordics",
   description: "Connecting cloud native communities across the Nordics",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Cloud Native Nordics",
     description: "Connecting cloud native communities across the Nordics",
