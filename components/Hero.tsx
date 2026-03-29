@@ -8,12 +8,20 @@ interface HeroProps {
 export function Hero({ totalMembers }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-navy-deep py-20 sm:py-28">
-      {/* Animated aurora blobs */}
+      {/* Vibrant aurora background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 -left-1/4 w-[800px] h-[800px] rounded-full bg-brand-gold/20 blur-[120px] animate-pulse-glow" />
-        <div className="absolute top-1/2 -right-1/4 w-[700px] h-[700px] rounded-full bg-brand-gold/15 blur-[100px] animate-pulse-glow [animation-delay:1.5s]" />
-        <div className="absolute -bottom-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-brand-pink/12 blur-[100px] animate-pulse-glow [animation-delay:0.8s]" />
-        <div className="absolute top-1/4 right-1/3 w-[300px] h-[300px] rounded-full bg-brand-blue/15 blur-[80px] animate-pulse-glow [animation-delay:2s]" />
+        {/* Large warm glow top-left */}
+        <div className="absolute -top-1/3 -left-1/4 w-[900px] h-[900px] rounded-full bg-brand-gold/30 blur-[140px] animate-pulse-glow" />
+        {/* Hot pink center-right */}
+        <div className="absolute top-1/4 -right-1/6 w-[700px] h-[700px] rounded-full bg-brand-hotpink/25 blur-[120px] animate-pulse-glow [animation-delay:1s]" />
+        {/* Gold bottom-right */}
+        <div className="absolute -bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/25 blur-[100px] animate-pulse-glow [animation-delay:2s]" />
+        {/* Pink center */}
+        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-brand-pink/20 blur-[100px] animate-pulse-glow [animation-delay:0.5s]" />
+        {/* Blue accent near logo */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-brand-blue/20 blur-[80px] animate-pulse-glow [animation-delay:1.5s]" />
+        {/* Extra warm glow bottom-left */}
+        <div className="absolute bottom-0 -left-1/6 w-[500px] h-[500px] rounded-full bg-brand-gold/20 blur-[100px] animate-pulse-glow [animation-delay:0.8s]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -39,8 +47,9 @@ export function Hero({ totalMembers }: HeroProps) {
             }} />
           </div>
 
-          {/* Glow behind the icon */}
-          <div className="absolute inset-0 -m-6 rounded-full bg-brand-blue/20 blur-[40px] animate-pulse-glow" />
+          {/* Warm glow behind the icon */}
+          <div className="absolute inset-0 -m-10 rounded-full bg-brand-gold/30 blur-[50px] animate-pulse-glow" />
+          <div className="absolute inset-0 -m-6 rounded-full bg-brand-blue/25 blur-[35px] animate-pulse-glow [animation-delay:1s]" />
 
           {/* The helm icon */}
           <Image
@@ -48,16 +57,16 @@ export function Hero({ totalMembers }: HeroProps) {
             alt="Cloud Native Nordics"
             width={120}
             height={120}
-            className="relative z-10 drop-shadow-[0_0_30px_rgba(50,108,229,0.4)]"
+            className="relative z-10 drop-shadow-[0_0_40px_rgba(255,181,0,0.3)]"
             priority
           />
         </div>
 
         {/* Text content */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-pink to-brand-gold mb-3">
           Cloud Native Nordics
         </h1>
-        <p className="text-lg sm:text-xl font-heading font-semibold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-pink mb-10 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl font-heading font-semibold text-gray-300 mb-10 max-w-2xl mx-auto">
           Connecting cloud native communities across the Nordics
         </p>
 
