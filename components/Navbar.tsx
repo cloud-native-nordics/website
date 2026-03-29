@@ -7,8 +7,8 @@ import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
 
 const NAV_LINKS = [
-  { href: "#groups", label: "Groups" },
-  { href: "#events", label: "Events" },
+  { href: "/#groups", label: "Groups" },
+  { href: "/#events", label: "Events" },
   { href: "/cfp", label: "CFP" },
   { href: "/sponsor", label: "Sponsor" },
   {

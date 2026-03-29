@@ -16,8 +16,8 @@ export function Footer() {
             community.
           </div>
           <div className="flex items-center gap-6 text-sm">
-            <a href="#groups" className="hover:text-white transition-colors">Groups</a>
-            <a href="#events" className="hover:text-white transition-colors">Events</a>
+            <a href="/#groups" className="hover:text-white transition-colors">Groups</a>
+            <a href="/#events" className="hover:text-white transition-colors">Events</a>
             <a href="/cfp" className="hover:text-white transition-colors">CFP</a>
             <a
               href="https://github.com/cloud-native-nordics"
