@@ -38,8 +38,9 @@ export function GroupMap({ latitude, longitude, name }: GroupMapProps) {
         dragging: false,
       });
 
+      const isDark = document.documentElement.classList.contains("dark");
       const tiles = L.tileLayer(
-        theme === "dark" ? DARK_TILES : LIGHT_TILES,
+        isDark ? DARK_TILES : LIGHT_TILES,
         { attribution: TILE_ATTRIBUTION }
       ).addTo(map);
 
