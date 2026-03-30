@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-body bg-warm-white text-navy dark:bg-navy-deep dark:text-gray-100;
+    @apply font-body bg-birch text-slate dark:bg-night dark:text-gray-100;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -14,21 +14,21 @@
 
 @layer utilities {
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-gold;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber to-ember;
   }
 }
 
 @layer components {
   .gradient-link {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-gold;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber to-ember;
   }
 
   .gradient-link:hover {
-    @apply from-brand-gold to-brand-pink;
+    @apply from-ember to-amber;
   }
 
   .group:hover .group-hover-gradient {
-    background: linear-gradient(to right, #FF6DAF, #FFB500);
+    background: linear-gradient(to right, #E8A435, #D4763A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -54,11 +54,6 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
-}
-
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0); }
-  50% { opacity: 1; transform: scale(1); }
 }
 
 .animate-spin-slow {

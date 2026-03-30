@@ -88,12 +88,12 @@ export function CfpForm() {
   if (success) {
     return (
       <div className="text-center py-16">
-        <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-brand-pink to-brand-gold flex items-center justify-center">
+        <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber to-ember flex items-center justify-center">
           <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h2 className="text-2xl font-heading font-bold text-navy dark:text-white mb-3">
+        <h2 className="text-2xl font-heading font-bold text-slate dark:text-white mb-3">
           Thank you for your submission!
         </h2>
         <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
@@ -103,9 +103,9 @@ export function CfpForm() {
     );
   }
 
-  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-navy-deep px-4 py-2.5 text-sm text-navy dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-colors";
-  const labelClass = "block text-sm font-medium text-navy dark:text-white mb-1.5";
-  const sectionClass = "bg-white dark:bg-navy-card rounded-xl border border-gray-200 dark:border-white/10 p-6 mb-6";
+  const inputClass = "w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-night px-4 py-2.5 text-sm text-slate dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-ember/50 focus:border-ember transition-colors";
+  const labelClass = "block text-sm font-medium text-slate dark:text-white mb-1.5";
+  const sectionClass = "bg-white dark:bg-charcoal rounded-xl border border-gray-200 dark:border-white/10 p-6 mb-6";
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate>
@@ -117,7 +117,7 @@ export function CfpForm() {
 
       {/* Speaker Information */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 border-b-2 border-gradient-to-r from-brand-pink to-brand-gold">
+        <h3 className="text-lg font-heading font-bold text-slate dark:text-white mb-4 pb-2 border-b-2 border-gradient-to-r from-amber to-ember">
           Speaker Information
         </h3>
 
@@ -178,7 +178,7 @@ export function CfpForm() {
 
       {/* Talk Information */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
+        <h3 className="text-lg font-heading font-bold text-slate dark:text-white mb-4 pb-2 pb-2 border-b-2 border-ember">
           Talk Information
         </h3>
 
@@ -229,8 +229,8 @@ export function CfpForm() {
           <label className={labelClass}>Topic Tags</label>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {TAGS.map((tag) => (
-              <label key={tag} className="flex items-center gap-2 text-sm text-navy dark:text-gray-300 cursor-pointer">
-                <input type="checkbox" name="tags" value={tag} className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold" />
+              <label key={tag} className="flex items-center gap-2 text-sm text-slate dark:text-gray-300 cursor-pointer">
+                <input type="checkbox" name="tags" value={tag} className="rounded border-gray-300 dark:border-white/20 text-ember focus:ring-ember" />
                 {tag}
               </label>
             ))}
@@ -256,21 +256,21 @@ export function CfpForm() {
 
       {/* Location Selection */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
+        <h3 className="text-lg font-heading font-bold text-slate dark:text-white mb-4 pb-2 pb-2 border-b-2 border-ember">
           Location Selection
         </h3>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
           Select the chapter(s) you'd like to present at. <span className="gradient-text">*</span>
         </p>
 
-        <label className="flex items-center gap-2 text-sm font-semibold text-navy dark:text-white mb-4 cursor-pointer">
+        <label className="flex items-center gap-2 text-sm font-semibold text-slate dark:text-white mb-4 cursor-pointer">
           <input
             type="checkbox"
             name="open_to_any"
             value="1"
             checked={openToAny}
             onChange={(e) => setOpenToAny(e.target.checked)}
-            className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold"
+            className="rounded border-gray-300 dark:border-white/20 text-ember focus:ring-ember"
           />
           I'm open to presenting at any location
         </label>
@@ -280,14 +280,14 @@ export function CfpForm() {
             <div key={country}>
               <h4 className="text-sm font-heading font-bold gradient-text mb-2">{country}</h4>
               {cities.map((city) => (
-                <label key={city} className="flex items-center gap-2 text-sm text-navy dark:text-gray-300 mb-1 cursor-pointer">
+                <label key={city} className="flex items-center gap-2 text-sm text-slate dark:text-gray-300 mb-1 cursor-pointer">
                   <input
                     type="checkbox"
                     name="locations"
                     value={city}
                     disabled={openToAny}
                     defaultChecked={city === preselectedLocation}
-                    className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold disabled:opacity-50"
+                    className="rounded border-gray-300 dark:border-white/20 text-ember focus:ring-ember disabled:opacity-50"
                   />
                   {city}
                 </label>
@@ -304,15 +304,15 @@ export function CfpForm() {
 
       {/* Consent */}
       <div className={sectionClass}>
-        <h3 className="text-lg font-heading font-bold text-navy dark:text-white mb-4 pb-2 pb-2 border-b-2 border-brand-gold">
+        <h3 className="text-lg font-heading font-bold text-slate dark:text-white mb-4 pb-2 pb-2 border-b-2 border-ember">
           Data Consent
         </h3>
-        <label className="flex items-start gap-2 text-sm text-navy dark:text-gray-300 cursor-pointer">
+        <label className="flex items-start gap-2 text-sm text-slate dark:text-gray-300 cursor-pointer">
           <input
             type="checkbox"
             name="consent"
             required
-            className="rounded border-gray-300 dark:border-white/20 text-brand-gold focus:ring-brand-gold mt-0.5"
+            className="rounded border-gray-300 dark:border-white/20 text-ember focus:ring-ember mt-0.5"
           />
           <span>
             I consent to my data being stored and shared with Cloud Native Nordics organisers for the purpose of reviewing my submission. <span className="gradient-text">*</span>
@@ -327,7 +327,7 @@ export function CfpForm() {
         <button
           type="submit"
           disabled={submitting}
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-brand-pink to-brand-gold text-white font-heading font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-amber to-ember text-white font-heading font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
         >
           {submitting ? "Submitting..." : "Submit Proposal"}
         </button>

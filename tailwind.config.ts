@@ -10,20 +10,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: "#262F59",
-          deep: "#09090b",
-          card: "#18181b",
+        // Primary — Logo Blue
+        fjord: {
+          DEFAULT: "#326CE5",
+          light: "#5B8DEF",
         },
-        brand: {
-          blue: "#326CE5",
-          pink: "#FF6DAF",
-          gold: "#FFB500",
-          purple: "#512268",
-          hotpink: "#F11F7E",
+        // Warm Accents — Nordic Hearth
+        amber: {
+          DEFAULT: "#E8A435",
         },
-        warm: {
-          white: "#FDF9F9",
+        ember: {
+          DEFAULT: "#D4763A",
+        },
+        // Neutrals — Birch & Stone
+        birch: {
+          DEFAULT: "#F5EDE3",
+        },
+        wool: {
+          DEFAULT: "#E8DED1",
+        },
+        stone: {
+          DEFAULT: "#9C9489",
+        },
+        slate: {
+          DEFAULT: "#5C564E",
+        },
+        // Dark Mode — Winter Night
+        night: {
+          DEFAULT: "#0C0A09",
+        },
+        charcoal: {
+          DEFAULT: "#1C1917",
+        },
+        ash: {
+          DEFAULT: "#A8A29E",
         },
       },
       fontFamily: {

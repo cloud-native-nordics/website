@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="py-8 bg-navy-deep text-gray-400 border-t border-white/10">
+    <footer className="py-8 bg-night text-gray-400 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-sm">
@@ -9,7 +9,7 @@ export function Footer() {
               href="https://www.cncf.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-pink hover:text-brand-gold transition-colors"
+              className="text-amber hover:text-ember transition-colors"
             >
               CNCF
             </a>{" "}

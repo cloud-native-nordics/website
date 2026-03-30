@@ -3,9 +3,9 @@ import type { GroupWithData } from "@/lib/types";
 
 export function GroupsGrid({ groups }: { groups: GroupWithData[] }) {
   return (
-    <section id="groups" className="py-16 bg-gray-50 dark:bg-navy-deep">
+    <section id="groups" className="py-16 bg-wool dark:bg-night">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-heading font-bold text-center mb-4 text-navy dark:text-white">
+        <h2 className="text-3xl font-heading font-bold text-center mb-4 text-slate dark:text-white">
           Community Groups
         </h2>
         <p className="text-center text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto">

@@ -89,12 +89,12 @@ export function InteractiveMap({ groups }: { groups: GroupWithData[] }) {
   }, [theme]);
 
   return (
-    <section id="map" className="py-16 bg-warm-white dark:bg-navy-deep">
+    <section id="map" className="py-16 bg-birch dark:bg-night">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-heading font-bold text-center mb-8 text-navy dark:text-white">
+        <h2 className="text-3xl font-heading font-bold text-center mb-8 text-slate dark:text-white">
           Our Communities
         </h2>
-        <div className="p-[2px] rounded-xl bg-gradient-to-r from-brand-pink to-brand-gold shadow-lg">
+        <div className="p-[2px] rounded-xl bg-gradient-to-r from-amber to-ember shadow-lg">
           <div
             ref={mapRef}
             className="h-[400px] sm:h-[500px] rounded-[10px] overflow-hidden"
