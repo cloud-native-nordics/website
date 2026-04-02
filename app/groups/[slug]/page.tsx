@@ -41,9 +41,9 @@ export default async function GroupPage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-night py-16 sm:py-20">
+      <section className="relative bg-nord0 py-16 sm:py-20">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-amber/15 blur-[100px]" />
+          <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-nord12/15 blur-[100px]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
@@ -68,7 +68,7 @@ export default async function GroupPage({ params }: PageProps) {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             {group.member_count && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-amber to-ember text-white">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-nord12 to-nord12 text-white">
                 {group.member_count.toLocaleString()} members
               </span>
             )}
@@ -91,7 +91,7 @@ export default async function GroupPage({ params }: PageProps) {
         {/* About */}
         {description && (
           <div className="mb-12">
-            <h2 className="text-xl font-heading font-bold text-slate dark:text-white mb-4">
+            <h2 className="text-xl font-heading font-bold text-nord0 dark:text-white mb-4">
               About
             </h2>
             <div
@@ -103,7 +103,7 @@ export default async function GroupPage({ params }: PageProps) {
 
         {/* Location Map */}
         <div className="mb-12">
-          <h2 className="text-xl font-heading font-bold text-slate dark:text-white mb-4">
+          <h2 className="text-xl font-heading font-bold text-nord0 dark:text-white mb-4">
             Location
           </h2>
           <div className="max-w-md">
@@ -114,7 +114,7 @@ export default async function GroupPage({ params }: PageProps) {
         {/* Organizers */}
         {group.organizers && group.organizers.length > 0 && (
           <div className="mb-12">
-            <h2 className="text-xl font-heading font-bold text-slate dark:text-white mb-4">
+            <h2 className="text-xl font-heading font-bold text-nord0 dark:text-white mb-4">
               Organizers
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -127,7 +127,7 @@ export default async function GroupPage({ params }: PageProps) {
 
         {/* Upcoming Events */}
         <div className="mb-12">
-          <h2 className="text-xl font-heading font-bold text-slate dark:text-white mb-4">
+          <h2 className="text-xl font-heading font-bold text-nord0 dark:text-white mb-4">
             Upcoming Events
           </h2>
           {upcoming.length > 0 ? (
@@ -144,7 +144,7 @@ export default async function GroupPage({ params }: PageProps) {
         {/* Past Events */}
         {past.length > 0 && (
           <div className="mb-12">
-            <h2 className="text-xl font-heading font-bold text-slate dark:text-white mb-4">
+            <h2 className="text-xl font-heading font-bold text-nord0 dark:text-white mb-4">
               Past Events
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,13 +156,13 @@ export default async function GroupPage({ params }: PageProps) {
         )}
 
         {/* CFP CTA */}
-        <div className="text-center py-8 px-6 rounded-xl bg-gradient-to-br from-amber/10 to-ember/10 border border-amber/20">
-          <h3 className="text-lg font-heading font-bold text-slate dark:text-white mb-2">
+        <div className="text-center py-8 px-6 rounded-xl bg-gradient-to-br from-nord12/10 to-nord12/10 border border-nord12/20">
+          <h3 className="text-lg font-heading font-bold text-nord0 dark:text-white mb-2">
             Want to speak at {group.name}?
           </h3>
           <a
             href={`/cfp?location=${encodeURIComponent(group.city)}`}
-            className="inline-flex items-center gap-2 mt-3 px-6 py-3 rounded-full bg-gradient-to-r from-amber to-ember text-white font-heading font-bold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 mt-3 px-6 py-3 rounded-full bg-gradient-to-r from-nord12 to-nord12 text-white font-heading font-bold hover:opacity-90 transition-opacity"
           >
             Submit a Talk Proposal
           </a>

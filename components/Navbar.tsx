@@ -22,7 +22,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-birch/80 dark:bg-night/80 border-b border-gray-200/20 dark:border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-nord6/80 dark:bg-nord0/80 border-b border-gray-200/20 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
@@ -43,7 +43,7 @@ export function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-sm font-medium text-slate/70 dark:text-gray-300 hover:text-amber transition-colors"
+                className="text-sm font-medium text-nord0/70 dark:text-gray-300 hover:text-nord8 transition-colors"
               >
                 {link.label}
               </a>

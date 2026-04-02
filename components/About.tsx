@@ -1,8 +1,8 @@
 export function About() {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-amber to-ember opacity-90" />
-      <div className="absolute inset-0 bg-night/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-nord12 to-nord12 opacity-90" />
+      <div className="absolute inset-0 bg-nord0/30" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">

@@ -10,40 +10,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary — Logo Blue
+        // Polar Night — dark backgrounds
+        nord0: "#2E3440",
+        nord1: "#3B4252",
+        nord2: "#434C5E",
+        nord3: "#4C566A",
+        // Snow Storm — light backgrounds & text
+        nord4: "#D8DEE9",
+        nord5: "#E5E9F0",
+        nord6: "#ECEFF4",
+        // Frost — blues & teals
+        nord7: "#8FBCBB",
+        nord8: "#88C0D0",
+        nord9: "#81A1C1",
+        nord10: "#5E81AC",
+        // Aurora — accents
+        nord11: "#BF616A",
+        nord12: "#D08770",
+        nord13: "#EBCB8B",
+        nord14: "#A3BE8C",
+        nord15: "#B48EAD",
+        // Logo blue — unchanged
         fjord: {
           DEFAULT: "#326CE5",
-          light: "#5B8DEF",
-        },
-        // Warm Accents — Nordic Hearth
-        amber: {
-          DEFAULT: "#E8A435",
-        },
-        ember: {
-          DEFAULT: "#D4763A",
-        },
-        // Neutrals — Birch & Stone
-        birch: {
-          DEFAULT: "#F5EDE3",
-        },
-        wool: {
-          DEFAULT: "#E8DED1",
-        },
-        stone: {
-          DEFAULT: "#9C9489",
-        },
-        slate: {
-          DEFAULT: "#5C564E",
-        },
-        // Dark Mode — Winter Night
-        night: {
-          DEFAULT: "#0C0A09",
-        },
-        charcoal: {
-          DEFAULT: "#1C1917",
-        },
-        ash: {
-          DEFAULT: "#A8A29E",
         },
       },
       fontFamily: {

@@ -7,13 +7,13 @@ export function GroupCard({ group }: { group: GroupWithData }) {
   return (
     <Link
       href={`/groups/${group.slug}`}
-      className="group relative block rounded-xl overflow-hidden bg-white dark:bg-charcoal border border-gray-200 dark:border-white/10 hover:border-amber dark:hover:border-amber transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+      className="group relative block rounded-xl overflow-hidden bg-white dark:bg-nord1 border border-gray-200 dark:border-white/10 hover:border-nord12 dark:hover:border-nord12 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
     >
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl bg-gradient-to-br from-amber/5 to-ember/5" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl bg-gradient-to-br from-nord12/5 to-nord12/5" />
 
       <div className="relative p-6">
         {group.member_count && (
-          <span className="absolute top-6 right-6 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-amber to-ember text-white">
+          <span className="absolute top-6 right-6 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-nord12 to-nord12 text-white">
             {group.member_count.toLocaleString()} members
           </span>
         )}
@@ -22,7 +22,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
           alt=""
           className="w-12 h-12 rounded-lg object-cover mb-3"
         />
-        <h3 className="text-lg font-heading font-bold text-slate dark:text-white group-hover-gradient transition-colors">
+        <h3 className="text-lg font-heading font-bold text-nord0 dark:text-white group-hover-gradient transition-colors">
           {group.name}
         </h3>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
@@ -34,7 +34,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
             <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">
               Next Event
             </p>
-            <p className="text-sm font-medium text-slate dark:text-gray-200 truncate">
+            <p className="text-sm font-medium text-nord0 dark:text-gray-200 truncate">
               {nextEvent.title}
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">

@@ -43,9 +43,9 @@ const COMMUNITY_LINKS = [
 
 export function CommunitySection() {
   return (
-    <section className="py-16 bg-wool dark:bg-charcoal">
+    <section className="py-16 bg-nord5 dark:bg-nord1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-heading font-bold mb-4 text-slate dark:text-white">
+        <h2 className="text-3xl font-heading font-bold mb-4 text-nord0 dark:text-white">
           Join the Community
         </h2>
         <p className="text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
@@ -58,11 +58,11 @@ export function CommunitySection() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white dark:bg-night border border-gray-200 dark:border-white/10 hover:border-amber dark:hover:border-amber transition-colors w-full sm:w-auto"
+              className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white dark:bg-nord0 border border-gray-200 dark:border-white/10 hover:border-nord12 dark:hover:border-nord12 transition-colors w-full sm:w-auto"
             >
-              <div className="text-slate dark:text-white">{link.icon}</div>
+              <div className="text-nord0 dark:text-white">{link.icon}</div>
               <div className="text-left">
-                <div className="font-heading font-bold text-slate dark:text-white">
+                <div className="font-heading font-bold text-nord0 dark:text-white">
                   {link.name}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">

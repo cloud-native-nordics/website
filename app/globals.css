@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-body bg-birch text-slate dark:bg-night dark:text-gray-100;
+    @apply font-body bg-nord6 text-nord0 dark:bg-nord0 dark:text-nord4;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -14,21 +14,21 @@
 
 @layer utilities {
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber to-ember;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-nord12 to-nord13;
   }
 }
 
 @layer components {
   .gradient-link {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber to-ember;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-nord12 to-nord13;
   }
 
   .gradient-link:hover {
-    @apply from-ember to-amber;
+    @apply from-nord13 to-nord12;
   }
 
   .group:hover .group-hover-gradient {
-    background: linear-gradient(to right, #E8A435, #D4763A);
+    background: linear-gradient(to right, #D08770, #EBCB8B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

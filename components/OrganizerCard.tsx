@@ -47,7 +47,7 @@ export function OrganizerCard({ org }: { org: Organizer }) {
     .slice(0, 2);
 
   return (
-    <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white dark:bg-charcoal border border-gray-200 dark:border-white/10 hover:border-amber/50 transition-colors">
+    <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white dark:bg-nord1 border border-gray-200 dark:border-white/10 hover:border-nord12/50 transition-colors">
       {org.photo ? (
         <img
           src={org.photo}
@@ -55,11 +55,11 @@ export function OrganizerCard({ org }: { org: Organizer }) {
           className="w-20 h-20 rounded-full object-cover mb-3"
         />
       ) : (
-        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber to-ember flex items-center justify-center text-white font-heading font-bold text-xl mb-3">
+        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-nord12 to-nord12 flex items-center justify-center text-white font-heading font-bold text-xl mb-3">
           {initials}
         </div>
       )}
-      <div className="font-heading font-bold text-slate dark:text-white text-sm">
+      <div className="font-heading font-bold text-nord0 dark:text-white text-sm">
         {org.name}
       </div>
       {org.role && (
@@ -68,7 +68,7 @@ export function OrganizerCard({ org }: { org: Organizer }) {
         </div>
       )}
       {org.company && (
-        <div className="text-xs text-amber font-medium mt-0.5">
+        <div className="text-xs text-nord12 font-medium mt-0.5">
           {org.company}
         </div>
       )}
@@ -80,7 +80,7 @@ export function OrganizerCard({ org }: { org: Organizer }) {
               href={org[key]}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-amber transition-colors"
+              className="text-gray-400 hover:text-nord8 transition-colors"
             >
               <Icon />
             </a>

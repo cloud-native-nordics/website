@@ -78,7 +78,7 @@ export function GroupMap({ latitude, longitude, name }: GroupMapProps) {
   }, [theme]);
 
   return (
-    <div className="p-[2px] rounded-xl bg-gradient-to-r from-amber to-ember">
+    <div className="p-[2px] rounded-xl bg-gradient-to-r from-nord12 to-nord12">
       <div
         ref={mapRef}
         className="h-[200px] rounded-[10px] overflow-hidden"
