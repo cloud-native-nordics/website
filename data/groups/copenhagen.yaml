@@ -3,6 +3,6 @@ city: Copenhagen
 country: Denmark
 latitude: 55.6761
 longitude: 12.5683
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-copenhagen/
+platform: meetup
+platform_url: https://www.meetup.com/cloud-native-copenhagen/?eventOrigin=home_groups_you_organize
 member_count: 1500
