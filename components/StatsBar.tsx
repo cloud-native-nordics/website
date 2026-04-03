@@ -22,8 +22,8 @@ const STAT_ICONS = {
 export function StatsBar({ stats }: { stats: SiteStats }) {
   const items = [
     { icon: STAT_ICONS.countries, value: stats.countries.toString(), label: "Countries" },
-    { icon: STAT_ICONS.groups, value: stats.active_groups.toString(), label: "Active Groups" },
-    { icon: STAT_ICONS.events, value: stats.upcoming_events.toString(), label: "Upcoming Events" },
+    { icon: STAT_ICONS.groups, value: stats.active_groups.toString(), label: "Groups" },
+    { icon: STAT_ICONS.events, value: stats.upcoming_events.toString(), label: "Events" },
   ];
 
   return (
