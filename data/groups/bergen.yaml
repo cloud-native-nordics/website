@@ -6,3 +6,23 @@ longitude: 5.3221
 platform: bevy
 platform_url: https://community.cncf.io/cloud-native-bergen/
 member_count: 300
+organizers:
+  - name: Hans Kristian Flaatten
+    role: Platform Engineer at NAV
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/hans_kristian_flaatten_sPPcO8F.jpg
+  - name: Anders Runningen
+    role: Platform Engineer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/anders_runningen.jpg
+  - name: Bjørge Solli
+    role: Director Solution Consultant
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/bjørge_solli.jpg
+  - name: Øyvind Randa
+    role: Software Architect
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/øyvind_randa.jpg
+  - name: Rainui Ly
+    role: Engineer | CNCF Kubestronaut
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/rainui_ly.jpeg
+  - name: Arve Solli
+    role: Co-Organizer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/arve_solli.jpg
+

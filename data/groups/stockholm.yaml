@@ -6,3 +6,20 @@ longitude: 18.0686
 platform: bevy
 platform_url: https://community.cncf.io/cloud-native-stockholm/
 member_count: 800
+organizers:
+  - name: Amelie Friederike Löwe
+    role: Organizer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/amelie_friederike_löwe.jpg
+  - name: Justin Lex-Hammarskjöld
+    role: Platform Engineer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/justin_lex-hammarskjöld.jpg
+  - name: Shiva Swaroop N K
+    role: Masters Student
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/shiva_swaroop_n_k_3ELzNjP.jpeg
+  - name: Amit Tewari
+    role: Organizer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/amit_tewari.jpeg
+  - name: Andreas Mikael Holmsten
+    role: Organizer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/andreas_holmsten_fvP3slU.png
+

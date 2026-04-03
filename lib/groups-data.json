@@ -8,7 +8,33 @@
     "longitude": 9.9217,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-aalborg/",
-    "member_count": 300
+    "member_count": 300,
+    "organizers": [
+      {
+        "name": "Camilla Larsen",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/camilla_larsen.jpg"
+      },
+      {
+        "name": "Niels Wittrup Andersen",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/niels_wittrup_andersen.png"
+      },
+      {
+        "name": "Allan Hoejgaard Jensen",
+        "role": "Platform Development Specialist",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/featured_attendees/me_hjMJBVw.jpg"
+      },
+      {
+        "name": "Christoffer Hollensen",
+        "role": "Software Pilot @ Trifork",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/christoffer_hollensen_ZlsQyGI.jpg"
+      },
+      {
+        "name": "Simon Bengtsson",
+        "role": "Organizer"
+      }
+    ]
   },
   {
     "slug": "aarhus",
@@ -86,7 +112,39 @@
     "longitude": 5.3221,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-bergen/",
-    "member_count": 300
+    "member_count": 300,
+    "organizers": [
+      {
+        "name": "Hans Kristian Flaatten",
+        "role": "Platform Engineer at NAV",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/hans_kristian_flaatten_sPPcO8F.jpg"
+      },
+      {
+        "name": "Anders Runningen",
+        "role": "Platform Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/anders_runningen.jpg"
+      },
+      {
+        "name": "Bjørge Solli",
+        "role": "Director Solution Consultant",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/bjørge_solli.jpg"
+      },
+      {
+        "name": "Øyvind Randa",
+        "role": "Software Architect",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/øyvind_randa.jpg"
+      },
+      {
+        "name": "Rainui Ly",
+        "role": "Engineer | CNCF Kubestronaut",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/rainui_ly.jpeg"
+      },
+      {
+        "name": "Arve Solli",
+        "role": "Co-Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/arve_solli.jpg"
+      }
+    ]
   },
   {
     "slug": "copenhagen",
@@ -108,7 +166,39 @@
     "longitude": 11.9746,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-goteborg/",
-    "member_count": 400
+    "member_count": 400,
+    "organizers": [
+      {
+        "name": "Jessica Andersson",
+        "role": "Leader of Platform Engineering, CNCF Ambassador",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/jessica_andersson_00WX8DI.jpg"
+      },
+      {
+        "name": "Peter Rosell",
+        "role": "Event Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/peter_rosell.jpg"
+      },
+      {
+        "name": "Edvin Norling",
+        "role": "DevOps Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/edvin_norling.jpeg"
+      },
+      {
+        "name": "Anders Johansson",
+        "role": "Event Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/anders_johansson.jpg"
+      },
+      {
+        "name": "Alexander Lindeskär",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/alexander_lindeskär.jpeg"
+      },
+      {
+        "name": "Mikael Johansson Länsberg",
+        "role": "Senior Site Reliability Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/mikael_rikard_johansson_länsberg.png"
+      }
+    ]
   },
   {
     "slug": "helsinki",
@@ -119,7 +209,29 @@
     "longitude": 24.9384,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-helsinki/",
-    "member_count": 800
+    "member_count": 800,
+    "organizers": [
+      {
+        "name": "Maryam Tavakkoli",
+        "role": "Senior Cloud Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/maryam_tavakkoli.png"
+      },
+      {
+        "name": "Lucas Käldström",
+        "role": "CNCF Ambassador / Student",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/lucas_käldström.jpeg"
+      },
+      {
+        "name": "Annie Talvasto",
+        "role": "Product Marketing Manager at CAST AI.",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/annie_talvasto.jpg"
+      },
+      {
+        "name": "Janne Välimaa",
+        "role": "Cloud Architecht",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/janne_välimaa.jpg"
+      }
+    ]
   },
   {
     "slug": "oslo",
@@ -130,7 +242,39 @@
     "longitude": 10.7522,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-oslo/",
-    "member_count": 600
+    "member_count": 600,
+    "organizers": [
+      {
+        "name": "Kristina Devochko",
+        "role": "CNCF Ambassador",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/kristina_devochko_XXFMJcO.JPG"
+      },
+      {
+        "name": "Kristian Schjelderup",
+        "role": "Cloud Engineer, Edgeworks",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/kristian_schjelderup.jpg"
+      },
+      {
+        "name": "Klaudia Beata Janusz",
+        "role": "Solution Consultant",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/klaudia_beata_janusz.png"
+      },
+      {
+        "name": "Steffen Pøhner Henriksen",
+        "role": "Cloud Native Developer, Geodata AS",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/steffen_pøhner_henriksen.jpg"
+      },
+      {
+        "name": "Emil Antoni Brasø",
+        "role": "Senior Cloud Native Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/emil_antoni_brasø_8EYlQIl.jpeg"
+      },
+      {
+        "name": "Bosse Klykken",
+        "role": "Senior Architect",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/bosse_klykken_ygBjpEe.jpg"
+      }
+    ]
   },
   {
     "slug": "stavanger",
@@ -152,7 +296,34 @@
     "longitude": 18.0686,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-stockholm/",
-    "member_count": 800
+    "member_count": 800,
+    "organizers": [
+      {
+        "name": "Amelie Friederike Löwe",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/amelie_friederike_löwe.jpg"
+      },
+      {
+        "name": "Justin Lex-Hammarskjöld",
+        "role": "Platform Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/justin_lex-hammarskjöld.jpg"
+      },
+      {
+        "name": "Shiva Swaroop N K",
+        "role": "Masters Student",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/shiva_swaroop_n_k_3ELzNjP.jpeg"
+      },
+      {
+        "name": "Amit Tewari",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/amit_tewari.jpeg"
+      },
+      {
+        "name": "Andreas Mikael Holmsten",
+        "role": "Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/andreas_holmsten_fvP3slU.png"
+      }
+    ]
   },
   {
     "slug": "tampere",
@@ -185,6 +356,23 @@
     "longitude": 20.263,
     "platform": "bevy",
     "platform_url": "https://community.cncf.io/cloud-native-umea/",
-    "member_count": 150
+    "member_count": 150,
+    "organizers": [
+      {
+        "name": "Johan Tordsson",
+        "role": "Co-Organizer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/johan_tordsson.jpg"
+      },
+      {
+        "name": "Emil Marklund",
+        "role": "Freelance Devops Engineer",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/emil_marklund.JPG"
+      },
+      {
+        "name": "Oliver Larsson",
+        "role": "PhD Student",
+        "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/oliver_larsson.jpg"
+      }
+    ]
   }
 ]

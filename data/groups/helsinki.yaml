@@ -6,3 +6,17 @@ longitude: 24.9384
 platform: bevy
 platform_url: https://community.cncf.io/cloud-native-helsinki/
 member_count: 800
+organizers:
+  - name: Maryam Tavakkoli
+    role: Senior Cloud Engineer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/maryam_tavakkoli.png
+  - name: Lucas Käldström
+    role: CNCF Ambassador / Student
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/lucas_käldström.jpeg
+  - name: Annie Talvasto
+    role: Product Marketing Manager at CAST AI.
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/annie_talvasto.jpg
+  - name: Janne Välimaa
+    role: Cloud Architecht
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/janne_välimaa.jpg
+

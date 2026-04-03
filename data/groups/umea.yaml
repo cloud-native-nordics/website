@@ -6,3 +6,14 @@ longitude: 20.2630
 platform: bevy
 platform_url: https://community.cncf.io/cloud-native-umea/
 member_count: 150
+organizers:
+  - name: Johan Tordsson
+    role: Co-Organizer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/johan_tordsson.jpg
+  - name: Emil Marklund
+    role: Freelance Devops Engineer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/emil_marklund.JPG
+  - name: Oliver Larsson
+    role: PhD Student
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/oliver_larsson.jpg
+

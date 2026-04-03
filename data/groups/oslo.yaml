@@ -6,3 +6,23 @@ longitude: 10.7522
 platform: bevy
 platform_url: https://community.cncf.io/cloud-native-oslo/
 member_count: 600
+organizers:
+  - name: Kristina Devochko
+    role: CNCF Ambassador
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/kristina_devochko_XXFMJcO.JPG
+  - name: Kristian Schjelderup
+    role: Cloud Engineer, Edgeworks
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/kristian_schjelderup.jpg
+  - name: Klaudia Beata Janusz
+    role: Solution Consultant
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/klaudia_beata_janusz.png
+  - name: Steffen Pøhner Henriksen
+    role: Cloud Native Developer, Geodata AS
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/steffen_pøhner_henriksen.jpg
+  - name: Emil Antoni Brasø
+    role: Senior Cloud Native Engineer
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/emil_antoni_brasø_8EYlQIl.jpeg
+  - name: Bosse Klykken
+    role: Senior Architect
+    photo: https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/bosse_klykken_ygBjpEe.jpg
+
