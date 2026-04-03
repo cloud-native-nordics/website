@@ -1,0 +1,47 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Polar Night — dark backgrounds
+        nord0: "#2E3440",
+        nord1: "#3B4252",
+        nord2: "#434C5E",
+        nord3: "#4C566A",
+        // Snow Storm — light backgrounds & text
+        nord4: "#D8DEE9",
+        nord5: "#E5E9F0",
+        nord6: "#ECEFF4",
+        // Frost — blues & teals
+        nord7: "#8FBCBB",
+        nord8: "#88C0D0",
+        nord9: "#81A1C1",
+        nord10: "#5E81AC",
+        // Aurora — accents
+        nord11: "#BF616A",
+        nord12: "#D08770",
+        nord13: "#EBCB8B",
+        nord14: "#A3BE8C",
+        nord15: "#B48EAD",
+        // Logo blue — unchanged
+        fjord: {
+          DEFAULT: "#326CE5",
+        },
+      },
+      fontFamily: {
+        heading: ["var(--font-heading)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/typography")],
+};
+
+export default config;

@@ -1,0 +1,40 @@
+name: Cloud Native Aarhus
+city: Aarhus
+country: Denmark
+latitude: 56.1629
+longitude: 10.2039
+platform: bevy
+platform_url: https://community.cncf.io/cloud-native-aarhus/
+slack_channel: "#cloud-native-aarhus"
+slack_channel_id: "G4W89H5LH"
+member_count: 1200
+organizers:
+  - name: Kasper Borg Nissen
+    role: Principal Developer Advocate
+    company: Dash0
+    photo: https://github.com/kaspernissen.png
+    linkedin: https://www.linkedin.com/in/kaspernissen/
+    github: https://github.com/kaspernissen
+    bluesky: https://bsky.app/profile/kaspernissen.xyz
+    twitter: https://x.com/phennex
+  - name: Rasmus Steiniche
+    role: Lead Organizer
+    company: Neurospace
+  - name: Ophelia Zhang Dalsgaard
+    role: Modernization and Engineering Lead
+    company: Danske Bank
+  - name: Henrik Høegh
+    role: Digital Platform Owner
+    company: VELUX
+  - name: Henrik Løvborg
+    role: Tech Sales Lead Denmark
+    company: Red Hat
+  - name: Stefan Daugaard Poulsen
+    role: Solution Architect
+    company: Norlys
+  - name: Ryan Gough
+    role: Senior IT Operations Specialist / Platform
+    company: JYSK
+  - name: Kasper Tygesen
+    role: Senior Software Engineer
+    company: Lunar
