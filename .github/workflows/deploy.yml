@@ -1,12 +1,19 @@
-name: Deploy to Cloudflare Pages
+name: Build and Deploy
 
 on:
   push:
     branches: [master]
+  schedule:
+    # Rebuild every 6 hours to refresh Bevy event data
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Manual trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
 
@@ -21,10 +28,9 @@ jobs:
         env:
           NODE_ENV: production
 
-      - run: npx @cloudflare/next-on-pages
-
-      - uses: cloudflare/wrangler-action@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=cloud-native-nordics-website
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: cloudnativenordics.com
