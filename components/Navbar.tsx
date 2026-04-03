@@ -27,11 +27,19 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3">
             <Image
+              src="/logo-dark.svg"
+              alt="Cloud Native Nordics"
+              width={160}
+              height={52}
+              className="block dark:hidden"
+              priority
+            />
+            <Image
               src="/logo.svg"
               alt="Cloud Native Nordics"
               width={160}
               height={52}
-              className="dark:brightness-100 brightness-0"
+              className="hidden dark:block"
               priority
             />
           </Link>
