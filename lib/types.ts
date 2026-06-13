@@ -5,8 +5,15 @@ export interface GroupDefinition {
   country: string;
   latitude: number;
   longitude: number;
-  platform: "bevy" | "meetup";
+  platform: "ocgroups" | "meetup" | "bevy";
   platform_url: string;
+  // Slug on the Open Community Groups platform (ocgroups.dev), used to fetch
+  // events. Absent for groups hosted elsewhere (e.g. Meetup).
+  ocg_slug?: string;
+  // Populated by scripts/build-groups.mjs from ocgroups: a locally-downloaded
+  // logo path and the group's short description.
+  logo?: string;
+  description?: string;
   slack_channel?: string;
   slack_channel_id?: string;
   member_count?: number;
@@ -24,25 +31,20 @@ export interface Organizer {
   twitter?: string;
 }
 
-export interface BevyEvent {
-  id: number;
+export interface CommunityEvent {
+  id: string;
   title: string;
   start_date: string;
   end_date: string;
   url: string;
+  group_slug: string;
   chapter_title: string;
   chapter_city: string;
-  chapter_country: string;
-  chapter_logo_url?: string;
-  chapter_description?: string;
-  chapter_relative_url: string;
 }
 
 export interface GroupWithData extends GroupDefinition {
-  upcoming_events: BevyEvent[];
-  past_events: BevyEvent[];
-  logo_url?: string;
-  description?: string;
+  upcoming_events: CommunityEvent[];
+  past_events: CommunityEvent[];
 }
 
 export interface SiteStats {

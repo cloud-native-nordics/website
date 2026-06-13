@@ -8,22 +8,20 @@ import { CfpSection } from "@/components/CfpSection";
 import { CommunitySection } from "@/components/CommunitySection";
 import { Partners } from "@/components/Partners";
 import { loadGroups } from "@/lib/groups";
-import { fetchBevyEvents, getEventsForChapter } from "@/lib/bevy";
+import { fetchGroupData } from "@/lib/ocg";
 import type { SiteStats, GroupWithData } from "@/lib/types";
 
 export default async function Home() {
   const groups = await loadGroups();
-  const allEvents = await fetchBevyEvents();
 
   const totalMembers = groups.reduce((sum, g) => sum + (g.member_count || 0), 0);
 
-  const groupsWithEvents: GroupWithData[] = groups.map((group) => {
-    const { upcoming, past } = getEventsForChapter(allEvents, group.platform_url);
-    const firstEvent = upcoming[0] || past[0];
-    const logo_url = firstEvent?.chapter_logo_url;
-    const description = firstEvent?.chapter_description;
-    return { ...group, upcoming_events: upcoming, past_events: past, logo_url, description };
-  });
+  const groupsWithEvents: GroupWithData[] = await Promise.all(
+    groups.map(async (group) => {
+      const { upcoming, past } = await fetchGroupData(group);
+      return { ...group, upcoming_events: upcoming, past_events: past };
+    })
+  );
 
   const totalUpcoming = groupsWithEvents.reduce((sum, g) => sum + g.upcoming_events.length, 0);
 

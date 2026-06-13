@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   schedule:
-    # Rebuild every 6 hours to refresh Bevy event data
+    # Rebuild every 6 hours to refresh event data from Open Community Groups (ocgroups.dev)
     - cron: '0 */6 * * *'
   workflow_dispatch: # Manual trigger
 

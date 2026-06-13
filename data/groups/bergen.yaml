@@ -3,8 +3,9 @@ city: Bergen
 country: Norway
 latitude: 60.3913
 longitude: 5.3221
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-bergen/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/tz3z6a4
+ocg_slug: tz3z6a4
 member_count: 300
 organizers:
   - name: Hans Kristian Flaatten

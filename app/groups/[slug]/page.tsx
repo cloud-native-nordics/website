@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { loadGroup, loadGroups } from "@/lib/groups";
-import { fetchBevyEvents, getEventsForChapter } from "@/lib/bevy";
+import { fetchGroupData } from "@/lib/ocg";
 import { EventCard } from "@/components/EventCard";
 import { GroupMap } from "@/components/GroupMap";
 import { OrganizerCard } from "@/components/OrganizerCard";
@@ -32,11 +32,9 @@ export default async function GroupPage({ params }: PageProps) {
   const group = await loadGroup(slug);
   if (!group) notFound();
 
-  const allEvents = await fetchBevyEvents();
-  const { upcoming, past } = getEventsForChapter(allEvents, group.platform_url);
-  const firstEvent = upcoming[0] || past[0];
-  const logoUrl = firstEvent?.chapter_logo_url;
-  const description = firstEvent?.chapter_description;
+  const { upcoming, past } = await fetchGroupData(group);
+  const logoUrl = group.logo;
+  const description = group.description;
 
   return (
     <>
@@ -78,7 +76,12 @@ export default async function GroupPage({ params }: PageProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition-colors"
             >
-              View on {group.platform === "meetup" ? "Meetup" : "Bevy"}
+              View on{" "}
+              {group.platform === "meetup"
+                ? "Meetup"
+                : group.platform === "bevy"
+                  ? "Bevy"
+                  : "Open Community Groups"}
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>

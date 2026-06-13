@@ -1,7 +1,7 @@
 import { EventCard } from "./EventCard";
-import type { BevyEvent } from "@/lib/types";
+import type { CommunityEvent } from "@/lib/types";
 
-export function UpcomingEvents({ events }: { events: BevyEvent[] }) {
+export function UpcomingEvents({ events }: { events: CommunityEvent[] }) {
   if (events.length === 0) {
     return (
       <section id="events" className="py-16 bg-nord6 dark:bg-nord0">

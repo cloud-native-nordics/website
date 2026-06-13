@@ -3,8 +3,9 @@ city: Umea
 country: Sweden
 latitude: 63.8258
 longitude: 20.2630
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-umea/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/ukhrkzb
+ocg_slug: ukhrkzb
 member_count: 150
 organizers:
   - name: Johan Tordsson

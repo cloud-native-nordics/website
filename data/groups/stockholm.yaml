@@ -3,8 +3,9 @@ city: Stockholm
 country: Sweden
 latitude: 59.3293
 longitude: 18.0686
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-stockholm/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/cncf-stockholm
+ocg_slug: cncf-stockholm
 member_count: 800
 organizers:
   - name: Amelie Friederike Löwe

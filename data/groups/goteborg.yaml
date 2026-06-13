@@ -3,8 +3,9 @@ city: Goteborg
 country: Sweden
 latitude: 57.7089
 longitude: 11.9746
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-goteborg/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/goteborg
+ocg_slug: goteborg
 member_count: 400
 organizers:
   - name: Jessica Andersson
