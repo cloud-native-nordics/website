@@ -6,8 +6,9 @@
     "country": "Denmark",
     "latitude": 57.0488,
     "longitude": 9.9217,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-aalborg/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/aalborg",
+    "ocg_slug": "aalborg",
     "member_count": 300,
     "organizers": [
       {
@@ -34,7 +35,8 @@
         "name": "Simon Bengtsson",
         "role": "Organizer"
       }
-    ]
+    ],
+    "logo": "/images/group-logos/aalborg.png"
   },
   {
     "slug": "aarhus",
@@ -43,8 +45,9 @@
     "country": "Denmark",
     "latitude": 56.1629,
     "longitude": 10.2039,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-aarhus/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/cncf-aarhus",
+    "ocg_slug": "cncf-aarhus",
     "slack_channel": "#cloud-native-aarhus",
     "slack_channel_id": "G4W89H5LH",
     "member_count": 1200,
@@ -101,7 +104,8 @@
         "company": "Lunar",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/kasper_tygesen.jpg"
       }
-    ]
+    ],
+    "logo": "/images/group-logos/aarhus.jpg"
   },
   {
     "slug": "bergen",
@@ -110,8 +114,9 @@
     "country": "Norway",
     "latitude": 60.3913,
     "longitude": 5.3221,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-bergen/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/tz3z6a4",
+    "ocg_slug": "tz3z6a4",
     "member_count": 300,
     "organizers": [
       {
@@ -144,7 +149,9 @@
         "role": "Co-Organizer",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/arve_solli.jpg"
       }
-    ]
+    ],
+    "description": "Connecting innovators, engineers, and cloud enthusiasts in Bergen, Norway to explore the future of Cloud Native technologies. Our community dives deep into Kubernetes, DevOps practices, Cloud Native Architecture, Site Reliability Engineering (SRE), Continuous Integration, and Continuous Delivery. Whether you're building, operating, or scaling modern infrastructure, join us to share knowledge, collaborate on real-world challenges, and grow the Cloud Native ecosystem.",
+    "logo": "/images/group-logos/bergen.jpg"
   },
   {
     "slug": "copenhagen",
@@ -164,8 +171,9 @@
     "country": "Sweden",
     "latitude": 57.7089,
     "longitude": 11.9746,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-goteborg/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/goteborg",
+    "ocg_slug": "goteborg",
     "member_count": 400,
     "organizers": [
       {
@@ -198,7 +206,8 @@
         "role": "Senior Site Reliability Engineer",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/mikael_rikard_johansson_länsberg.png"
       }
-    ]
+    ],
+    "logo": "/images/group-logos/goteborg.jpg"
   },
   {
     "slug": "helsinki",
@@ -207,8 +216,9 @@
     "country": "Finland",
     "latitude": 60.1699,
     "longitude": 24.9384,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-helsinki/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/7uqebk2",
+    "ocg_slug": "7uqebk2",
     "member_count": 800,
     "organizers": [
       {
@@ -231,7 +241,9 @@
         "role": "Cloud Architecht",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/janne_välimaa.jpg"
       }
-    ]
+    ],
+    "description": "Cloud Native and Kubernetes Finland is an official Cloud Native Computing Foundation Meetup group and part of the Cloud Native Nordics community as well. We host talks from anyone doing cool things with Kubernetes, and the other CNCF technologies and projects. We warmly welcome sponsors and speakers to join our community-driven events. You can connect with us via our Meetup page or propose a talk by filling out this form or contacting us directly. Please note that English is the official languag",
+    "logo": "/images/group-logos/helsinki.jpg"
   },
   {
     "slug": "oslo",
@@ -240,8 +252,9 @@
     "country": "Norway",
     "latitude": 59.9139,
     "longitude": 10.7522,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-oslo/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/hcwp3b5",
+    "ocg_slug": "hcwp3b5",
     "member_count": 600,
     "organizers": [
       {
@@ -274,7 +287,9 @@
         "role": "Senior Architect",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/bosse_klykken_ygBjpEe.jpg"
       }
-    ]
+    ],
+    "description": "Cloud Native Oslo is the official Cloud Native Computing Foundation Meetup group about the technologies hosted under CNCF umbrella. We host talks from anyone doing cool things with Kubernetes, and the other CNCF technologies, including companies using them in production or vendors who are pushing the boundaries of what the cloud native techs can do. Presentations will be focused on demos, and not sales pitches. The meetup will be organized in an open and democratic way, where anyone that wants t",
+    "logo": "/images/group-logos/oslo.jpg"
   },
   {
     "slug": "stavanger",
@@ -294,8 +309,9 @@
     "country": "Sweden",
     "latitude": 59.3293,
     "longitude": 18.0686,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-stockholm/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/cncf-stockholm",
+    "ocg_slug": "cncf-stockholm",
     "member_count": 800,
     "organizers": [
       {
@@ -323,7 +339,8 @@
         "role": "Organizer",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/andreas_holmsten_fvP3slU.png"
       }
-    ]
+    ],
+    "logo": "/images/group-logos/stockholm.jpg"
   },
   {
     "slug": "tampere",
@@ -354,8 +371,9 @@
     "country": "Sweden",
     "latitude": 63.8258,
     "longitude": 20.263,
-    "platform": "bevy",
-    "platform_url": "https://community.cncf.io/cloud-native-umea/",
+    "platform": "ocgroups",
+    "platform_url": "https://ocgroups.dev/cncf/group/ukhrkzb",
+    "ocg_slug": "ukhrkzb",
     "member_count": 150,
     "organizers": [
       {
@@ -373,6 +391,7 @@
         "role": "PhD Student",
         "photo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,h_400,q_auto:good,w_400/v1/gcs/platform-data-cncf/avatars/oliver_larsson.jpg"
       }
-    ]
+    ],
+    "logo": "/images/group-logos/umea.jpg"
   }
 ]

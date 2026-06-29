@@ -1,6 +1,6 @@
-import type { BevyEvent } from "@/lib/types";
+import type { CommunityEvent } from "@/lib/types";
 
-export function EventCard({ event }: { event: BevyEvent }) {
+export function EventCard({ event }: { event: CommunityEvent }) {
   const date = new Date(event.start_date);
 
   return (
@@ -26,7 +26,8 @@ export function EventCard({ event }: { event: BevyEvent }) {
           {event.title}
         </h3>
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-          {event.chapter_title} &middot; {event.chapter_city}
+          {event.chapter_title}
+          {event.chapter_city && <> &middot; {event.chapter_city}</>}
         </p>
         <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
           {date.toLocaleDateString("en-US", {

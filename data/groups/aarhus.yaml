@@ -3,8 +3,9 @@ city: Aarhus
 country: Denmark
 latitude: 56.1629
 longitude: 10.2039
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-aarhus/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/cncf-aarhus
+ocg_slug: cncf-aarhus
 slack_channel: "#cloud-native-aarhus"
 slack_channel_id: "G4W89H5LH"
 member_count: 1200

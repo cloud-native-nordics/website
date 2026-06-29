@@ -3,8 +3,9 @@ city: Aalborg
 country: Denmark
 latitude: 57.0488
 longitude: 9.9217
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-aalborg/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/aalborg
+ocg_slug: aalborg
 member_count: 300
 organizers:
   - name: Camilla Larsen

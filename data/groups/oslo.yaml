@@ -3,8 +3,9 @@ city: Oslo
 country: Norway
 latitude: 59.9139
 longitude: 10.7522
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-oslo/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/hcwp3b5
+ocg_slug: hcwp3b5
 member_count: 600
 organizers:
   - name: Kristina Devochko

@@ -12,8 +12,9 @@ describe("loadGroups", () => {
     expect(aarhus!.country).toBe("Denmark");
     expect(aarhus!.latitude).toBeCloseTo(56.1629, 2);
     expect(aarhus!.longitude).toBeCloseTo(10.2039, 2);
-    expect(aarhus!.platform).toBe("bevy");
-    expect(aarhus!.platform_url).toContain("cloud-native-aarhus");
+    expect(aarhus!.platform).toBe("ocgroups");
+    expect(aarhus!.ocg_slug).toBe("cncf-aarhus");
+    expect(aarhus!.platform_url).toContain("ocgroups.dev");
   });
 
   it("derives slug from filename", async () => {

@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# group logos downloaded from ocgroups.dev at build time (scripts/build-groups.mjs)
+/public/images/group-logos/
+
 # production
 /build
 

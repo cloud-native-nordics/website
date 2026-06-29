@@ -18,7 +18,7 @@ export function GroupCard({ group }: { group: GroupWithData }) {
           </span>
         )}
         <img
-          src={group.logo_url || "/logo-icon.svg"}
+          src={group.logo || "/logo-icon.svg"}
           alt=""
           className="w-12 h-12 rounded-lg object-cover mb-3"
         />

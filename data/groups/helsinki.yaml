@@ -3,8 +3,9 @@ city: Helsinki
 country: Finland
 latitude: 60.1699
 longitude: 24.9384
-platform: bevy
-platform_url: https://community.cncf.io/cloud-native-helsinki/
+platform: ocgroups
+platform_url: https://ocgroups.dev/cncf/group/7uqebk2
+ocg_slug: 7uqebk2
 member_count: 800
 organizers:
   - name: Maryam Tavakkoli
