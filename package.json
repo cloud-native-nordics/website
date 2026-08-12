@@ -17,7 +17,7 @@
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
     "@tailwindcss/typography": "^0.5.19",
-    "js-yaml": "^4.3.0",
+    "js-yaml": "^4.3.1",
     "leaflet": "^1.9.4",
     "next": "^15.5.21",
     "react": "^18.3.1",
