@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 import { useTheme } from "./ThemeProvider";
 
-const LIGHT_TILES = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-const DARK_TILES = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
-const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>';
+const LIGHT_TILES = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}";
+const DARK_TILES = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}";
+const TILE_ATTRIBUTION = "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors";
 
 interface GroupMapProps {
   latitude: number;
@@ -41,7 +41,7 @@ export function GroupMap({ latitude, longitude, name }: GroupMapProps) {
       const isDark = document.documentElement.classList.contains("dark");
       const tiles = L.tileLayer(
         isDark ? DARK_TILES : LIGHT_TILES,
-        { attribution: TILE_ATTRIBUTION }
+        { attribution: TILE_ATTRIBUTION, maxZoom: 16 }
       ).addTo(map);
 
       tileLayer.current = tiles;
